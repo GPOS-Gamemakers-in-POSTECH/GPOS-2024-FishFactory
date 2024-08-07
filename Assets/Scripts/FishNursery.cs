@@ -46,12 +46,6 @@ public class FishNursery
     }
 
 
-
-    void ShowNurseryInfo()
-    {
-        Console.WriteLine();
-    }
-
     public void ShowNurseryInfo()
     {
         Console.WriteLine($"Nursery Tier: {NurseryTier}");
@@ -110,7 +104,7 @@ public class FishNursery
         if(CheckNecessaryParts())
         {
             //추가부품 확인 코드
-            
+
             return true;
         }
         return false;
