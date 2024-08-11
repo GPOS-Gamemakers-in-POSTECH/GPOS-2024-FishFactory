@@ -50,6 +50,9 @@ TagManager:
   - name: Edge
     uniqueID: 1204104957
     locked: 0
+  - name: Objects
+    uniqueID: 3551230659
+    locked: 0
   - name: Player
     uniqueID: 3780855985
     locked: 0

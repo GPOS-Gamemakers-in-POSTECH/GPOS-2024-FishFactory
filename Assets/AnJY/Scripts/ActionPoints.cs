@@ -5,13 +5,17 @@ using TMPro;
 
 public class ActionPoints : MonoBehaviour
 {
-    private static int actionPoints = 100;
+    public static int actionPoints = 100;
+    public static int date = 0;
+    private int daysinOneSeason = 5;
 
     public TextMeshProUGUI ActionPointsText;
+    public TextMeshProUGUI DateText;
 
     void Start()
     {
         UpdateActionPointsUI();
+        UpdateDateUI();
     }
 
     void Update()
@@ -21,9 +25,6 @@ public class ActionPoints : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.T))
             ReduceActionPoints(20);
-
-        if (Input.GetKeyDown(KeyCode.B))
-            sleep();
     }
 
     void ReduceActionPoints(int amount)
@@ -34,22 +35,39 @@ public class ActionPoints : MonoBehaviour
         {
             actionPoints -= amount;
             actionPoints = Mathf.Clamp(actionPoints, 0, 100);
-            UpdateActionPointsUI();  // UI 업데이트
+            UpdateActionPointsUI();
         }
     }
 
-    void sleep()
+    protected void sleep()
     {
         actionPoints = 100;
-        Debug.Log("Sleeped Well! All Action Points Restored.");
-        UpdateActionPointsUI();  // UI 업데이트
+        date++;
+        // Debug.Log("Sleeped Well! All Action Points Restored.");
+        UpdateActionPointsUI();
+        UpdateDateUI();
     }
 
     void UpdateActionPointsUI()
     {
         if (ActionPointsText != null)
         {
-            ActionPointsText.text = actionPoints.ToString() + "/100";
+            ActionPointsText.text = actionPoints.ToString() + " / 100";
+        }
+    }
+
+    void UpdateDateUI()
+    {
+        if (DateText != null)
+        {
+            switch(date / daysinOneSeason)
+            {
+                case 0: DateText.text = "SPRING - " + ((date % daysinOneSeason) + 1).ToString(); break;
+                case 1: DateText.text = "SUMMER - " + ((date % daysinOneSeason) + 1).ToString(); break;
+                case 2: DateText.text = "FALL - " + ((date % daysinOneSeason) + 1).ToString(); break;
+                case 3: DateText.text = "WINTER - " + ((date % daysinOneSeason) + 1).ToString(); break;
+                default: DateText.text = "Game End!"; break;
+            }
         }
     }
 }
