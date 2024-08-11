@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Indoor.unity
     guid: 128d98b34b986c84f9099c04c26d7478
+  - enabled: 1
+    path: Assets/Scenes/SleepScene.unity
+    guid: f39581b2b560f0d4eb754fd2a230a8bc
   m_configObjects: {}

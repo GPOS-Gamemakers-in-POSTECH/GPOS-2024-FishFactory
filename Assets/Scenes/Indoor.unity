@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 56507598}
   - component: {fileID: 56507605}
-  - component: {fileID: 56507604}
   - component: {fileID: 56507603}
   - component: {fileID: 56507602}
   - component: {fileID: 56507601}
@@ -280,18 +279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActionPointsText: {fileID: 976967050}
   DateText: {fileID: 0}
---- !u!114 &56507604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56507597}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a6bb63214a07944b714757d8de96ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &56507605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -661,7 +648,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 745185973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4400c51360a4f8248b3bfd607b4481f0, type: 3}
+  m_Script: {fileID: 11500000, guid: e81f4d0aaf2761a4b8c690c305568239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ActionPointsText: {fileID: 976967050}
@@ -6794,7 +6781,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1615830428}
   - component: {fileID: 1615830427}
-  - component: {fileID: 1615830426}
   - component: {fileID: 1615830425}
   - component: {fileID: 1615830424}
   m_Layer: 0
@@ -6856,18 +6842,6 @@ MonoBehaviour:
   interactionDistance: 1.5
   interactionKey: 101
   sceneName: MinMul
---- !u!114 &1615830426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615830423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931a44209a412314c9a1f14955bf8509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1615830427
 SpriteRenderer:
   m_ObjectHideFlags: 0

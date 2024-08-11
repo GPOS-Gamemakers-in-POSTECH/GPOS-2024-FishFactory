@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ActionPoints : MonoBehaviour
@@ -37,6 +38,11 @@ public class ActionPoints : MonoBehaviour
             actionPoints = Mathf.Clamp(actionPoints, 0, 100);
             UpdateActionPointsUI();
         }
+
+        if(actionPoints == 0)
+        {
+            SceneManager.LoadScene("Indoor");
+        }
     }
 
     protected void sleep()
@@ -44,8 +50,7 @@ public class ActionPoints : MonoBehaviour
         actionPoints = 100;
         date++;
         // Debug.Log("Sleeped Well! All Action Points Restored.");
-        UpdateActionPointsUI();
-        UpdateDateUI();
+        SceneManager.LoadScene("SleepScene");
     }
 
     void UpdateActionPointsUI()

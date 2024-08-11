@@ -51,13 +51,13 @@ public class CameraFollow : MonoBehaviour
 
     private void SetCameraBounds()
     {
-        Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();  // 씬 내 모든 타일맵을 찾습니다
+        Tilemap[] tilemaps = FindObjectsOfType<Tilemap>();  // make a list of all tilemaps in the scene
         if (tilemaps.Length > 0)
         {
             Tilemap largestTilemap = tilemaps[0];
             Bounds largestBounds = largestTilemap.localBounds;
 
-            // 모든 타일맵을 순회하며 가장 큰 타일맵을 찾습니다
+            // find the largest tilemap and make it as a boundary of camera
             foreach (Tilemap tilemap in tilemaps)
             {
                 Bounds bounds = tilemap.localBounds;
@@ -73,11 +73,12 @@ public class CameraFollow : MonoBehaviour
             limitMinY = largestBounds.min.y;
             limitMaxY = largestBounds.max.y;
 
-            Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
+            //Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
         }
-        else
+        
+        /*else
         {
             Debug.LogWarning("No Tilemap found in the scene!");
-        }
+        }*/
     }
 }
