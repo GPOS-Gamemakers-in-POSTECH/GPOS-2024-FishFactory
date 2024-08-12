@@ -22,7 +22,7 @@ public class GrowthRateData
     public float baseGrowthRate;
     public float GrowthRateModifier(float curVar)
     {
-        return baseGrowthRate * Mathf.Min(Mathf.Max((maxVar - Mathf.Abs(curVar - avg) + minVar) / maxVar, 1), Convert.ToSingle(maxVar > Mathf.Abs(curVar - avg)));
+        return baseGrowthRate * Mathf.Min(Mathf.Min((maxVar - Mathf.Abs(curVar - avg) + minVar) / (maxVar+minVar/2), 1), Convert.ToSingle(maxVar > Mathf.Abs(curVar - avg)));
     }
 }
 [System.Serializable]
@@ -39,6 +39,16 @@ public class Fish
     public float baseGrowthRate;//base growth rate
     public float minGrowthRate;//minimum growth rate before the countdown starts ticking
     public int expirationDate;//date before fish dies
+
+    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, float curOxygen, float curDegree, float )
+    {
+        float curGrowthRate = baseGrowthRate
+            * waterOxygen.GrowthRateModifier(curOxygen)
+            * waterDegree.GrowthRateModifier(curDegree)
+
+            ;
+
+    }
 
     public void DebugPrintInfo()
     {
