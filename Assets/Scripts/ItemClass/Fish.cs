@@ -40,14 +40,17 @@ public class Fish
     public float minGrowthRate;//minimum growth rate before the countdown starts ticking
     public int expirationDate;//date before fish dies
 
-    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, float curOxygen, float curDegree, float )
+    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, int farmTier, bool efficiencyMax, float curOxygen, float curDegree, float eventModifier)
     {
-        float curGrowthRate = baseGrowthRate
-            * waterOxygen.GrowthRateModifier(curOxygen)
-            * waterDegree.GrowthRateModifier(curDegree)
+        float curGrowthRate = baseGrowthRate;
+        if (farmTier - 2 >= fishTier) curGrowthRate *= 1.4f;//if farm tier is way higher, gets a big bonus
+        //else if (farmTier - 1 >= fishTier) curGrowthRate *= 1.1f;
+        if (farmType == FishType.both && fishType != FishType.both) curGrowthRate *= 0.8f;//if outdoor fish is grown inside, gets 0.8x penalty
+        if (farmType != FishType.both && fishType != farmType) curGrowthRate *= 0.0f;//wrong placement gets a 0x modifier cause fish cant grow there
+        if (efficiencyMax) curGrowthRate *= waterOxygen.baseGrowthRate * waterDegree.baseGrowthRate;//if efficiency is max due to event(or other stuff) gets max oxygen/degree bonus
+        else curGrowthRate *= waterOxygen.GrowthRateModifier(curOxygen) * waterDegree.GrowthRateModifier(curDegree);//if its not, it is calculated
 
-            ;
-
+        return (curGrowthRate * eventModifier, curGrowthRate < minGrowthRate);
     }
 
     public void DebugPrintInfo()
