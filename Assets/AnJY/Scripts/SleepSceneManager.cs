@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SleepSceneManager : MonoBehaviour
+public class SleepSceneManager : fadeInOut
 {
     void Start()
     {
-        StartCoroutine(delayedSceneLoad());
-    }
-
-    IEnumerator delayedSceneLoad()
-    {
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Indoor");
+        StartCoroutine(delayedSceneLoad("Indoor"));
     }
 }

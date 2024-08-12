@@ -13,12 +13,12 @@ public class BedInteraction : ActionPoints
     void Update()
     {
         // calculate distance between player and arrow
-        float distance = Vector3.Distance(player.position, transform.position);
+        float distance = Vector3.Distance(player.position, transform.position);   
 
         // if close enough, sleep when press E
         if (distance <= interactionDistance && Input.GetKeyDown(interactionKey))
         {
-            sleep();
+            StartCoroutine(sleep());
         }
     }
 }

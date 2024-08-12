@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ArrowInteraction : MonoBehaviour
+public class ArrowInteraction : fadeInOut
 {
     public Transform player;
     public float interactionDistance = 1.5f;
@@ -16,8 +16,7 @@ public class ArrowInteraction : MonoBehaviour
     [SerializeField] 
     private string sceneName; // select scene to move into
 
-    public Image fadeImage;
-    private float fadeDuration = 1f;
+    public GameObject arrowPopUp;
     
     void Start()
     {
@@ -33,39 +32,20 @@ public class ArrowInteraction : MonoBehaviour
         // if close enough, change scene when press E
         if(distance <= interactionDistance )
         {
+            arrowPopUp.SetActive(true);
             //Debug.Log("Close Enough to Interact");
             if (Input.GetKeyDown(interactionKey))
             {
-                StartCoroutine(FadeAndLoadScene());
+                // save the departureMap name
+                departureMap = SceneManager.GetActiveScene().name;
+                Debug.Log("departure map is : " + departureMap);
+
+                StartCoroutine(FadeAndLoadScene(sceneName));
             }
         }
-    }
-
-    IEnumerator FadeAndLoadScene()
-    {
-        // fade out
-        yield return StartCoroutine(FadeFunction(0f));
-
-        // save the departureMap name
-        departureMap = SceneManager.GetActiveScene().name;
-        Debug.Log("departure map is : " + departureMap);
-        
-        // load the new scene
-        SceneManager.LoadScene(sceneName);
-
-
-    }
-
-    IEnumerator FadeFunction(float index) // 0 : fade out, 1 : fade in
-    {
-        float elapsedTIme = 0f;
-        Color color = fadeImage.color;
-        while (elapsedTIme < fadeDuration)
+        else
         {
-            elapsedTIme += Time.deltaTime;
-            color.a = Mathf.Lerp(index, 1f - index, elapsedTIme / fadeDuration);
-            fadeImage.color = color;
-            yield return null;
+            arrowPopUp.SetActive(false);
         }
     }
 }

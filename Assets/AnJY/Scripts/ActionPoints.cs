@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class ActionPoints : MonoBehaviour
+public class ActionPoints : fadeInOut
 {
     public static int actionPoints = 100;
     public static int date = 0;
@@ -45,11 +45,12 @@ public class ActionPoints : MonoBehaviour
         }
     }
 
-    protected void sleep()
+    protected IEnumerator sleep()
     {
         actionPoints = 100;
         date++;
-        // Debug.Log("Sleeped Well! All Action Points Restored.");
+        StartCoroutine(FadeFunction(0f));
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("SleepScene");
     }
 
