@@ -21,6 +21,10 @@ public class ArrowInteraction : fadeInOut
     void Start()
     {
         // fade in
+        if (departureMap == sceneName)
+        {
+            player.position = transform.position;
+        }
         StartCoroutine(FadeFunction(1f));
     }
 
