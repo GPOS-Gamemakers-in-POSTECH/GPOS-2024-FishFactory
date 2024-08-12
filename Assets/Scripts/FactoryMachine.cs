@@ -18,82 +18,82 @@ public class FactoryMachine : MonoBehaviour
         switch (Tier)
         {
             case 2:
-                if willMakeFreezer() {
+                if (willMakeFreezer()) {
                     Freezer = 1; // Naengdong-gi
                 }
-                if willMakePackagingMachine() {
+                if (willMakePackagingMachine()) {
                     PackagingMachine = 1; // Pojang-gi
                 }
-                if willMakeDryer() {
+                if (willMakeDryer()) {
                     Dryer = 1; // Geonjogi
                 }
                 break;
             case 3:
-                if willMakeFreezer() {
+                if (willMakeFreezer()) {
                     Freezer = 1; // Naengdong-gi
                 }
-                if willMakePackagingMachine() {
+                if (willMakePackagingMachine()) {
                     PackagingMachine = 1; // Pojang-gi
                 }
-                if willMakeDryer() {
+                if (willMakeDryer()) {
                     Dryer = 1; // Geonjogi
                 }
-                if willMakeBoneBreaker() {
+                if (willMakeBoneBreaker()) {
                     BoneBreaker = 1; // Balgolgi
                 }
-                if willMakeSaltedFishCharger() {
+                if (willMakeSaltedFishCharger()) {
                     SaltedFishCharger = 1; // JeotgalChungjun-gi
                 }
                 break;
             case 4:
-                if willMakeFreezer() {
+                if (willMakeFreezer()) {
                     Freezer = 1; // Naengdong-gi
                 }
-                if willMakePackagingMachine() {
+                if (willMakePackagingMachine()) {
                     PackagingMachine = 1; // Pojang-gi
                 }
-                if willMakeDryer() {
+                if (willMakeDryer()) {
                     Dryer = 1; // Geonjogi
                 }
-                if willMakeBoneBreaker() {
+                if (willMakeBoneBreaker()) {
                     BoneBreaker = 1; // Balgolgi
                 }
-                if willMakeSaltedFishCharger() {
+                if (willMakeSaltedFishCharger()) {
                     SaltedFishCharger = 1; // JeotgalChungjun-gi
                 }
-                if willMakeStarchSynthesizer() {
+                if (willMakeStarchSynthesizer()) {
                     StarchSynthesizer = 1; // JeonbunHapseong-gi
                 }
-                if willMakeFryer() {
+                if (willMakeFryer()) {
                     Fryer = 1; // Tuigimgi
                 }
                 break;
             case 5:
-                if willMakeFreezer() {
+                if (willMakeFreezer()) {
                     Freezer = 1; // Naengdong-gi
                 }
-                if willMakePackagingMachine() {
+                if (willMakePackagingMachine()) {
                     PackagingMachine = 1; // Pojang-gi
                 }
-                if willMakeDryer() {
+                if (willMakeDryer()) {
                     Dryer = 1; // Geonjogi
                 }
-                if willMakeBoneBreaker() {
+                if (willMakeBoneBreaker()) {
                     BoneBreaker = 1; // Balgolgi
                 }
-                if willMakeSaltedFishCharger() {
+                if (willMakeSaltedFishCharger()) {
                     SaltedFishCharger = 1; // JeotgalChungjun-gi
                 }
-                if willMakeStarchSynthesizer() {
+                if (willMakeStarchSynthesizer()) {
                     StarchSynthesizer = 1; // JeonbunHapseong-gi
                 }
-                if willMakeFryer() {
+                if (willMakeFryer()) {
                     Fryer = 1; // Tuigimgi
                 }
-                if willMakeCanCharger() {
+                if (willMakeCanCharger()) {
                     CanCharger = 1; // TongjorimChungjeon-gi
                 }
-                if willMakeCanMaker() {
+                if (willMakeCanMaker()) {
                     CanMaker = 1; // TongjorimJejak-gi
                 }
                 break;
@@ -105,12 +105,25 @@ public class FactoryMachine : MonoBehaviour
         var GeneralSale = 1; // General sale mean
         var Freezing, Drying, SaltedFish, FishCake, Can: bool
 
-        if Freezer == 1 && PackagingMachine == 1: Freezing = 1; // Naengdong active
-        if Dryer == 1 && PackagingMachine == 1: Drying = 1; // Geonjo active
-        if BoneBreaker == 1 && SaltedFishCharger == 1 && PackagingMachine == 1: SaltedFish = 1; // Jeotgal active
-        if BoneBreaker == 1 && StarchSynthesizer == 1 && Fryer == 1 && PackagingMachine == 1: FishCake = 1; // Eomuk active
-        if BoneBreaker == 1 && CanCharger == 1 && CanMaker == 1 && PackagingMachine == 1: Can = 1;
+        public void Process(bool Freezer, bool PackagingMachine, bool Dryer, bool BoneBreaker, bool SaltedFishCharger, bool StarchSynthesizer, bool Fryer, bool CanCharger, bool CanMaker)
+        {
+            if (Freezer == 1 && PackagingMachine == 1)
+            {
+                Freezing = 1; // Naengdong active
+            }
+            if (Dryer == 1 && PackagingMachine == 1) {
+                Drying = 1; // Geonjo active
+            }
+            if (BoneBreaker == 1 && SaltedFishCharger == 1 && PackagingMachine == 1) {
+                SaltedFish = 1; // Jeotgal active
+            }
+            if (BoneBreaker == 1 && StarchSynthesizer == 1 && Fryer == 1 && PackagingMachine == 1) {
+                FishCake = 1; // Eomuk active
+            }
+            if (BoneBreaker == 1 && CanCharger == 1 && CanMaker == 1 && PackagingMachine == 1)
+            {
+                Can = 1;
+            }
+        }   
     }
-        
-
 }
