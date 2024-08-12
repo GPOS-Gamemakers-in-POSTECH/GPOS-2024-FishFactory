@@ -12292,11 +12292,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1229667807}
+  ActionPointsText: {fileID: 0}
+  DateText: {fileID: 0}
   player: {fileID: 1918211202}
   interactionDistance: 1.5
   interactionKey: 101
+  isBed: 0
   sceneName: MinMul
-  arrowPopUp: {fileID: 1986634544}
+  interactionPopUp: {fileID: 1986634544}
 --- !u!212 &1532380301
 SpriteRenderer:
   m_ObjectHideFlags: 0

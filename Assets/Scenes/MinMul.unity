@@ -1766,11 +1766,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
+  ActionPointsText: {fileID: 0}
+  DateText: {fileID: 0}
   player: {fileID: 199419088}
   interactionDistance: 1.5
   interactionKey: 101
+  isBed: 0
   sceneName: Ocean
-  arrowPopUp: {fileID: 1739030281}
+  interactionPopUp: {fileID: 1739030281}
 --- !u!1 &1560654477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7583,11 +7586,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
+  ActionPointsText: {fileID: 0}
+  DateText: {fileID: 0}
   player: {fileID: 199419088}
   interactionDistance: 1.5
   interactionKey: 101
+  isBed: 0
   sceneName: Indoor
-  arrowPopUp: {fileID: 456421051}
+  interactionPopUp: {fileID: 456421051}
 --- !u!212 &1618569951
 SpriteRenderer:
   m_ObjectHideFlags: 0

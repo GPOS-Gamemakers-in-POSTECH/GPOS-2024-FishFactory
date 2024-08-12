@@ -1,3 +1,5 @@
+// script for control camera
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,8 +20,6 @@ public class CameraFollow : MonoBehaviour
     {
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
         cameraHalfHeight = Camera.main.orthographicSize;
-
-        //DontDestroyOnLoad(gameObject);
 
         SetCameraBounds();  // 초기 경계 설정
     }

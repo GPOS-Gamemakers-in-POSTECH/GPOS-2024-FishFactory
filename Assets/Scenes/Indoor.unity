@@ -735,7 +735,7 @@ MonoBehaviour:
   interactionKey: 101
   isBed: 1
   sceneName: Indoor
-  arrowPopUp: {fileID: 931554653}
+  interactionPopUp: {fileID: 931554653}
 --- !u!1 &835172396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7196,7 +7196,7 @@ MonoBehaviour:
   interactionKey: 101
   isBed: 0
   sceneName: MinMul
-  arrowPopUp: {fileID: 1153955495}
+  interactionPopUp: {fileID: 1153955495}
 --- !u!212 &1615830427
 SpriteRenderer:
   m_ObjectHideFlags: 0

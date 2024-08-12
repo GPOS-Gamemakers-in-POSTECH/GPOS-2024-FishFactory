@@ -1,3 +1,5 @@
+// script for control AP system
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +8,27 @@ using TMPro;
 
 public class ActionPoints : fadeInOut
 {
+    // how many days in one season
+    private int daysinOneSeason = 5;
+    // amount of max AP
+    private int maxActionPoints = 100;
+
+    // initialize UI values
     public static int actionPoints = 100;
     public static int date = 0;
-    private int daysinOneSeason = 5;
 
+    // UI texts
     public TextMeshProUGUI ActionPointsText;
     public TextMeshProUGUI DateText;
 
+    // update UI when starting the scene
     void Start()
     {
         UpdateActionPointsUI();
         UpdateDateUI();
     }
 
+    // update AP when event using AP occurs
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -28,43 +38,54 @@ public class ActionPoints : fadeInOut
             ReduceActionPoints(20);
     }
 
+    // function to update AP
     void ReduceActionPoints(int amount)
     {
+        // if require more than remaining AP, action is not happens
         if (actionPoints < amount)
             Debug.Log("Running out of Action Points!");
+
+        // if AP is enough, reduce AP and update UI
         else
         {
-            actionPoints -= amount;
-            actionPoints = Mathf.Clamp(actionPoints, 0, 100);
+            actionPoints -= amount;            
             UpdateActionPointsUI();
+
+            // if AP becomes zero, move to scene where bed is located
             if (actionPoints == 0)
             {
                 SceneManager.LoadScene("Indoor");
             }
         }
-
-
     }
 
+    // coroutine to do sleep
     protected IEnumerator sleep()
     {
-        actionPoints = 100;
+        // fill the AP to max and add date
+        actionPoints = maxActionPoints;
         date++;
+
+        // fade out and move to SleepScene
         StartCoroutine(FadeFunction(0f));
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("SleepScene");
     }
 
+    // function to update AP UI
     void UpdateActionPointsUI()
     {
+        // express AP as "amount / max amount"
         if (ActionPointsText != null)
         {
-            ActionPointsText.text = actionPoints.ToString() + " / 100";
+            ActionPointsText.text = actionPoints.ToString() + " / " + maxActionPoints.ToString();
         }
     }
 
+    // function to update Date UI
     void UpdateDateUI()
     {
+        // express Date as "season - day"
         if (DateText != null)
         {
             switch(date / daysinOneSeason)
