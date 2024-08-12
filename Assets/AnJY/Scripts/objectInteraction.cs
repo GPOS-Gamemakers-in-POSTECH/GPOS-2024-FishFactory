@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ArrowInteraction : fadeInOut
+public class objectInteraction : ActionPoints
 {
     public Transform player;
     public float interactionDistance = 1.5f;
     public KeyCode interactionKey = KeyCode.E;
-    
+
+    public int isBed;
+
+
     // save the name of departureMap to choose the correct position of player
     public static string departureMap;
 
@@ -42,9 +45,16 @@ public class ArrowInteraction : fadeInOut
             {
                 // save the departureMap name
                 departureMap = SceneManager.GetActiveScene().name;
-                Debug.Log("departure map is : " + departureMap);
+                //Debug.Log("departure map is : " + departureMap);
 
-                StartCoroutine(FadeAndLoadScene(sceneName));
+                if (isBed == 0)
+                {
+                    StartCoroutine(FadeAndLoadScene(sceneName));
+                }
+                else
+                {
+                    StartCoroutine(sleep());
+                }
             }
         }
         else

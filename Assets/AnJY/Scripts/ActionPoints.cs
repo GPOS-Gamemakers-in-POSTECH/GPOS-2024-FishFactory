@@ -37,12 +37,13 @@ public class ActionPoints : fadeInOut
             actionPoints -= amount;
             actionPoints = Mathf.Clamp(actionPoints, 0, 100);
             UpdateActionPointsUI();
+            if (actionPoints == 0)
+            {
+                SceneManager.LoadScene("Indoor");
+            }
         }
 
-        if(actionPoints == 0)
-        {
-            SceneManager.LoadScene("Indoor");
-        }
+
     }
 
     protected IEnumerator sleep()
