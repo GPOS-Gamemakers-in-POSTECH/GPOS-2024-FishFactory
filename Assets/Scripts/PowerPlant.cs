@@ -1,123 +1,42 @@
-public class SampleScript : MonoBehaviour
+using System;
+using UnityEngine;
+
+// Abstract Class for Power Plants
+abstract class PowerPlant
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public bool isSolved; // Check if Power Plant is solved
+    public int power; // Power Value of Power Plant
 
-    }
+    public abstract void ShowPowerPlantInfo(); // Show the information of Each Power Plant
+    public abstract void GeneratePower(); // Add Power Value
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if PlayerdoCheckPowerPlantInfo == 1 {
-            ShowPowerPlantInfo()
-        }
-    }
+// Fire Power Plant
+class FirePowerPlant : PowerPlant
+{
+    public bool isSolved = false;
+    public int power = 0;
 
-    func ShowPowerPlantInfo() // check thermal, wind, tidal power plant
-    {
-        ThermalPowerPlant;
-        WindPowerPlant;
-        TidalPowerPlant;
-    }
+    public override void ShowPowerPlantInfo() { Debug.Log("Fire Power Plant"); }
+    public override void GeneratePower() { power += 10; }
+}
 
-    // Thermal power plant
-    class ThermalPowerPlant
-    {
-        private var isOpening: bool // check if thermal power plant is open
-        private var Power: int
-        private func willCheckPower()
-        {
-            if FishFarmGrade >= 1 {
-                isOpening = 1;
-                Power = 10; // generate basic power 10
-            }
-            else isOpening = 0; // basic fish farm grade = 1, so this is basic power plant
+// wind power plant
+class WindPowerPlant : PowerPlant
+{
+    public bool isSolved = false;
+    public int power = 0;
 
-            if isOpening == 0 {
-                StopPowerPlant();
-                Power = 0;
-            }
+    public override void ShowPowerPlantInfo() { Debug.Log("Wind Power Plant"); }
+    public override void GeneratePower() { power += 15; }
+}
 
-            if PowerPlantEvent == 1 {
-                StopPowerPlant();
-                Power = 0;
-            } // if power plant event occurs, stop power plant
+// Tidal power station
+class TidalPowerPlant : PowerPlant
+{
+    public bool isSolved = false;
+    public int power = 0;
 
-            if Machine < 5 {
-                Power = Power - 5;
-            } // if machine point is less than 5, decrease power
-
-            if FishFarm < 10 {
-                Power = Power - 5;
-            } // if fish farm point is less than 10, decrease power
-        }
-    }
-
-    // wind power plant
-    class WindPowerPlant
-    {
-        private var isOpening: bool // check if wind power plant is open
-        private var Power: int
-        private func willCheckPower()
-        {
-            if FishFarmGrade >= 2 {
-                isOpening = 1;
-                Power = 15; // generate basic power 15
-            }
-            else isOpening = 0; // need one upgrade to use wind power plant
-
-            if isOpening == 0 {
-                StopPowerPlant();
-                Power = 0;
-            }
-
-            if PowerPlantEvent == 1 {
-                StopPowerPlant();
-                Power = 0;
-            } // if power plant event occurs, stop power plant
-
-            if Machine < 5 {
-                Power = Power - 5;
-            } // if machine point is less than 5, decrease power
-
-            if FishFarm < 10 {
-                Power = Power - 5;
-            } // if fish farm point is less than 10, decrease power
-        }
-    }
-
-    // Tidal power station
-    class TidalPowerPlant
-    {
-        private var isOpening: bool // check if tidal power plant is open
-        private var Power: int
-        private func willCheckPower()
-        {
-            if FishFarmGrade >= 3 {
-                isOpening = 1;
-                Power = 30; // generate basic power 30
-            }
-            else isOpening = 0; // need two upgrade to use tidal power plant
-
-            if isOpening == 0 {
-                StopPowerPlant();
-                Power = 0;
-            }
-
-            if PowerPlantEvent == 1 {
-                StopPowerPlant();
-                Power = 0;
-            } // if power plant event occurs, stop power plant
-
-            if Machine < 5 {
-                Power = Power - 5;
-            } // if machine point is less than 5, decrease power
-
-            if FishFarm < 10 {
-                Power = Power - 5;
-            } // if fish farm point is less than 10, decrease power
-        }
-    }
-
+    public override void ShowPowerPlantInfo() { Debug.Log("Tidal Power Plant"); }
+    public override void GeneratePower() { power += 30; }
 }
