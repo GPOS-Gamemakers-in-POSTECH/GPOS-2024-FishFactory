@@ -32,22 +32,24 @@ public class Fish
     public int fishTier;//1~3 for freshwater, 1~5 for ocean
     public FishType fishType;//river/ocean/indoor as 0/1/2
     public bool isUnlocked;//Is unlocked by player?
-    public GrowthRateData waterOxygen;
-    public GrowthRateData waterDegree;
+    //public GrowthRateData waterOxygen;
+    //public GrowthRateData waterDegree;
+    public int oxygenTier;
+    public int degreeTier;
     public Vector2 growthTime;//hatchTime/grownTime
 
     public float baseGrowthRate;//base growth rate
-    public float minGrowthRate;//minimum growth rate before the countdown starts ticking
+    //public float minGrowthRate;//minimum growth rate before the countdown starts ticking
     public int expirationDate;//date before fish dies
 
-    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, float curOxygen, float curDegree, float )
+    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, int curOxygen, int curDegree, float eventModifier)
     {
-        float curGrowthRate = baseGrowthRate
-            * waterOxygen.GrowthRateModifier(curOxygen)
-            * waterDegree.GrowthRateModifier(curDegree)
-
-            ;
-
+        float curGrowthRate=baseGrowthRate * eventModifier;
+        if (farmType != FishType.inDoor && farmType != fishType) curGrowthRate = 0;
+        if (farmType == FishType.inDoor) curGrowthRate *= 0.8f;
+        if (curOxygen < oxygenTier) curGrowthRate = 0;
+        if (curDegree < degreeTier) curGrowthRate = 0;
+        return (curGrowthRate,curGrowthRate==0);
     }
 
     public void DebugPrintInfo()
