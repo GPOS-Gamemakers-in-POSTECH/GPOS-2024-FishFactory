@@ -40,7 +40,7 @@ public class Fish
     public float minGrowthRate;//minimum growth rate before the countdown starts ticking
     public int expirationDate;//date before fish dies
 
-    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, int farmTier, bool efficiencyMax, float curOxygen, float curDegree, float eventModifier)
+    public (float curGrowthRate, bool isExpire) CalcGrowthRate(FishType farmType, int farmTier, float curOxygen, float curDegree, bool efficiencyMax = false, float eventModifier=1.0f, bool savingThrow=false)
     {
         float curGrowthRate = baseGrowthRate;
         if (farmTier - 2 >= fishTier) curGrowthRate *= 1.4f;//if farm tier is way higher, gets a big bonus
@@ -50,7 +50,7 @@ public class Fish
         if (efficiencyMax) curGrowthRate *= waterOxygen.baseGrowthRate * waterDegree.baseGrowthRate;//if efficiency is max due to event(or other stuff) gets max oxygen/degree bonus
         else curGrowthRate *= waterOxygen.GrowthRateModifier(curOxygen) * waterDegree.GrowthRateModifier(curDegree);//if its not, it is calculated
 
-        return (curGrowthRate * eventModifier, curGrowthRate < minGrowthRate);
+        return (curGrowthRate * eventModifier, curGrowthRate < minGrowthRate&&!savingThrow);
     }
 
     public void DebugPrintInfo()
