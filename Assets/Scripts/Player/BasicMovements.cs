@@ -12,6 +12,9 @@ public class BasicMovements : MonoBehaviour
     // set moving speed
     float movingspeed = 3.0f;
 
+    // walking sound
+    public AudioSource walkingAudio;
+
     void Update()
     {
         // get each inputs
@@ -41,6 +44,25 @@ public class BasicMovements : MonoBehaviour
         // make player move (vertical)
         Vector3 verticalMovement = new Vector3(0.0f, verticalInput, 0.0f);
         transform.position += movingspeed * verticalMovement * Time.deltaTime;
+
+        // Check if player is moving
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            // Play walking sound if it's not already playing
+            if (!walkingAudio.isPlaying)
+            {
+                walkingAudio.loop = true; // Ensure it loops
+                walkingAudio.Play();
+            }
+        }
+        else
+        {
+            // Stop walking sound if player stops moving
+            if (walkingAudio.isPlaying)
+            {
+                walkingAudio.Stop();
+            }
+        }
 
     }
 }
