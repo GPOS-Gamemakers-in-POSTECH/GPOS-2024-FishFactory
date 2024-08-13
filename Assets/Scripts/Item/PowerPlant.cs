@@ -1,42 +1,22 @@
-using System;
 using UnityEngine;
 
 // Abstract Class for Power Plants
-abstract class PowerPlant
+public class PowerPlant
 {
+    public int plantType; // Type of Power Plant
+    public string plantName; // Name of Power Plant
     public bool isSolved; // Check if Power Plant is solved
     public int power; // Power Value of Power Plant
 
-    public abstract void ShowPowerPlantInfo(); // Show the information of Each Power Plant
-    public abstract void GeneratePower(); // Add Power Value
-}
+    public PowerPlant(int plantType, string plantName, bool isSolved, int power)
+    {
+        this.plantType = plantType;
+        this.plantName = plantName;
+        this.isSolved = isSolved;
+        this.power = power;
+    }
 
-// Fire Power Plant
-class FirePowerPlant : PowerPlant
-{
-    public bool isSolved = false;
-    public int power = 0;
-
-    public override void ShowPowerPlantInfo() { Debug.Log("Fire Power Plant"); }
-    public override void GeneratePower() { power += 10; }
-}
-
-// wind power plant
-class WindPowerPlant : PowerPlant
-{
-    public bool isSolved = false;
-    public int power = 0;
-
-    public override void ShowPowerPlantInfo() { Debug.Log("Wind Power Plant"); }
-    public override void GeneratePower() { power += 15; }
-}
-
-// Tidal power station
-class TidalPowerPlant : PowerPlant
-{
-    public bool isSolved = false;
-    public int power = 0;
-
-    public override void ShowPowerPlantInfo() { Debug.Log("Tidal Power Plant"); }
-    public override void GeneratePower() { power += 30; }
+    public void ShowPowerPlantInfo() { Debug.Log("Power Plant"); } // Show the information of Each Power Plant
+    public void GeneratePower(int increasePower) { power += increasePower; } // Increase Power Value
+    public void DecreasePower(int decreasePower) { power -= decreasePower; } // Decrease Power Value
 }
