@@ -19,6 +19,9 @@ public class ActionPoints : fadeInOut
     public static int actionPoints = 100;
     public static int date = 0;
 
+    // check if interaction is occuring
+    protected static int isDoingInteract = 0;
+
     // coroutine to do sleep
     protected IEnumerator sleep()
     {

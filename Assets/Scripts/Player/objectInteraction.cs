@@ -40,6 +40,8 @@ public class objectInteraction : ActionPoints
         }
         // fade in when scene is started
         StartCoroutine(FadeFunction(1f));
+
+        isDoingInteract = 0;
     }
 
     void Update()
@@ -53,9 +55,11 @@ public class objectInteraction : ActionPoints
             // activate popup
             interactionPopUp.SetActive(true);
             
-            // when interactionkey pressed,
-            if (Input.GetKeyDown(interactionKey))
+            // when interactionkey pressed, and interaction is not processing
+            if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0 )
             {
+                isDoingInteract = 1;
+                
                 // save the departureMap name
                 departureMap = SceneManager.GetActiveScene().name;                
 
