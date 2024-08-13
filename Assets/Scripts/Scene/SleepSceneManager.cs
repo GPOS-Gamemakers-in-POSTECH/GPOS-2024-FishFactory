@@ -8,9 +8,11 @@ using UnityEngine.UI;
 
 public class SleepSceneManager : fadeInOut
 {
+    public AudioSource wakeupAudio;
+
     void Start()
     {
         // load indoor scene after waiting 1 second
-        StartCoroutine(delayedSceneLoad("Indoor"));
+        StartCoroutine(delayedSceneLoad("Indoor", wakeupAudio));
     }
 }
