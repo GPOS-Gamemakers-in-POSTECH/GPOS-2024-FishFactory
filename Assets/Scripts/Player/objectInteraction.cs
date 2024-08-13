@@ -27,15 +27,21 @@ public class objectInteraction : ActionPoints
 
     // popup to let player know when close enough to interact
     public GameObject interactionPopUp;
+
+    // sound effect of transition
+    public AudioSource transitionAudio;
     
     void Start()
     {
-        // fade in when scene is started
+        // set players position to right arrow that is connected to departured map
         if (departureMap == sceneName)
         {
             player.position = transform.position;
         }
+        // fade in when scene is started
         StartCoroutine(FadeFunction(1f));
+
+        isDoingInteract = 0;
     }
 
     void Update()
@@ -49,16 +55,18 @@ public class objectInteraction : ActionPoints
             // activate popup
             interactionPopUp.SetActive(true);
             
-            // when interactionkey pressed,
-            if (Input.GetKeyDown(interactionKey))
+            // when interactionkey pressed, and interaction is not processing
+            if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0 )
             {
+                isDoingInteract = 1;
+                
                 // save the departureMap name
                 departureMap = SceneManager.GetActiveScene().name;                
 
                 // if object is arrow, fade and move to connected scene
                 if (isBed == 0)
                 {
-                    StartCoroutine(FadeAndLoadScene(sceneName));
+                    StartCoroutine(FadeAndLoadScene(sceneName, transitionAudio));
                 }
 
                 // if object is bed, move to sleep scene
