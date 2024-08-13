@@ -33,8 +33,14 @@ public class fadeInOut : MonoBehaviour
     }
 
     // function to fade out current scene and load new scene with name sceneName
-    protected IEnumerator FadeAndLoadScene(string sceneName)
+    protected IEnumerator FadeAndLoadScene(string sceneName, AudioSource transitionAudio)
     {
+        // play audio
+        if (transitionAudio != null)
+        {
+            transitionAudio.Play();            
+        }
+
         // fade out
         yield return StartCoroutine(FadeFunction(0f));
 
@@ -43,10 +49,18 @@ public class fadeInOut : MonoBehaviour
     }
 
     // function to fade in and delay, and load current scene
-    protected IEnumerator delayedSceneLoad(string sceneName)
+    protected IEnumerator delayedSceneLoad(string sceneName, AudioSource transitionAudio)
     {
         StartCoroutine(FadeFunction(1f));
         yield return new WaitForSeconds(1);
+
+        // play audio
+        if (transitionAudio != null)
+        {
+            transitionAudio.Play();
+            yield return new WaitForSeconds(transitionAudio.clip.length);
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 
