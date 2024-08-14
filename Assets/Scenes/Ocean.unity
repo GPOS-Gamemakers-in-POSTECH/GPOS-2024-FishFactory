@@ -9917,8 +9917,8 @@ MonoBehaviour:
   player: {fileID: 1918211202}
   interactionDistance: 1.5
   interactionKey: 101
-  isBed: 0
-  sceneName: Mine
+  objectKind: 2
+  sceneName: Ocean
   interactionPopUp: {fileID: 1986000197}
   transitionAudio: {fileID: 1741403158}
 --- !u!212 &304134065
@@ -14306,7 +14306,7 @@ MonoBehaviour:
   player: {fileID: 1918211202}
   interactionDistance: 1.5
   interactionKey: 101
-  isBed: 0
+  objectKind: 0
   sceneName: MinMul
   interactionPopUp: {fileID: 1986634544}
   transitionAudio: {fileID: 389576404}
@@ -15048,7 +15048,7 @@ MonoBehaviour:
   player: {fileID: 1918211202}
   interactionDistance: 1.5
   interactionKey: 101
-  isBed: 0
+  objectKind: 0
   sceneName: Factory
   interactionPopUp: {fileID: 369674107}
   transitionAudio: {fileID: 1896706861}

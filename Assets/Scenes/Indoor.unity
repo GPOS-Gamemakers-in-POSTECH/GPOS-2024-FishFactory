@@ -3545,7 +3545,7 @@ MonoBehaviour:
   player: {fileID: 56507598}
   interactionDistance: 1.5
   interactionKey: 101
-  isBed: 1
+  objectKind: 1
   sceneName: Indoor
   interactionPopUp: {fileID: 931554653}
   transitionAudio: {fileID: 0}
@@ -12777,7 +12777,7 @@ MonoBehaviour:
   player: {fileID: 56507598}
   interactionDistance: 1.5
   interactionKey: 101
-  isBed: 0
+  objectKind: 0
   sceneName: MinMul
   interactionPopUp: {fileID: 1153955495}
   transitionAudio: {fileID: 867906484}

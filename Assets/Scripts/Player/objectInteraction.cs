@@ -16,8 +16,8 @@ public class objectInteraction : ActionPoints
     // key to do interact
     public KeyCode interactionKey = KeyCode.E;
 
-    // value - 0 : object is arrow, 1 : object is bed
-    public int isBed;
+    // value - 0 : arrow, 1 : bed, 2 : mine
+    public int objectKind;
 
     // save the name of departureMap to choose the correct position of player
     public static string departureMap;
@@ -64,15 +64,20 @@ public class objectInteraction : ActionPoints
                 departureMap = SceneManager.GetActiveScene().name;                
 
                 // if object is arrow, fade and move to connected scene
-                if (isBed == 0)
+                if (objectKind == 0)
                 {
                     StartCoroutine(FadeAndLoadScene(sceneName, transitionAudio));
                 }
 
                 // if object is bed, move to sleep scene
-                else
+                else if (objectKind == 1)
                 {
                     StartCoroutine(sleep());
+                }
+
+                else
+                {
+                    StartCoroutine(FadeAndLoadScene("Mine", transitionAudio));
                 }
             }
         }
