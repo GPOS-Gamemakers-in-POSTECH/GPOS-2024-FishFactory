@@ -60,6 +60,7 @@ public class CameraFollow : MonoBehaviour
             // find the largest tilemap and make it as a boundary of camera
             foreach (Tilemap tilemap in tilemaps)
             {
+                tilemap.CompressBounds();
                 Bounds bounds = tilemap.localBounds;
                 if (bounds.size.x * bounds.size.y > largestBounds.size.x * largestBounds.size.y)
                 {
@@ -73,9 +74,11 @@ public class CameraFollow : MonoBehaviour
             limitMinY = largestBounds.min.y;
             limitMaxY = largestBounds.max.y;
 
-            //Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
+            Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
+            Debug.Log("Limit Values: MinX = " + limitMinX + ", MaxX = " + limitMaxX + ", MinY = " + limitMinY + ", MaxY = " + limitMaxY);
+
         }
-        
+
         /*else
         {
             Debug.LogWarning("No Tilemap found in the scene!");
