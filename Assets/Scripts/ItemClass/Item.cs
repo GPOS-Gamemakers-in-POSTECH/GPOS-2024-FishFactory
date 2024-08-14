@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class Item : MonoBehaviour
+[Serializable]
+public class Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int itemID;
+    public string itemName;
+    public bool sellAble;
+    public int sellPrice;
+    public bool buyAble;
+    public int buyPrice;
 }
