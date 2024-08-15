@@ -68,6 +68,8 @@ public class popupUIinteraction : ActionPoints
         {
             soundEffect.Play();
             yield return new WaitForSeconds(soundEffect.clip.length);
+            soundEffect.Play();
+            yield return new WaitForSeconds(soundEffect.clip.length);
         }
 
         popupUI.SetActive(false);
