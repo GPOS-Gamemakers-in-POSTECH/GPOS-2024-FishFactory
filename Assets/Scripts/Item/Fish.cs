@@ -12,3 +12,9 @@ public class Fish
     public int sellPrice;
     public int buyPrice;
 }
+
+[Serializable]
+public class FishData
+{
+    public Fish[] fishes;
+}
