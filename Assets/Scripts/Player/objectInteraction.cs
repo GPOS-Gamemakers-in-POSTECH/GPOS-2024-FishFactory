@@ -1,4 +1,4 @@
-// script for implement interaction to objects
+// script for implement interaction that moves to another scene
 
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ public class objectInteraction : ActionPoints
     // key to do interact
     public KeyCode interactionKey = KeyCode.E;
 
-    // value - 0 : arrow, 1 : bed, 2 : mine
+    // value - 0 : arrow that moves to new scene, 1 : bed, 2 : arrow that pops up UI
     public int objectKind;
 
     // save the name of departureMap to choose the correct position of player
