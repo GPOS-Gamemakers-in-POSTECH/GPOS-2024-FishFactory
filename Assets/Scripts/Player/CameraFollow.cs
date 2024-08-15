@@ -74,8 +74,8 @@ public class CameraFollow : MonoBehaviour
             limitMinY = largestBounds.min.y;
             limitMaxY = largestBounds.max.y;
 
-            Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
-            Debug.Log("Limit Values: MinX = " + limitMinX + ", MaxX = " + limitMaxX + ", MinY = " + limitMinY + ", MaxY = " + limitMaxY);
+            //Debug.Log("Largest Tilemap found: " + largestTilemap.name + " with size: " + largestBounds.size);
+            //Debug.Log("Limit Values: MinX = " + limitMinX + ", MaxX = " + limitMaxX + ", MinY = " + limitMinY + ", MaxY = " + limitMaxY);
 
         }
 

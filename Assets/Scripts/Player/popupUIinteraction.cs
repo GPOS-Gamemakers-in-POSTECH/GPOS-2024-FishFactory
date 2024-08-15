@@ -24,7 +24,7 @@ public class popupUIinteraction : ActionPoints
     // value - 0 : mining, 1 - selling
     public int objectKind;
 
-    public AudioSource miningAudio;
+    public AudioSource soundEffect;
 
     // Update is called once per frame
     void Update()
@@ -64,12 +64,10 @@ public class popupUIinteraction : ActionPoints
     IEnumerator mining()
     {
         popupUI.SetActive(true);
-        if (miningAudio != null)
+        if (soundEffect != null)
         {
-            miningAudio.Play();
-            yield return new WaitForSeconds(miningAudio.clip.length);
-            miningAudio.Play();
-            yield return new WaitForSeconds(miningAudio.clip.length);
+            soundEffect.Play();
+            yield return new WaitForSeconds(soundEffect.clip.length);
         }
 
         popupUI.SetActive(false);
