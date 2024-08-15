@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class JsonManager : MonoBehaviour
 {
-    // Load Fish Data
-    public void LoadFishJson(Dictionary<int, Fish> fishDict)
+    // Load Item Data
+    public void LoadJson(Dictionary<int, Item> itemDict)
     {
-        TextAsset textAsset = Resources.Load<TextAsset>("Json/Fish");
-        FishData fishData = JsonUtility.FromJson<FishData>(textAsset.text);
-        foreach (Fish fish in fishData.fishes) { fishDict.Add(fish.itemID, fish); }
-        return;
-    }
-
-    // Load Recipe Data
-    public void LoadRecipeJson(Dictionary<int, Recipe> recipes)
-    {
-        TextAsset textAsset = Resources.Load<TextAsset>("Json/Recipe");
+        TextAsset textAsset = Resources.Load<TextAsset>("Json/Item");
+        ItemData itemData = JsonUtility.FromJson<ItemData>(textAsset.text);
+        foreach (Item item in itemData.fishes) { itemDict.Add(item.itemID, item); }
         return;
     }
 }
