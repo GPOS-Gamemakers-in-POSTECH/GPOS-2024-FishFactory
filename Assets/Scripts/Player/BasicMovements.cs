@@ -1,8 +1,10 @@
 // script to control player movement
+//https://jjong-ga.tistory.com/101
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class BasicMovements : ActionPoints
 {
@@ -14,6 +16,17 @@ public class BasicMovements : ActionPoints
 
     // walking sound
     public AudioSource walkingAudio;
+
+    // Tilemap and its bounds to make player move in ground map
+    public Tilemap groundTile;
+    private Bounds groundBounds;
+
+    void Start()
+    {
+        // calculate the boundary of ground tilemap
+        groundTile.CompressBounds();
+        groundBounds = groundTile.localBounds;
+    }
 
     void Update()
     {
@@ -40,13 +53,20 @@ public class BasicMovements : ActionPoints
                 animator.SetFloat("Vertical", 0);
             }
 
-            // make player move (horizontal)
+            // add horizontal movement
             Vector3 horizontalMovement = new Vector3(horizontalInput, 0.0f, 0.0f);
-            transform.position += movingspeed * horizontalMovement * Time.deltaTime;
+            Vector3 targetPosition = transform.position + movingspeed * horizontalMovement * Time.deltaTime;
 
-            // make player move (vertical)
+            // add vertical movement
             Vector3 verticalMovement = new Vector3(0.0f, verticalInput, 0.0f);
-            transform.position += movingspeed * verticalMovement * Time.deltaTime;
+            targetPosition += movingspeed * verticalMovement * Time.deltaTime;
+
+            // Clamp the player's position to stay within the tilemap bounds
+            targetPosition.x = Mathf.Clamp(targetPosition.x, groundBounds.min.x, groundBounds.max.x);
+            targetPosition.y = Mathf.Clamp(targetPosition.y, groundBounds.min.y, groundBounds.max.y);
+
+            // Apply the clamped position
+            transform.position = targetPosition;
 
             // Check if player is moving
             if (horizontalInput != 0 || verticalInput != 0)
