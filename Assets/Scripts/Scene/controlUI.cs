@@ -21,12 +21,14 @@ public class controlUI : ActionPoints
     public Sprite fallImage;
     public Sprite winterImage;
 
+    public RectTransform APmaskTransform;
+
 
     // update UI when starting the scene
     void Start()
     {
         UpdateActionPointsUI();
-        UpdateDateUI();
+        UpdateDateUI();        
     }
 
     void Update()
@@ -36,6 +38,13 @@ public class controlUI : ActionPoints
 
         if (Input.GetKeyDown(KeyCode.T))
             ReduceActionPoints(20);
+
+        Vector2 mousePosition = Input.mousePosition;
+
+        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, Camera.main))
+        {
+            Debug.Log("Mouse is over the UI element.");
+        }        
     }
 
     // function to update AP
