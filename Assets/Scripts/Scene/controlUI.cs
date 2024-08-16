@@ -52,9 +52,9 @@ public class controlUI : ActionPoints
             UpdateActionPointsUI();
 
             // if AP becomes zero, move to scene where bed is located
-            if (actionPoints == 0)
+            if (actionPoints == 0 && SceneManager.GetActiveScene().name != "MinMul")
             {
-                SceneManager.LoadScene("Indoor");
+                SceneManager.LoadScene("MinMul");
             }
         }
     }
