@@ -123,7 +123,7 @@ public class fishTankManager : ActionPoints
         edge.gameObject.SetActive(true);
         yield return new WaitForSeconds(installSound.clip.length / 2);
         isTankInstalled = 1;
-        searchTankInstallation()[tankNumber] = 1;
+        searchTankInstallation()[tankNumber] = 1;   
         isDoingInteract = 0;
     }
 
