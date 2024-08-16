@@ -5,15 +5,19 @@ using UnityEngine;
 public class TestSceneScript : MonoBehaviour
 {
     JsonManager jsonManager;
-    Dictionary<int, Fish> fishDict;
+    Dictionary<int, Item>[] itemDict;
 
     // Start is called before the first frame update
     void Start()
     {
-        fishDict = new Dictionary<int, Fish>();
-        jsonManager=FindObjectOfType<JsonManager>();
-        jsonManager.LoadFishJson(fishDict);
+        itemDict = new Dictionary<int, Item>[3];
+        itemDict[0] = new Dictionary<int, Item>();
+        itemDict[1] = new Dictionary<int, Item>();
+        itemDict[2] = new Dictionary<int, Item>();
 
-        Debug.Log(fishDict[10100].fishName);
+        jsonManager =FindObjectOfType<JsonManager>();
+        jsonManager.LoadJson(itemDict);
+
+        Debug.Log(itemDict[0][10100].itemName);
     }
 }
