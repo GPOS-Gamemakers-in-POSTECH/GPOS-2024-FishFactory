@@ -12,7 +12,7 @@ public class BasicMovements : ActionPoints
     public Animator animator;
 
     // set moving speed
-    float movingspeed = 3.0f;
+    float movingspeed = 5.0f;
 
     // walking sound
     public AudioSource walkingAudio;
