@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections. Generic;
 using UnityEngine;
-using NurseryParts;
 
 public class FishNursery
 {
     // NurseryTier: 양식장의 등급
-    private int NurseryTier;
-    private int MaxTier;
+    public int NurseryTier;
+    public int MaxTier;
 
     
-    public bool IsNurseryAvailable { get; set; }// IsNurseryAvailable: 양식장이 사용 가능한지 여부
+    public bool IsNurseryAvailable { get; set; } // IsNurseryAvailable: 양식장이 사용 가능한지 여부
     public List<NurseryParts> PartsList { get; set; }// PartsList: 장착된 부품 목록
     public double Temperature { get; set; }// Temperature: 수온
     public double OxygenRate { get; set; } // OxygenRate: 용존 산소량
@@ -71,7 +70,7 @@ public class FishNursery
     }
 
     // 필수 부품 확인
-    public void CheckNecessaryParts()
+    public bool CheckNecessaryParts()
     {
         bool hasOxygenController = false;
         bool hasTemperatureController = false;
@@ -97,6 +96,8 @@ public class FishNursery
         {
             //Debug.Log("All essential parts are available.");
         }
+
+        return false;
     }
 
     // 사료 추가
@@ -126,7 +127,7 @@ public class FishNursery
 
     void IsUpgradePossible()//티어 상승 조건 확인
     {
-        if(CheckNecessaryParts() && Nursery < MaxTier)
+        if(CheckNecessaryParts() && NurseryTier < MaxTier)
         {
             //추가부품 확인 코드
             
