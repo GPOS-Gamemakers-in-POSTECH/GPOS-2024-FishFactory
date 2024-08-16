@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class controlUI : ActionPoints
 {
     // UI texts
     public TextMeshProUGUI ActionPointsText;
     public TextMeshProUGUI DateText;
+
+    // mask for hide a AP bar
+    public Image APmask;
+
+    // sprites for various season
+    public Image seasonImage;
+    public Sprite springImage;
+    public Sprite summerImage;
+    public Sprite fallImage;
+    public Sprite winterImage;
+
 
     // update UI when starting the scene
     void Start()
@@ -54,6 +66,7 @@ public class controlUI : ActionPoints
         if (ActionPointsText != null)
         {
             ActionPointsText.text = actionPoints.ToString() + " / " + maxActionPoints.ToString();
+            APmask.fillAmount = 1 - (float)actionPoints / maxActionPoints;
         }
     }
 
@@ -65,10 +78,22 @@ public class controlUI : ActionPoints
         {
             switch (date / daysInOneSeason)
             {
-                case 0: DateText.text = "SPRING - " + ((date % daysInOneSeason) + 1).ToString(); break;
-                case 1: DateText.text = "SUMMER - " + ((date % daysInOneSeason) + 1).ToString(); break;
-                case 2: DateText.text = "FALL - " + ((date % daysInOneSeason) + 1).ToString(); break;
-                case 3: DateText.text = "WINTER - " + ((date % daysInOneSeason) + 1).ToString(); break;
+                case 0: 
+                    DateText.text = "SPRING - " + ((date % daysInOneSeason) + 1).ToString();
+                    seasonImage.sprite = springImage;
+                    break;
+                case 1: 
+                    DateText.text = "SUMMER - " + ((date % daysInOneSeason) + 1).ToString();
+                    seasonImage.sprite = summerImage;
+                    break;
+                case 2: 
+                    DateText.text = "FALL - " + ((date % daysInOneSeason) + 1).ToString();
+                    seasonImage.sprite = fallImage;
+                    break;
+                case 3:
+                    DateText.text = "WINTER - " + ((date % daysInOneSeason) + 1).ToString();
+                    seasonImage.sprite = winterImage;
+                    break;
                 default: DateText.text = "Game End!"; break;
             }
         }
