@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class ActionPoints : fadeInOut
 {
     // how many days in one season
-    protected int daysInOneSeason = 2;
+    protected int daysInOneSeason = 1;
     // amount of max AP
     protected int maxActionPoints = 100;
     // current season

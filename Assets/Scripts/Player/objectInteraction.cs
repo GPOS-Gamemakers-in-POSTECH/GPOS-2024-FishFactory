@@ -11,10 +11,10 @@ public class objectInteraction : ActionPoints
     public Transform player;
 
     // interaction become active when player is closer to object than this value
-    public float interactionDistance = 1.5f;
+    private float interactionDistance = 1f;
 
     // key to do interact
-    public KeyCode interactionKey = KeyCode.E;
+    private KeyCode interactionKey = KeyCode.E;
 
     // value - 0 : arrow that moves to new scene, 1 : bed, 2 : arrow that pops up UI
     public int objectKind;

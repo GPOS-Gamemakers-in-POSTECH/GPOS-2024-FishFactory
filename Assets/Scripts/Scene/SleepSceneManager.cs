@@ -13,6 +13,6 @@ public class SleepSceneManager : fadeInOut
     void Start()
     {
         // load indoor scene after waiting 1 second
-        StartCoroutine(delayedSceneLoad("Indoor", wakeupAudio));
+        StartCoroutine(delayedSceneLoad("MinMul", wakeupAudio));
     }
 }
