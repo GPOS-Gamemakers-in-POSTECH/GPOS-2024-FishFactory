@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class FishNursery
 {
-    // NurseryTier: 양식장의 등급
-    public int NurseryTier;
+    public int NurseryTier; // NurseryTier: 양식장의 등급
     public int MaxTier;
 
     
