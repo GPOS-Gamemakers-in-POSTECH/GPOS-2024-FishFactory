@@ -19,7 +19,11 @@ public class Item
         Debug.Log(itemID);
     }
 
-    public void GeneratePower(int increasePower) { power += increasePower; } // Increase Power Value
+    // Increase Power Value
+    public void GeneratePower(int increasePower) {
+        power += increasePower;
+    }
+
     public void DecreasePower(int decreasePower) { power -= decreasePower; } // Decrease Power Value
 }
 
