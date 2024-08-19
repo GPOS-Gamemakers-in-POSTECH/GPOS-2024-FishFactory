@@ -30,6 +30,7 @@ public class fishTankManager : ActionPoints
     // tilmaps for water, edge of fish tank
     public Tilemap water;
     public Tilemap edge;
+    public Tilemap indoorWater;
 
     // UI that shows fish information UI
     public GameObject fishInfoUI;
@@ -118,10 +119,28 @@ public class fishTankManager : ActionPoints
     IEnumerator installFishTank()
     {
         installPopUp.SetActive(false);
-        installSound.Play();
-        yield return new WaitForSeconds(installSound.clip.length/2);
-        edge.gameObject.SetActive(true);
-        yield return new WaitForSeconds(installSound.clip.length / 2);
+
+        if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
+        {
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            edge.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            indoorWater.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+        }
+
+        else
+        {
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            edge.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+        }
+
         isTankInstalled = 1;
         searchTankInstallation()[tankNumber] = 1;   
         isDoingInteract = 0;
