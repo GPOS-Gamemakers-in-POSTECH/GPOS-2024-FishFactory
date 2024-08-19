@@ -9232,6 +9232,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 249344603}
   water: {fileID: 49687476}
   edge: {fileID: 1183060125}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &133993174
@@ -9828,6 +9829,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 2129180811}
   water: {fileID: 463769893}
   edge: {fileID: 1054232082}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &249344603
@@ -10147,6 +10149,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 2050968106}
   water: {fileID: 133993178}
   edge: {fileID: 636108654}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &292491269
@@ -10507,6 +10510,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1907260047}
   water: {fileID: 892981786}
   edge: {fileID: 919212430}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &323686413
@@ -13046,6 +13050,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 487470357}
   water: {fileID: 1620096284}
   edge: {fileID: 635142409}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &511409849
@@ -13103,6 +13108,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 390136385}
   water: {fileID: 998569022}
   edge: {fileID: 1441071312}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &566337556
@@ -15571,7 +15577,7 @@ GameObject:
   - component: {fileID: 791454666}
   - component: {fileID: 791454664}
   m_Layer: 5
-  m_Name: mask1
+  m_Name: APmask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15586,15 +15592,15 @@ RectTransform:
   m_GameObject: {fileID: 791454662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2107301811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39900002, y: 0.38521317}
-  m_AnchorMax: {x: 0.99200004, y: 0.614754}
-  m_AnchoredPosition: {x: -2.0315094, y: -0.039093018}
-  m_SizeDelta: {x: -3.4929047, y: -11.025}
+  m_AnchorMax: {x: 0.39900002, y: 0.38521317}
+  m_AnchoredPosition: {x: 99.51746, y: 39.915306}
+  m_SizeDelta: {x: 594.9459, y: 142.4017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &791454664
 BoxCollider2D:
@@ -15662,21 +15668,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3019608, g: 0.28627452, b: 0.3019608, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5032e6a92c10b64083e8b3d36d975b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8fe71671a1b6924fba4061c8ecc9bfe, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &792482280
@@ -16099,6 +16105,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 2018344194}
   water: {fileID: 892588278}
   edge: {fileID: 50724258}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &814031743
@@ -16695,6 +16702,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 486087215}
   water: {fileID: 1382779066}
   edge: {fileID: 2071558061}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &867079581
@@ -19170,6 +19178,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 107561264}
   water: {fileID: 2132432232}
   edge: {fileID: 1807701942}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1017738796
@@ -20215,6 +20224,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1084265618}
   water: {fileID: 1088926943}
   edge: {fileID: 750429707}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1068131195
@@ -20272,6 +20282,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 706160957}
   water: {fileID: 1575365057}
   edge: {fileID: 1396342710}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1082877754
@@ -21371,7 +21382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.1983, y: 1.163}
+  m_AnchoredPosition: {x: -72.4, y: -2.1}
   m_SizeDelta: {x: 1817.4116, y: 1061.0366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229667807
@@ -21922,6 +21933,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 342012979}
   water: {fileID: 1841875991}
   edge: {fileID: 1593080150}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1371323482
@@ -23818,6 +23830,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 2098903500}
   water: {fileID: 323686417}
   edge: {fileID: 363063163}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1511389126
@@ -26368,6 +26381,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1511389126}
   water: {fileID: 1258695157}
   edge: {fileID: 1558825909}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1667149811
@@ -27432,6 +27446,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1559692203}
   water: {fileID: 1017738800}
   edge: {fileID: 1934806908}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1841875987
@@ -28237,6 +28252,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1766124044}
   water: {fileID: 1496321206}
   edge: {fileID: 792482284}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1883979276
@@ -28294,6 +28310,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1678620975}
   water: {fileID: 600361554}
   edge: {fileID: 1525847503}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1896706860
@@ -29619,83 +29636,9 @@ MonoBehaviour:
   infoPopUp: {fileID: 1927750968}
   water: {fileID: 109204837}
   edge: {fileID: 391912277}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
---- !u!1 &1976318640
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1976318641}
-  - component: {fileID: 1976318643}
-  - component: {fileID: 1976318642}
-  m_Layer: 5
-  m_Name: mask2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1976318641
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976318640}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2107301811}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.96849, y: 38.2}
-  m_SizeDelta: {x: 196.5071, y: 16.975}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1976318642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976318640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.3019608, g: 0.28627452, b: 0.3019608, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5032e6a92c10b64083e8b3d36d975b6, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 1
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1976318643
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976318640}
-  m_CullTransparentMesh: 1
 --- !u!1 &1986000197
 GameObject:
   m_ObjectHideFlags: 0
@@ -30087,6 +30030,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 974648085}
   water: {fileID: 814031747}
   edge: {fileID: 867079585}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &2038834667
@@ -30228,6 +30172,7 @@ MonoBehaviour:
   infoPopUp: {fileID: 1843050493}
   water: {fileID: 2138852792}
   edge: {fileID: 611883213}
+  indoorWater: {fileID: 0}
   fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &2050968106
@@ -31090,7 +31035,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 791454663}
-  - {fileID: 1976318641}
   m_Father: {fileID: 1000412458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -31118,7 +31062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30071d3d0475e604eb93a4db7202ae08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55166946ec9af6e4e996041275cbdebb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
