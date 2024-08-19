@@ -22,7 +22,7 @@ public class controlUI : ActionPoints
     public Sprite winterImage;
 
     public RectTransform APmaskTransform;
-
+    public RectTransform seasonTransform;
 
     // update UI when starting the scene
     void Start()
@@ -41,10 +41,18 @@ public class controlUI : ActionPoints
 
         Vector2 mousePosition = Input.mousePosition;
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, Camera.main))
-        {
-            Debug.Log("Mouse is over the UI element.");
-        }        
+        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, null))
+            ActionPointsText.gameObject.SetActive(true);
+
+        else
+            ActionPointsText.gameObject.SetActive(false);
+
+
+        if (RectTransformUtility.RectangleContainsScreenPoint(seasonTransform, mousePosition, null))
+            DateText.gameObject.SetActive(true);
+
+        else
+            DateText.gameObject.SetActive(false);
     }
 
     // function to update AP
