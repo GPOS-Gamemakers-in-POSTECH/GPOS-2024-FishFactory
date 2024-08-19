@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FishFarm
 {
-    public int farmTear;
     public Item fish;
     public int fishAmount;
     public Item[] parts;
@@ -13,13 +12,12 @@ public class FishFarm
     public int growCount;
 
     // Constructor
-    public FishFarm(int farmTear, Item fish, Item[] parts, int fishAmount)
+    public FishFarm()
     {
-        this.farmTear = farmTear;
-        this.fish = fish;
-        this.parts = parts;
-        this.fishAmount = fishAmount;
-        isPartsOn = new bool[]{false, false, false, false};
+        fish = null;
+        fishAmount = 0;
+        parts = new Item[] { null, null, null, null };
+        isPartsOn = new bool[] { false, false, false, false };
         dieCount = 0;
         growCount = 0;
     }
@@ -27,11 +25,31 @@ public class FishFarm
     // Show the Information of fish farm
     public void ShowFishFarmInfo()
     {
-        Debug.Log(farmTear);
         Debug.Log(fish.itemID);
         Debug.Log(fish.itemName);
         Debug.Log(fishAmount);
         Debug.Log(isPartsOn);
+    }
+
+    // Add New Fishes to fish farm
+    public void AddFish(Item fish, int fishAmount)
+    {
+        if (this.fish == null)
+        {
+            this.fish = fish;
+            this.fishAmount = fishAmount;
+        }
+        else { Debug.Log("Fish Already Exists."); }
+
+        return;
+    }
+
+    // Gather Grown Fishes
+    public void GatherFish()
+    {
+        if (growCount >= fish.growTime) { Debug.Log("Gathered"); }
+        else if (dieCount >= 3) { Debug.Log("Died"); }
+        else { Debug.Log("Not Yet"); }
     }
 
     // Add New Parts to fish farm
@@ -41,18 +59,18 @@ public class FishFarm
         {
             if (parts[i].itemID / 1000 == newParts.itemID / 1000)
             {
-                if (parts[i].itemID == newParts.itemID) { Debug.Log("이미 장착된 파츠입니다."); }
+                if (parts[i].itemID == newParts.itemID) { Debug.Log("Parts Already Exists"); }
                 else if (parts[i].itemID < newParts.itemID)
                 {
                     parts[i] = newParts;
-                    Debug.Log("파츠 교체 완료");
+                    Debug.Log("Changed");
                 }
-                else { Debug.Log("하위 티어의 파츠입니다."); }
+                else { Debug.Log("Low Tier"); }
 
                 return;
                     
             }
-            else { Debug.Log("장착할 수 없는 아이템입니다."); }
+            else { Debug.Log("Invalid Item"); }
         }
 
         return;

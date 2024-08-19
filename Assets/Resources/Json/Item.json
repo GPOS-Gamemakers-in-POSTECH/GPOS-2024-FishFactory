@@ -1,5 +1,6 @@
 {
     "fishes": [
+        {"itemID":0,"itemName":"Empty","waterType":0,"itemTier":0,"time":0,"feedAmount":0,"sellPrice":0,"buyPrice":0,"power":0},
         {"itemID":10100,"itemName":"다슬기","waterType":1,"itemTier":101,"time":2,"feedAmount":0.1,"sellPrice":1000,"buyPrice":900,"power":0},
         {"itemID":10199,"itemName":"다슬기(폐사)","waterType":1,"itemTier":101,"time":0,"feedAmount":0,"sellPrice":0,"buyPrice":0,"power":0},
         {"itemID":10200,"itemName":"민물새우","waterType":1,"itemTier":101,"time":2,"feedAmount":0.1,"sellPrice":1000,"buyPrice":900,"power":0},
