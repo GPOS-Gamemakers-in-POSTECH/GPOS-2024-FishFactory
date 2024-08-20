@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FishTank : MonoBehaviour
 {
+    public bool waterType;
     public Item fish;
     public int fishAmount;
     public Item[] parts;
@@ -12,8 +13,9 @@ public class FishTank : MonoBehaviour
     public int growCount;
 
     // Constructor
-    public FishTank()
+    public FishTank(bool waterType)
     {
+        this.waterType = waterType;
         fish = null;
         fishAmount = 0;
         parts = new Item[] { null, null, null, null };

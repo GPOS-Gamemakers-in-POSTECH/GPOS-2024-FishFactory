@@ -1,13 +1,11 @@
 // script for implementing fish tank
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class fishTankManager : fishTankUiController
+public class FishTankManager : FishTankUIController
 {
     public Transform player;
 
@@ -28,7 +26,7 @@ public class fishTankManager : fishTankUiController
     public GameObject installPopUp;
     public GameObject infoPopUp;
 
-    // tilmaps for water, edge of fish tank
+    // Tilemaps
     public Tilemap water;
     public Tilemap edge;
     public Tilemap indoorWater;

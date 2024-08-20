@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class fishTankUiController : ActionPoints
+public class FishTankUIController : ActionPoints
 {
     // UI that shows fish information UI
     public GameObject fishInfoUI;
@@ -39,6 +37,7 @@ public class fishTankUiController : ActionPoints
 
     void insertFish()
     {
+
         Debug.Log("inserting fish");
     }
 
