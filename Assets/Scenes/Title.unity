@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 513668331}
   - component: {fileID: 513668330}
   m_Layer: 0
-  m_Name: titleManager
+  m_Name: titleControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

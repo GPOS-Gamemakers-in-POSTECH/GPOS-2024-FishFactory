@@ -46,6 +46,8 @@ public class fishTankManager : ActionPoints
         if (isTankInstalled == 1)
         {
             edge.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
+                indoorWater.gameObject.SetActive(true);
         }
     }
 
@@ -116,23 +118,28 @@ public class fishTankManager : ActionPoints
         return Vector3.Distance(playerPosition, closestPoint);
     }
 
+    // coroutine to install fish tank
     IEnumerator installFishTank()
     {
         installPopUp.SetActive(false);
 
+        // if installing in indoor, installing is seperated into two part
         if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
         {
+            // first activate tish tank edge
             installSound.Play();
             yield return new WaitForSeconds(installSound.clip.length / 2);
             edge.gameObject.SetActive(true);
             yield return new WaitForSeconds(installSound.clip.length / 2);
             
+            // second activate water in it
             installSound.Play();
             yield return new WaitForSeconds(installSound.clip.length / 2);
             indoorWater.gameObject.SetActive(true);
             yield return new WaitForSeconds(installSound.clip.length / 2);
         }
 
+        // else just activate the edge of fish tank
         else
         {
             installSound.Play();
