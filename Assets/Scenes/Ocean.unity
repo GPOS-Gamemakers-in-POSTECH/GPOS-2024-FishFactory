@@ -9226,6 +9226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 1
@@ -9234,7 +9237,6 @@ MonoBehaviour:
   water: {fileID: 49687476}
   edge: {fileID: 1183060125}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &133993174
 GameObject:
@@ -9995,6 +9997,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 2
@@ -10003,7 +10008,6 @@ MonoBehaviour:
   water: {fileID: 463769893}
   edge: {fileID: 1054232082}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &228558376
 GameObject:
@@ -10487,6 +10491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 10
@@ -10495,7 +10502,6 @@ MonoBehaviour:
   water: {fileID: 133993178}
   edge: {fileID: 636108654}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &292491269
 GameObject:
@@ -10849,6 +10855,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 0
@@ -10857,7 +10866,6 @@ MonoBehaviour:
   water: {fileID: 892981786}
   edge: {fileID: 919212430}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &323686413
 GameObject:
@@ -13391,6 +13399,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 12
@@ -13399,7 +13410,6 @@ MonoBehaviour:
   water: {fileID: 1620096284}
   edge: {fileID: 635142409}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &511409849
 GameObject:
@@ -13450,6 +13460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 13
@@ -13458,7 +13471,6 @@ MonoBehaviour:
   water: {fileID: 998569022}
   edge: {fileID: 1441071312}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &566337556
 GameObject:
@@ -16448,6 +16460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 14
@@ -16456,7 +16471,6 @@ MonoBehaviour:
   water: {fileID: 892588278}
   edge: {fileID: 50724258}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &814031743
 GameObject:
@@ -17046,6 +17060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 16
@@ -17054,7 +17071,6 @@ MonoBehaviour:
   water: {fileID: 1382779066}
   edge: {fileID: 2071558061}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &867079581
 GameObject:
@@ -18543,6 +18559,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &904598856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904598857}
+  - component: {fileID: 904598859}
+  - component: {fileID: 904598858}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904598857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904598856}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -500, y: -297.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1000412458}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &904598858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904598856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &904598859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904598856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &919212426
 GameObject:
   m_ObjectHideFlags: 0
@@ -19478,6 +19562,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 904598857}
   - {fileID: 2107301811}
   - {fileID: 1532115064}
   - {fileID: 873988690}
@@ -19601,6 +19686,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 6
@@ -19609,7 +19697,6 @@ MonoBehaviour:
   water: {fileID: 2132432232}
   edge: {fileID: 1807701942}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1017738796
 GameObject:
@@ -20648,6 +20735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 7
@@ -20656,7 +20746,6 @@ MonoBehaviour:
   water: {fileID: 1088926943}
   edge: {fileID: 750429707}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1068131195
 GameObject:
@@ -20707,6 +20796,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 8
@@ -20715,7 +20807,6 @@ MonoBehaviour:
   water: {fileID: 1575365057}
   edge: {fileID: 1396342710}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1082877754
 GameObject:
@@ -22359,6 +22450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 11
@@ -22367,7 +22461,6 @@ MonoBehaviour:
   water: {fileID: 1841875991}
   edge: {fileID: 1593080150}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1371323482
 GameObject:
@@ -24428,6 +24521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 19
@@ -24436,7 +24532,6 @@ MonoBehaviour:
   water: {fileID: 323686417}
   edge: {fileID: 363063163}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1511389126
 GameObject:
@@ -26980,6 +27075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 5
@@ -26988,7 +27086,6 @@ MonoBehaviour:
   water: {fileID: 1258695157}
   edge: {fileID: 1558825909}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1667149811
 GameObject:
@@ -28046,6 +28143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 3
@@ -28054,7 +28154,6 @@ MonoBehaviour:
   water: {fileID: 1017738800}
   edge: {fileID: 1934806908}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1841875987
 GameObject:
@@ -28853,6 +28952,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 15
@@ -28861,7 +28963,6 @@ MonoBehaviour:
   water: {fileID: 1496321206}
   edge: {fileID: 792482284}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1883979276
 GameObject:
@@ -28912,6 +29013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 17
@@ -28920,7 +29024,6 @@ MonoBehaviour:
   water: {fileID: 600361554}
   edge: {fileID: 1525847503}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1896706860
 GameObject:
@@ -30239,6 +30342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 9
@@ -30247,7 +30353,6 @@ MonoBehaviour:
   water: {fileID: 109204837}
   edge: {fileID: 391912277}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &1986000197
 GameObject:
@@ -30636,6 +30741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 18
@@ -30644,7 +30752,6 @@ MonoBehaviour:
   water: {fileID: 814031747}
   edge: {fileID: 867079585}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &2038834667
 GameObject:
@@ -30779,6 +30886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  fishInfoUI: {fileID: 1516873820}
+  fishButton: {fileID: 0}
+  feedButton: {fileID: 0}
   player: {fileID: 1918211202}
   fishTank: {fileID: 0}
   tankNumber: 4
@@ -30787,7 +30897,6 @@ MonoBehaviour:
   water: {fileID: 2138852792}
   edge: {fileID: 611883213}
   indoorWater: {fileID: 0}
-  fishInfoUI: {fileID: 1516873820}
   installSound: {fileID: 2067678304}
 --- !u!1 &2050968106
 GameObject:
