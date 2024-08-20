@@ -1,4 +1,4 @@
-// dontdestroy object that save status of facility installation
+// dontdestroy object that save status of fish tanks and facilities installation
 
 using System.Collections;
 using System.Collections.Generic;
