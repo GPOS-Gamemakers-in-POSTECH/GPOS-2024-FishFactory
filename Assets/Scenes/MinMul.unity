@@ -12328,8 +12328,9 @@ GameObject:
   m_Component:
   - component: {fileID: 360617886}
   - component: {fileID: 360617887}
+  - component: {fileID: 360617888}
   m_Layer: 0
-  m_Name: FishTank (5)
+  m_Name: FishTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12380,6 +12381,74 @@ MonoBehaviour:
   baseTile: {fileID: 1608547986}
   edgeTile: {fileID: 537580148}
   installSound: {fileID: 1308029777}
+--- !u!114 &360617888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360617885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480a7fe0ecc65a42923ff119b731480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishTankNo: 0
+  waterType: 0
+  fish:
+    itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  fishAmount: 0
+  dieCount: 0
+  growCount: 0
+  parts:
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  isPartsOn: 00000000
+  fishInfoUI: {fileID: 1180924519}
+  fishButton: {fileID: 1669380389}
+  feedButton: {fileID: 942054541}
 --- !u!1 &410432706
 GameObject:
   m_ObjectHideFlags: 0
@@ -14146,7 +14215,7 @@ GameObject:
   - component: {fileID: 942054542}
   - component: {fileID: 942054541}
   m_Layer: 5
-  m_Name: fishFeedButton
+  m_Name: FeedButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16505,7 +16574,7 @@ GameObject:
   - component: {fileID: 1669380390}
   - component: {fileID: 1669380389}
   m_Layer: 5
-  m_Name: fishInsertButton
+  m_Name: FishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

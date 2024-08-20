@@ -1,21 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishTank : MonoBehaviour
 {
-    public bool waterType;
-    public Item fish;
-    public int fishAmount;
-    public Item[] parts;
-    public bool[] isPartsOn;
-    public int dieCount;
-    public int growCount;
+    public int fishTankNo; // Number of Fish Tank
+    public int waterType; // Water Type of Fish Tank
+
+    public Item fish; // Fish Item
+    public int fishAmount; // Amount of Fishes
+    public int dieCount; // Die Count of Fishes
+    public int growCount; // Grow Count of Fishes
+
+    public Item[] parts; // Parts on Fish Tank
+    public bool[] isPartsOn; // Bool variable for which parts is on
+
+    public GameObject fishInfoUI; // UI for Fish Tank Information
+    public Button fishButton; // Button for adding & gathering fishes from Fish Tank
+    public Button feedButton; // Button for feeding fishes
+
+    // Start is called before the first frame update
+    public void Start()
+    {
+        fishButton.onClick.AddListener(() => AddFish(null, 0));
+        feedButton.onClick.AddListener(FeedFish);
+    }
+
 
     // Constructor
-    public FishTank(bool waterType)
+    public FishTank()
     {
-        this.waterType = waterType;
         fish = null;
         fishAmount = 0;
         parts = new Item[] { null, null, null, null };
@@ -97,6 +112,8 @@ public class FishTank : MonoBehaviour
         {
             parts[3].feedAmount -= fish.feedAmount * fishAmount;
         }
+
+        Debug.Log("Feeded");
     }
 
     // Check fish's grown days or days to die
