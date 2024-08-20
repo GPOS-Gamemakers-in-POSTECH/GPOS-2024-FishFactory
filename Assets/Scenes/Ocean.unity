@@ -9227,6 +9227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 1
   installPopUp: {fileID: 835584218}
   infoPopUp: {fileID: 249344603}
@@ -9995,6 +9996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 2
   installPopUp: {fileID: 159889281}
   infoPopUp: {fileID: 2129180811}
@@ -10486,6 +10488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 10
   installPopUp: {fileID: 1371323482}
   infoPopUp: {fileID: 2050968106}
@@ -10847,6 +10850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 0
   installPopUp: {fileID: 1488951102}
   infoPopUp: {fileID: 1907260047}
@@ -13388,6 +13392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 12
   installPopUp: {fileID: 28779581}
   infoPopUp: {fileID: 487470357}
@@ -13446,6 +13451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 13
   installPopUp: {fileID: 1021239656}
   infoPopUp: {fileID: 390136385}
@@ -16443,6 +16449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 14
   installPopUp: {fileID: 566337556}
   infoPopUp: {fileID: 2018344194}
@@ -17040,6 +17047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 16
   installPopUp: {fileID: 2038834667}
   infoPopUp: {fileID: 486087215}
@@ -17547,6 +17555,53 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &877048015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877048017}
+  - component: {fileID: 877048016}
+  m_Layer: 0
+  m_Name: installStatusManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &877048016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877048015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b7a30e7648c804e83e73f170aea92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinMulFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
+  OceanFishTank: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  IndoorFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!4 &877048017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877048015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.0985265, y: -4.2629895, z: -0.13893539}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &892588274
 GameObject:
   m_ObjectHideFlags: 0
@@ -18457,6 +18512,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &902803291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902803292}
+  m_Layer: 0
+  m_Name: -------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902803292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902803291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.932182, y: -33.318832, z: -0.028251143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919212426
 GameObject:
   m_ObjectHideFlags: 0
@@ -19516,6 +19602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 6
   installPopUp: {fileID: 2077586429}
   infoPopUp: {fileID: 107561264}
@@ -20562,6 +20649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 7
   installPopUp: {fileID: 753396594}
   infoPopUp: {fileID: 1084265618}
@@ -20620,6 +20708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 8
   installPopUp: {fileID: 1042959044}
   infoPopUp: {fileID: 706160957}
@@ -22271,6 +22360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 11
   installPopUp: {fileID: 1908402025}
   infoPopUp: {fileID: 342012979}
@@ -24339,6 +24429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 19
   installPopUp: {fileID: 701282560}
   infoPopUp: {fileID: 2098903500}
@@ -26890,6 +26981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 5
   installPopUp: {fileID: 2005478694}
   infoPopUp: {fileID: 1511389126}
@@ -27955,6 +28047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 3
   installPopUp: {fileID: 1098643421}
   infoPopUp: {fileID: 1559692203}
@@ -28761,6 +28854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 15
   installPopUp: {fileID: 1743057022}
   infoPopUp: {fileID: 1766124044}
@@ -28819,6 +28913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 17
   installPopUp: {fileID: 2097865514}
   infoPopUp: {fileID: 1678620975}
@@ -30145,6 +30240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 9
   installPopUp: {fileID: 300838897}
   infoPopUp: {fileID: 1927750968}
@@ -30541,6 +30637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 18
   installPopUp: {fileID: 1905745490}
   infoPopUp: {fileID: 974648085}
@@ -30683,6 +30780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   player: {fileID: 1918211202}
+  fishTank: {fileID: 0}
   tankNumber: 4
   installPopUp: {fileID: 392777024}
   infoPopUp: {fileID: 1843050493}
@@ -44275,3 +44373,5 @@ SceneRoots:
   - {fileID: 2124380192}
   - {fileID: 304134066}
   - {fileID: 693561151}
+  - {fileID: 902803292}
+  - {fileID: 877048017}

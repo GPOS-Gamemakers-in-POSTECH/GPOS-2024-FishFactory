@@ -11602,6 +11602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 5
   installPopUp: {fileID: 174544583}
   infoPopUp: {fileID: 822137707}
@@ -13319,6 +13320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 4
   installPopUp: {fileID: 853045702}
   infoPopUp: {fileID: 1115686597}
@@ -14326,6 +14328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 7
   installPopUp: {fileID: 583196780}
   infoPopUp: {fileID: 1442037614}
@@ -16592,6 +16595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 3
   installPopUp: {fileID: 436697265}
   infoPopUp: {fileID: 146267603}
@@ -18508,6 +18512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 6
   installPopUp: {fileID: 1572749971}
   infoPopUp: {fileID: 32920484}
@@ -20964,6 +20969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 8
   installPopUp: {fileID: 624103669}
   infoPopUp: {fileID: 1439022971}
@@ -22625,6 +22631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 1
   installPopUp: {fileID: 1832655675}
   infoPopUp: {fileID: 462999022}
@@ -25914,6 +25921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 0
   installPopUp: {fileID: 1509594046}
   infoPopUp: {fileID: 239727362}
@@ -26119,6 +26127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 714211873}
   player: {fileID: 199419088}
+  fishTank: {fileID: 0}
   tankNumber: 2
   installPopUp: {fileID: 1288133646}
   infoPopUp: {fileID: 1098537583}

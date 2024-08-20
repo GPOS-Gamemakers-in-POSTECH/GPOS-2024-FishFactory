@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishTank
+public class FishTank : MonoBehaviour
 {
     public Item fish;
     public int fishAmount;

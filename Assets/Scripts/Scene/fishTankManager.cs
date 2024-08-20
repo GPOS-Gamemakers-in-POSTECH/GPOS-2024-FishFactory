@@ -12,6 +12,7 @@ public class fishTankManager : ActionPoints
     public Transform player;
 
     // number of fish tank
+    public FishTank fishTank;
     public int tankNumber;
 
     // interaction become active when player is closer to object than this value
@@ -41,6 +42,7 @@ public class fishTankManager : ActionPoints
     // Start is called before the first frame update
     void Start()
     {
+        fishTank = gameObject.AddComponent<FishTank>();
         isTankInstalled = searchTankInstallation()[tankNumber];
 
         if (isTankInstalled == 1)
