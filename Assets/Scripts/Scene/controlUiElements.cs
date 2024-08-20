@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class controlUI : ActionPoints
+public class controlUiElements : ActionPoints
 {
     // UI texts
     public TextMeshProUGUI ActionPointsText;
@@ -22,7 +22,7 @@ public class controlUI : ActionPoints
     public Sprite winterImage;
 
     public RectTransform APmaskTransform;
-
+    public RectTransform seasonTransform;
 
     // update UI when starting the scene
     void Start()
@@ -41,10 +41,18 @@ public class controlUI : ActionPoints
 
         Vector2 mousePosition = Input.mousePosition;
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, Camera.main))
-        {
-            Debug.Log("Mouse is over the UI element.");
-        }        
+        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, null))
+            ActionPointsText.gameObject.SetActive(true);
+
+        else
+            ActionPointsText.gameObject.SetActive(false);
+
+
+        if (RectTransformUtility.RectangleContainsScreenPoint(seasonTransform, mousePosition, null))
+            DateText.gameObject.SetActive(true);
+
+        else
+            DateText.gameObject.SetActive(false);
     }
 
     // function to update AP
@@ -61,7 +69,7 @@ public class controlUI : ActionPoints
             UpdateActionPointsUI();
 
             // if AP becomes zero, move to scene where bed is located
-            if (actionPoints == 0 && SceneManager.GetActiveScene().name != "MinMul")
+            if (actionPoints == 0)
             {
                 SceneManager.LoadScene("MinMul");
             }
@@ -75,7 +83,7 @@ public class controlUI : ActionPoints
         if (ActionPointsText != null)
         {
             ActionPointsText.text = actionPoints.ToString() + " / " + maxActionPoints.ToString();
-            APmask.fillAmount = 1 - (float)actionPoints / maxActionPoints;
+            APmask.fillAmount = (float)actionPoints / maxActionPoints;
         }
     }
 

@@ -30,6 +30,7 @@ public class fishTankManager : ActionPoints
     // tilmaps for water, edge of fish tank
     public Tilemap water;
     public Tilemap edge;
+    public Tilemap indoorWater;
 
     // UI that shows fish information UI
     public GameObject fishInfoUI;
@@ -45,6 +46,8 @@ public class fishTankManager : ActionPoints
         if (isTankInstalled == 1)
         {
             edge.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
+                indoorWater.gameObject.SetActive(true);
         }
     }
 
@@ -115,13 +118,36 @@ public class fishTankManager : ActionPoints
         return Vector3.Distance(playerPosition, closestPoint);
     }
 
+    // coroutine to install fish tank
     IEnumerator installFishTank()
     {
         installPopUp.SetActive(false);
-        installSound.Play();
-        yield return new WaitForSeconds(installSound.clip.length / 2);
-        edge.gameObject.SetActive(true);
-        yield return new WaitForSeconds(installSound.clip.length / 2);
+
+        // if installing in indoor, installing is seperated into two part
+        if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
+        {
+            // first activate tish tank edge
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            edge.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            
+            // second activate water in it
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            indoorWater.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+        }
+
+        // else just activate the edge of fish tank
+        else
+        {
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            edge.gameObject.SetActive(true);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+        }
+
         isTankInstalled = 1;
         searchTankInstallation()[tankNumber] = 1;   
         isDoingInteract = 0;

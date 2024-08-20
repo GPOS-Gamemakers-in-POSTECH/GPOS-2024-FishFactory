@@ -16,7 +16,7 @@ public class objectInteraction : ActionPoints
     // key to do interact
     private KeyCode interactionKey = KeyCode.E;
 
-    // value - 0 : arrow that moves to new scene, 1 : bed, 2 : arrow that pops up UI
+    // value - 0 : arrow that moves to new map, 1 : bed
     public int objectKind;
 
     // save the name of departureMap to choose the correct position of player
@@ -73,11 +73,6 @@ public class objectInteraction : ActionPoints
                 else if (objectKind == 1)
                 {
                     StartCoroutine(sleep());
-                }
-
-                else
-                {
-                    StartCoroutine(FadeAndLoadScene("Mine", transitionAudio));
                 }
             }
         }
