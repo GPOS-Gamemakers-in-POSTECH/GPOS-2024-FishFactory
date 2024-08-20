@@ -33,7 +33,6 @@ public class titleManager : MonoBehaviour
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
         #else
-                // 빌드된 게임에서 종료
                 Application.Quit();
         #endif
     }
