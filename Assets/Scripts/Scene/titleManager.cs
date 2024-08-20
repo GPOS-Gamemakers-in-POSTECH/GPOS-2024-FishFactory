@@ -1,3 +1,5 @@
+// script to control elements of title scene
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,12 +22,6 @@ public class titleManager : MonoBehaviour
         closeButton.onClick.AddListener(gameClose);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void gameStart()
     {
         SceneManager.LoadScene("MinMul");
@@ -33,7 +29,7 @@ public class titleManager : MonoBehaviour
 
     void gameClose()
     {
-                // 에디터에서 테스트할 때 종료
+        // close the game in both unity build and application
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
         #else

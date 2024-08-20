@@ -29,10 +29,8 @@ public class popupUIinteraction : ActionPoints
     // Update is called once per frame
     void Update()
     {
-        // calculate distance between player and arrow
+        // if close enough, start process of interaction        
         float distance = Vector3.Distance(player.position, transform.position);
-
-        // if close enough, start process of interaction
         if (distance <= interactionDistance)
         {
             // activate popup
@@ -42,25 +40,21 @@ public class popupUIinteraction : ActionPoints
             if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0)
             {
                 isDoingInteract = 1;
-
-                // if mining
-                if(objectKind == 0)
+                
+                if(objectKind == 0) // mining
                     StartCoroutine(mining());
-
-                // if selling
-                else
+                                
+                else // selling
                     popupUI.SetActive(true);
             }
         }
 
         // if player moves away, deactivate popup
-        else
-        {
-            interactionPopUp.SetActive(false);
-        }
+        else        
+            interactionPopUp.SetActive(false);        
     }
 
-    // if mining arrow interacted, activate mining UI for length of mining sound
+    // if mining arrow interacted, activate mining UI during the length of mining sound
     IEnumerator mining()
     {
         popupUI.SetActive(true);
