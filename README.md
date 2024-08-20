@@ -38,8 +38,8 @@ G-POS의 2024년 여름 합숙 프로젝트 포항과메기절도범 팀이 제�
 
 ## :fountain_pen: Authors
 
-- 기획 : [@정태원](https://github.com/felixj04) | [@임재민](https://github.com/psljm) | [@안재영](https://github.com/2nter21)
-- 프로그래밍 : [@황찬기](https://github.com/DevMizeKR) | [@안현태](https://github.com/TheOnlyMann) | [@이현재](https://github.com/LeeMIR-P)
+- 기획 : [@정태원](https://github.com/felixj04) | [@임재민](https://github.com/psljm) | 
+- 프로그래밍 : [@황찬기](https://github.com/DevMizeKR) | [@안재영](https://github.com/2nter21) | [@안현태](https://github.com/TheOnlyMann) | [@이현재](https://github.com/LeeMIR-P)
 - 그래픽 : [@이준호](https://github.com/joonho9245) | @전성원
 - 사운드 : @손동현
 
