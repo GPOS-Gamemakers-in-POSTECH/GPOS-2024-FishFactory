@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class fishTankManager : ActionPoints
+public class fishTankManager : fishTankUiController
 {
     public Transform player;
 
@@ -33,8 +33,6 @@ public class fishTankManager : ActionPoints
     public Tilemap edge;
     public Tilemap indoorWater;
 
-    // UI that shows fish information UI
-    public GameObject fishInfoUI;
 
     // sound of installing fish tank
     public AudioSource installSound;
@@ -87,7 +85,7 @@ public class fishTankManager : ActionPoints
                 if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0)
                 {
                     isDoingInteract = 1;
-                    fishInfoUI.SetActive(true);
+                    activeFishTankUi(tankNumber);
                     infoPopUp.SetActive(false);
                 }
             }
@@ -98,7 +96,7 @@ public class fishTankManager : ActionPoints
             if (Input.GetKeyDown(interactionKey))
             {
                 isDoingInteract = 0;
-                fishInfoUI.SetActive(false);
+                deactivateFishTankUi();
             }
         }
 
