@@ -23,12 +23,18 @@ public class controlUiElements : ActionPoints
 
     public RectTransform APmaskTransform;
     public RectTransform seasonTransform;
+    
+    // inventory
+    public GameObject inventory;
+
+    public Button inventoryButton;
 
     // update UI when starting the scene
     void Start()
     {
         UpdateActionPointsUI();
-        UpdateDateUI();        
+        UpdateDateUI();
+        //inventoryButton.onClick.AddListener(openInventory);
     }
 
     void Update()
@@ -115,4 +121,9 @@ public class controlUiElements : ActionPoints
             }
         }
     }
+
+    /*void openinventory()
+    {
+        inventory.SetActivate(true);
+    }*/
 }
