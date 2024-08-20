@@ -26,10 +26,11 @@ public class FishTankManager : FishTankUIController
     public GameObject installPopUp;
     public GameObject infoPopUp;
 
-    // Tilemaps
-    public Tilemap water;
-    public Tilemap edge;
-    public Tilemap indoorWater;
+    // TileBase & Tilemaps
+    public TileBase tileBaseA;
+    public TileBase tileBaseB;
+    public Tilemap baseTile;
+    public Tilemap edgeTile;
 
 
     // sound of installing fish tank
@@ -43,9 +44,8 @@ public class FishTankManager : FishTankUIController
 
         if (isTankInstalled == 1)
         {
-            edge.gameObject.SetActive(true);
-            if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
-                indoorWater.gameObject.SetActive(true);
+            edgeTile.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "Indoor") { baseTile.SwapTile(tileBaseA, tileBaseB); }
         }
     }
 
@@ -54,7 +54,7 @@ public class FishTankManager : FishTankUIController
     {
         // calculate distance between player and tile
         Vector3 playerPosition = player.position;
-        float distance = CalculateDistance(playerPosition, water);
+        float distance = CalculateDistance(playerPosition, baseTile);
 
         if (distance <= interactionDistance && isDoingInteract == 0)
         {            
@@ -122,18 +122,18 @@ public class FishTankManager : FishTankUIController
         installPopUp.SetActive(false);
 
         // if installing in indoor, installing is seperated into two part
-        if (SceneManager.GetActiveScene().name == "Indoor" && indoorWater != null)
+        if (SceneManager.GetActiveScene().name == "Indoor")
         {
             // first activate tish tank edge
             installSound.Play();
             yield return new WaitForSeconds(installSound.clip.length / 2);
-            edge.gameObject.SetActive(true);
+            edgeTile.gameObject.SetActive(true);
             yield return new WaitForSeconds(installSound.clip.length / 2);
             
             // second activate water in it
             installSound.Play();
             yield return new WaitForSeconds(installSound.clip.length / 2);
-            indoorWater.gameObject.SetActive(true);
+            baseTile.SwapTile(tileBaseA, tileBaseB);
             yield return new WaitForSeconds(installSound.clip.length / 2);
         }
 
@@ -142,7 +142,7 @@ public class FishTankManager : FishTankUIController
         {
             installSound.Play();
             yield return new WaitForSeconds(installSound.clip.length / 2);
-            edge.gameObject.SetActive(true);
+            edgeTile.gameObject.SetActive(true);
             yield return new WaitForSeconds(installSound.clip.length / 2);
         }
 

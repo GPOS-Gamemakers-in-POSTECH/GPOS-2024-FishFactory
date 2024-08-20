@@ -12375,9 +12375,10 @@ MonoBehaviour:
   tankNumber: 7
   installPopUp: {fileID: 583196780}
   infoPopUp: {fileID: 1442037614}
-  water: {fileID: 1608547986}
-  edge: {fileID: 537580148}
-  indoorWater: {fileID: 0}
+  tileBaseA: {fileID: 0}
+  tileBaseB: {fileID: 0}
+  baseTile: {fileID: 1608547986}
+  edgeTile: {fileID: 537580148}
   installSound: {fileID: 1308029777}
 --- !u!1 &410432706
 GameObject:
@@ -15907,7 +15908,7 @@ GameObject:
   - component: {fileID: 1608547985}
   - component: {fileID: 1608547984}
   m_Layer: 0
-  m_Name: 'Water '
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
