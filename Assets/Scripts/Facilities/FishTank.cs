@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishFarm
+public class FishTank
 {
     public Item fish;
     public int fishAmount;
@@ -12,7 +12,7 @@ public class FishFarm
     public int growCount;
 
     // Constructor
-    public FishFarm()
+    public FishTank()
     {
         fish = null;
         fishAmount = 0;
@@ -22,8 +22,8 @@ public class FishFarm
         growCount = 0;
     }
 
-    // Show the Information of fish farm
-    public void ShowFishFarmInfo()
+    // Show the Information of fish Tank
+    public void ShowFishTankInfo()
     {
         Debug.Log(fish.itemID);
         Debug.Log(fish.itemName);
@@ -31,7 +31,7 @@ public class FishFarm
         Debug.Log(isPartsOn);
     }
 
-    // Add New Fishes to fish farm
+    // Add New Fishes to Fish Tank
     public void AddFish(Item fish, int fishAmount)
     {
         if (this.fish == null)
@@ -52,7 +52,7 @@ public class FishFarm
         else { Debug.Log("Not Yet"); }
     }
 
-    // Add New Parts to fish farm
+    // Add New Parts to Fish Tank
     public void AddParts(Item newParts)
     {
         for (int i = 0; i < 4; i++)
@@ -76,7 +76,7 @@ public class FishFarm
         return;
     }
 
-    // Check Parts of fish farm
+    // Check Parts of Fish Tank
     public void CheckPartsOn()
     {
         for (int i = 0; i < 4; i++)

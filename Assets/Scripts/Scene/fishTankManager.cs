@@ -119,7 +119,7 @@ public class fishTankManager : ActionPoints
     {
         installPopUp.SetActive(false);
         installSound.Play();
-        yield return new WaitForSeconds(installSound.clip.length/2);
+        yield return new WaitForSeconds(installSound.clip.length / 2);
         edge.gameObject.SetActive(true);
         yield return new WaitForSeconds(installSound.clip.length / 2);
         isTankInstalled = 1;
@@ -130,17 +130,8 @@ public class fishTankManager : ActionPoints
     int[] searchTankInstallation()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "MinMul")
-        {
-            return installStatusManager.Instance.MinMulFishTank;
-        }
-        else if (currentSceneName == "Ocean")
-        {
-            return installStatusManager.Instance.OceanFishTank;
-        }
-        else
-        {
-            return installStatusManager.Instance.IndoorFishTank;
-        }
+        if (currentSceneName == "MinMul") { return installStatusManager.Instance.MinMulFishTank; }
+        else if (currentSceneName == "Ocean") { return installStatusManager.Instance.OceanFishTank; }
+        else { return installStatusManager.Instance.IndoorFishTank; }
     }
 }
