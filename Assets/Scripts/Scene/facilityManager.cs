@@ -79,12 +79,12 @@ public class facilityManager : ActionPoints
                         Debug.Log(currentTile + "번 위치에" + ableElements[0] + "번 설치");
                         elementStatus[currentTile] = ableElements[0];
                         isDoingInteract = 0;
-                        currentTile = setCurrentTile();
                         if (ableElements[0] == 4)
                         {
                             lineStatus[lineNumber] = checkLineType();
                             Debug.Log(lineStatus[lineNumber]+"번 라인 완성");
                         }
+                        currentTile = setCurrentTile();
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
@@ -118,7 +118,7 @@ public class facilityManager : ActionPoints
 
     int setCurrentTile()
     {
-        if (lineStatus[lineNumber] == 1)
+        if (lineStatus[lineNumber] != 0)
             return 0;
 
         else if (elementStatus[0] == 0)
