@@ -7,9 +7,9 @@ using UnityEngine;
 public class installStatusManager : MonoBehaviour
 {
     public static installStatusManager Instance { get; private set; }
-    public int[] MinMulFishTank = new int[9];
-    public int[] OceanFishTank = new int[20];
-    public int[] IndoorFishTank = new int[9];
+    public bool[] MinMulFishTank = new bool[9];
+    public bool[] OceanFishTank = new bool[20];
+    public bool[] IndoorFishTank = new bool[9];
 
     void Awake()
     {
