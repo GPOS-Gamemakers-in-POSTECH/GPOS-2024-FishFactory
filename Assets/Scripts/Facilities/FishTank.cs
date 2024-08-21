@@ -1,6 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class FishTank : MonoBehaviour
@@ -17,14 +18,95 @@ public class FishTank : MonoBehaviour
     public bool[] isPartsOn; // Bool variable for which parts is on
 
     public GameObject fishInfoUI; // UI for Fish Tank Information
+    public GameObject infoPopup; // Information Pop-up for Fish Tank
+    public GameObject installPopup; // Installation Pop-up for Fish Tank
     public Button fishButton; // Button for adding & gathering fishes from Fish Tank
     public Button feedButton; // Button for feeding fishes
+
+    public GameObject player;
+    public bool isInteracting; // Check if Player is Interacting
+    private float interactionDistance = 0.8f; // Max Distance to Interact with Fish Tank
+    private KeyCode interactionKey = KeyCode.E; // KeyCode for Interact
+
+    // TileBase & Tilemaps
+    public TileBase tileBaseA;
+    public TileBase tileBaseB;
+    public Tilemap baseTile;
+    public Tilemap edgeTile;
+
+    public bool isTankInstalled; // Check if Fish Tank is Installed
+    public AudioSource installSound; // Sound for Installation
+
+
 
     // Start is called before the first frame update
     public void Start()
     {
+        player = GameObject.FindWithTag("Player"); // Find Player Object
+
         fishButton.onClick.AddListener(() => AddFish(null, 0));
         feedButton.onClick.AddListener(FeedFish);
+
+        isTankInstalled = SearchTankInstallation()[fishTankNo];
+        isInteracting = GameManager.Instance.isInteracting;
+
+        if (isTankInstalled)
+        {
+            edgeTile.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "Indoor") { baseTile.SwapTile(tileBaseA, tileBaseB); }
+        }
+    }
+
+    // Update is called once per frame
+    public void Update()
+    {
+        float distance = CalculateDistance(player, baseTile);
+
+        if (distance <= interactionDistance && isInteracting == false)
+        {
+            // if fish tank is not installed yet
+            if (!isTankInstalled)
+            {
+                // show pop up
+                installPopup.SetActive(true);
+
+                // if interactionKey pressed, and condition satisfied, install fish tank
+                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                {
+                    isInteracting = true;
+                    StartCoroutine(InstallFishTank());
+                }
+            }
+
+            else
+            {
+                // show pop up
+                infoPopup.SetActive(true);
+
+                // if interactionKey pressed, show information UI
+                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                {
+                    isInteracting = true;
+                    fishInfoUI.SetActive(true);
+                    infoPopup.SetActive(false);
+                }
+            }
+        }
+
+        else if (distance <= interactionDistance && isInteracting && isTankInstalled)
+        {
+            if (Input.GetKeyDown(interactionKey))
+            {
+                isInteracting = false;
+                fishInfoUI.SetActive(false);
+            }
+        }
+
+        else
+        {
+            installPopup.SetActive(false);
+            infoPopup.SetActive(false);
+        }
     }
 
 
@@ -39,7 +121,32 @@ public class FishTank : MonoBehaviour
         growCount = 0;
     }
 
-    // Show the Information of fish Tank
+    // Install FIsh Tank
+    IEnumerator InstallFishTank()
+    {
+        installPopup.SetActive(false);
+
+        // Activate Edge Tiles
+        installSound.Play();
+        yield return new WaitForSeconds(installSound.clip.length / 2);
+        edgeTile.gameObject.SetActive(true);
+        yield return new WaitForSeconds(installSound.clip.length / 2);
+
+        // Swap Base Tiles to Water
+        if (SceneManager.GetActiveScene().name == "Indoor")
+        {
+            installSound.Play();
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+            baseTile.SwapTile(tileBaseA, tileBaseB);
+            yield return new WaitForSeconds(installSound.clip.length / 2);
+        }
+
+        isTankInstalled = true;
+        SearchTankInstallation()[fishTankNo] = true;
+        isInteracting = false;
+    }
+
+    // Show the Information of Fish Tank
     public void ShowFishTankInfo()
     {
         Debug.Log(fish.itemID);
@@ -125,5 +232,25 @@ public class FishTank : MonoBehaviour
         if (dieCount == 3) { }
 
         return;
+    }
+
+    // Calculate Distance from Player to Fish Tank
+    public float CalculateDistance(GameObject player, Tilemap tilemap)
+    {
+        // Calculate boundary of Tilemap
+        TilemapRenderer tilemapRenderer = tilemap.GetComponent<TilemapRenderer>();
+        Bounds tilemapBounds = tilemapRenderer.bounds;
+
+        // Find the closest point and Calculate Distance
+        Vector3 closestPoint = tilemapBounds.ClosestPoint(player.transform.position);
+        return Vector3.Distance(player.transform.position, closestPoint);
+    }
+
+    bool[] SearchTankInstallation()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "MinMul") { return GameManager.Instance.freshFishTank; }
+        else if (currentSceneName == "Ocean") { return GameManager.Instance.oceanFishTank; }
+        else { return GameManager.Instance.indoorFishTank; }
     }
 }

@@ -11619,7 +11619,7 @@ GameObject:
   - component: {fileID: 199419089}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12327,7 +12327,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360617886}
-  - component: {fileID: 360617887}
   - component: {fileID: 360617888}
   m_Layer: 0
   m_Name: FishTank
@@ -12355,32 +12354,6 @@ Transform:
   - {fileID: 583196781}
   m_Father: {fileID: 1103236546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &360617887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360617885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5c2d447b512644cb382343fe0d19da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 714211873}
-  fishInfoUI: {fileID: 1180924519}
-  fishButton: {fileID: 0}
-  feedButton: {fileID: 0}
-  player: {fileID: 199419088}
-  fishTank: {fileID: 0}
-  tankNumber: 7
-  installPopUp: {fileID: 583196780}
-  infoPopUp: {fileID: 1442037614}
-  tileBaseA: {fileID: 0}
-  tileBaseB: {fileID: 0}
-  baseTile: {fileID: 1608547986}
-  edgeTile: {fileID: 537580148}
-  installSound: {fileID: 1308029777}
 --- !u!114 &360617888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12447,8 +12420,18 @@ MonoBehaviour:
     power: 0
   isPartsOn: 00000000
   fishInfoUI: {fileID: 1180924519}
+  infoPopup: {fileID: 1442037614}
+  installPopup: {fileID: 583196780}
   fishButton: {fileID: 1669380389}
   feedButton: {fileID: 942054541}
+  player: {fileID: 0}
+  isInteracting: 0
+  tileBaseA: {fileID: 11400000, guid: 1b5836d4d86ecee48b53ff31026cb693, type: 2}
+  tileBaseB: {fileID: 11400000, guid: ec29ffd19395a914180c9be52820023c, type: 2}
+  baseTile: {fileID: 1608547986}
+  edgeTile: {fileID: 537580148}
+  isTankInstalled: 0
+  installSound: {fileID: 1308029777}
 --- !u!1 &410432706
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,7 +12973,7 @@ GameObject:
   - component: {fileID: 537580147}
   - component: {fileID: 537580146}
   m_Layer: 0
-  m_Name: Edge
+  m_Name: EdgeTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13384,7 +13367,7 @@ GameObject:
   - component: {fileID: 583196781}
   - component: {fileID: 583196782}
   m_Layer: 0
-  m_Name: installPopUp
+  m_Name: InstallPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13584,6 +13567,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1803302065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &677940771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677940772}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677940772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677940771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.192236, y: -9.556129, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1308029776}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712215251
 GameObject:
@@ -14731,7 +14746,6 @@ Transform:
   - {fileID: 1996043878}
   - {fileID: 42574530}
   - {fileID: 360617886}
-  - {fileID: 1308029776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110937517
@@ -15097,7 +15111,6 @@ GameObject:
   - component: {fileID: 1180924522}
   - component: {fileID: 1180924521}
   - component: {fileID: 1180924520}
-  - component: {fileID: 1180924524}
   m_Layer: 5
   m_Name: FishInfoUI
   m_TagString: Untagged
@@ -15191,22 +15204,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1180924524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180924519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97350fe9c810a1b458612f7194b08489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
-  fishInfoUI: {fileID: 1180924519}
-  fishButton: {fileID: 1669380389}
-  feedButton: {fileID: 942054541}
 --- !u!1 &1260795684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15656,7 +15653,7 @@ GameObject:
   - component: {fileID: 1308029776}
   - component: {fileID: 1308029777}
   m_Layer: 0
-  m_Name: installSound
+  m_Name: Installation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15670,12 +15667,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308029775}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.192236, y: 9.556129, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1103236546}
+  m_Father: {fileID: 677940772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1308029777
 AudioSource:
@@ -15784,7 +15781,7 @@ GameObject:
   - component: {fileID: 1442037615}
   - component: {fileID: 1442037616}
   m_Layer: 0
-  m_Name: infoPopUp
+  m_Name: InfoPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15977,7 +15974,7 @@ GameObject:
   - component: {fileID: 1608547985}
   - component: {fileID: 1608547984}
   m_Layer: 0
-  m_Name: Base
+  m_Name: BaseTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17400,29 +17397,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934785849}
-  - component: {fileID: 1934785848}
+  - component: {fileID: 1934785850}
   m_Layer: 0
-  m_Name: installStatusManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1934785848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934785847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b7a30e7648c804e83e73f170aea92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinMulFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
-  OceanFishTank: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  IndoorFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1934785849
 Transform:
   m_ObjectHideFlags: 0
@@ -17438,6 +17420,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934785850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934785847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed77ffe313a7b844f94b9a150172737a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  freshFishTank: 000000000000000000
+  oceanFishTank: 0000000000000000000000000000000000000000
+  indoorFishTank: 000000000000000000
 --- !u!1 &1996043877
 GameObject:
   m_ObjectHideFlags: 0
@@ -18973,6 +18971,7 @@ SceneRoots:
   - {fileID: 712215252}
   - {fileID: 1775538198}
   - {fileID: 2107280188}
+  - {fileID: 677940772}
   - {fileID: 318000858}
   - {fileID: 455205470}
   - {fileID: 199419088}
