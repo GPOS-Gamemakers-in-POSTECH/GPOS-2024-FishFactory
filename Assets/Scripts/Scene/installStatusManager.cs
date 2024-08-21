@@ -7,24 +7,24 @@ using UnityEngine;
 public class installStatusManager : MonoBehaviour
 {
     public static installStatusManager Instance { get; private set; }
-    
-    // status of fish tanks. 0 if not installed, 1 if installed
-    public int[] MinMulFishTank = new int[9];
-    public int[] OceanFishTank = new int[20];
-    public int[] IndoorFishTank = new int[9];
+
+    public bool[] MinMulFishTank = new bool[9];
+    public bool[] OceanFishTank = new bool[20];
+    public bool[] IndoorFishTank = new bool[9];
+
 
 
 
     // status of facility elements. each line has 4 elements. 0 if not installed, and
-    // 1¹ø ÀÚ¸® : 1 ³Ãµ¿±â, 2 °ÇÁ¶±â, 3 ¹ß°ñ±â
-    // 2¹ø ÀÚ¸® : 4 Æ÷Àå±â, 5 Á£°¥ ÃæÀü±â, 6 ÀüºÐ ÇÕ¼º±â, 7 ÅëÁ¶¸² Á¦ÀÛ±â
-    // 3¹ø ÀÚ¸® : 4 Æ÷Àå±â, 8 Æ¢±è±â
-    // 4¹ø ÀÚ¸® : 4 Æ÷Àå±â
+    // 1ï¿½ï¿½ ï¿½Ú¸ï¿½ : 1 ï¿½Ãµï¿½ï¿½ï¿½, 2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 3 ï¿½ß°ï¿½ï¿½
+    // 2ï¿½ï¿½ ï¿½Ú¸ï¿½ : 4 ï¿½ï¿½ï¿½ï¿½ï¿½, 5 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 6 ï¿½ï¿½ï¿½ï¿½ ï¿½Õ¼ï¿½ï¿½ï¿½, 7 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û±ï¿½
+    // 3ï¿½ï¿½ ï¿½Ú¸ï¿½ : 4 ï¿½ï¿½ï¿½ï¿½ï¿½, 8 Æ¢ï¿½ï¿½ï¿½
+    // 4ï¿½ï¿½ ï¿½Ú¸ï¿½ : 4 ï¿½ï¿½ï¿½ï¿½ï¿½
     public int[][] facilityElements = new int[6][];
 
     // status of facilities. 0 if not installed, and line types below
-    // 1 : ³Ãµ¿, 2 : ¸»¸®±â, 3 : Á£°¥, 4 : ¾î¹¬, 5 : ÅëÁ¶¸²
-    // ( 1400 ³Ãµ¿, 2400 ¸»¸®±â, 3540 Á£°¥, 3684 ¾î¹¬, 3740 ÅëÁ¶¸²)
+    // 1 : ï¿½Ãµï¿½, 2 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 3 : ï¿½ï¿½ï¿½ï¿½, 4 : ï¿½î¹¬, 5 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ( 1400 ï¿½Ãµï¿½, 2400 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 3540 ï¿½ï¿½ï¿½ï¿½, 3684 ï¿½î¹¬, 3740 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
     public int[] facilityLine = new int[6];
 
     public int[] isFacilityWorking = new int[6];

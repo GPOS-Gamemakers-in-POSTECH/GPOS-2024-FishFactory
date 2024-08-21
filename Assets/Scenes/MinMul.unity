@@ -11740,7 +11740,7 @@ GameObject:
   - component: {fileID: 199419089}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12450,9 +12450,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360617886}
-  - component: {fileID: 360617887}
+  - component: {fileID: 360617888}
   m_Layer: 0
-  m_Name: FishTank (5)
+  m_Name: FishTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12471,13 +12471,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 537580145}
   - {fileID: 1608547983}
+  - {fileID: 537580145}
   - {fileID: 1442037615}
   - {fileID: 583196781}
   m_Father: {fileID: 1103236546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &360617887
+--- !u!114 &360617888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12486,21 +12486,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 360617885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5c2d447b512644cb382343fe0d19da, type: 3}
+  m_Script: {fileID: 11500000, guid: e480a7fe0ecc65a42923ff119b731480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 714211873}
+  fishTankNo: 0
+  waterType: 0
+  fish:
+    itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  fishAmount: 0
+  dieCount: 0
+  growCount: 0
+  parts:
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  - itemID: 0
+    itemName: 
+    waterType: 0
+    itemTier: 0
+    growTime: 0
+    feedAmount: 0
+    sellPrice: 0
+    buyPrice: 0
+    power: 0
+  isPartsOn: 00000000
   fishInfoUI: {fileID: 1180924519}
-  fishButton: {fileID: 0}
-  feedButton: {fileID: 0}
-  player: {fileID: 199419088}
-  fishTank: {fileID: 0}
-  tankNumber: 7
-  installPopUp: {fileID: 583196780}
-  infoPopUp: {fileID: 1442037614}
-  water: {fileID: 1608547986}
-  edge: {fileID: 537580148}
-  indoorWater: {fileID: 0}
+  infoPopup: {fileID: 1442037614}
+  installPopup: {fileID: 583196780}
+  fishButton: {fileID: 1669380389}
+  feedButton: {fileID: 942054541}
+  player: {fileID: 0}
+  isInteracting: 0
+  tileBaseA: {fileID: 11400000, guid: 1b5836d4d86ecee48b53ff31026cb693, type: 2}
+  tileBaseB: {fileID: 11400000, guid: ec29ffd19395a914180c9be52820023c, type: 2}
+  baseTile: {fileID: 1608547986}
+  edgeTile: {fileID: 537580148}
+  isTankInstalled: 0
   installSound: {fileID: 1308029777}
 --- !u!1 &410432706
 GameObject:
@@ -13043,7 +13096,7 @@ GameObject:
   - component: {fileID: 537580147}
   - component: {fileID: 537580146}
   m_Layer: 0
-  m_Name: Edge
+  m_Name: EdgeTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13437,7 +13490,7 @@ GameObject:
   - component: {fileID: 583196781}
   - component: {fileID: 583196782}
   m_Layer: 0
-  m_Name: installPopUp
+  m_Name: InstallPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13637,6 +13690,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1803302065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &677940771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677940772}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677940772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677940771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.192236, y: -9.556129, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1308029776}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712215251
 GameObject:
@@ -14299,7 +14384,7 @@ GameObject:
   - component: {fileID: 942054542}
   - component: {fileID: 942054541}
   m_Layer: 5
-  m_Name: fishFeedButton
+  m_Name: FeedButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14815,7 +14900,6 @@ Transform:
   - {fileID: 1996043878}
   - {fileID: 42574530}
   - {fileID: 360617886}
-  - {fileID: 1308029776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110937517
@@ -15181,9 +15265,8 @@ GameObject:
   - component: {fileID: 1180924522}
   - component: {fileID: 1180924521}
   - component: {fileID: 1180924520}
-  - component: {fileID: 1180924524}
   m_Layer: 5
-  m_Name: fishInfoUI
+  m_Name: FishInfoUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15275,22 +15358,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1180924524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180924519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97350fe9c810a1b458612f7194b08489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
-  fishInfoUI: {fileID: 1180924519}
-  fishButton: {fileID: 1669380389}
-  feedButton: {fileID: 942054541}
 --- !u!1 &1260795684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15740,7 +15807,7 @@ GameObject:
   - component: {fileID: 1308029776}
   - component: {fileID: 1308029777}
   m_Layer: 0
-  m_Name: installSound
+  m_Name: Installation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15754,12 +15821,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308029775}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.192236, y: 9.556129, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1103236546}
+  m_Father: {fileID: 677940772}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1308029777
 AudioSource:
@@ -15868,7 +15935,7 @@ GameObject:
   - component: {fileID: 1442037615}
   - component: {fileID: 1442037616}
   m_Layer: 0
-  m_Name: infoPopUp
+  m_Name: InfoPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16061,7 +16128,7 @@ GameObject:
   - component: {fileID: 1608547985}
   - component: {fileID: 1608547984}
   m_Layer: 0
-  m_Name: 'Water '
+  m_Name: BaseTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16658,7 +16725,7 @@ GameObject:
   - component: {fileID: 1669380390}
   - component: {fileID: 1669380389}
   m_Layer: 5
-  m_Name: fishInsertButton
+  m_Name: FishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17619,29 +17686,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934785849}
-  - component: {fileID: 1934785848}
+  - component: {fileID: 1934785850}
   m_Layer: 0
-  m_Name: installStatusManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1934785848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934785847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b7a30e7648c804e83e73f170aea92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinMulFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
-  OceanFishTank: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  IndoorFishTank: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1934785849
 Transform:
   m_ObjectHideFlags: 0
@@ -17657,126 +17709,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1937877311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1937877312}
-  - component: {fileID: 1937877315}
-  - component: {fileID: 1937877314}
-  - component: {fileID: 1937877313}
-  m_Layer: 5
-  m_Name: InventoryButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1937877312
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937877311}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1775538198}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 237.5}
-  m_SizeDelta: {x: 134, y: 118}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1937877313
+--- !u!114 &1934785850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937877311}
+  m_GameObject: {fileID: 1934785847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: ed77ffe313a7b844f94b9a150172737a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1937877314}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1937877314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937877311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18cb5961f58647a4c801b29962a8b5fb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1937877315
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937877311}
-  m_CullTransparentMesh: 1
+  isInteracting: 0
+  freshFishTank: 000000000000000000
+  oceanFishTank: 0000000000000000000000000000000000000000
+  indoorFishTank: 000000000000000000
 --- !u!1 &1996043877
 GameObject:
   m_ObjectHideFlags: 0
@@ -19312,6 +19260,7 @@ SceneRoots:
   - {fileID: 712215252}
   - {fileID: 1775538198}
   - {fileID: 2107280188}
+  - {fileID: 677940772}
   - {fileID: 318000858}
   - {fileID: 455205470}
   - {fileID: 199419088}
