@@ -919,6 +919,54 @@ Transform:
   - {fileID: 1063657629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &254372699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254372701}
+  - component: {fileID: 254372700}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &254372700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254372699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed77ffe313a7b844f94b9a150172737a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  freshFishTank: 000000000000000000
+  oceanFishTank: 0000000000000000000000000000000000000000
+  indoorFishTank: 000000000000000000
+--- !u!4 &254372701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254372699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.0985265, y: -4.2629895, z: -0.13893539}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328796558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &515811708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12241,6 +12289,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &831060985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831060986}
+  m_Layer: 0
+  m_Name: -------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831060986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831060985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.932182, y: -33.318832, z: -0.028251143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843162631
 GameObject:
   m_ObjectHideFlags: 0
@@ -12399,7 +12478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4f211db9859a146972f39659bc18ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
   player: {fileID: 187284900}
   lineNumber: 0
   installPopUp: {fileID: 515811707}
@@ -12409,6 +12487,9 @@ MonoBehaviour:
   - {fileID: 1393757025}
   - {fileID: 1436679457}
   - {fileID: 109498846}
+  groundTile: {fileID: 11400000, guid: 5829b285be80a504a935d3fe029a1f97, type: 2}
+  interactTile: {fileID: 11400000, guid: 590f6f0bf98987f41b8e0045bdb5cb7b, type: 2}
+  facilityTile: {fileID: 11400000, guid: d590ab5a07f1bf44d833fd6995ecb133, type: 2}
   installSound: {fileID: 1225064694}
 --- !u!1 &897936766
 GameObject:
@@ -16390,3 +16471,5 @@ SceneRoots:
   - {fileID: 1201419472}
   - {fileID: 1755136263}
   - {fileID: 1798978851}
+  - {fileID: 831060986}
+  - {fileID: 254372701}

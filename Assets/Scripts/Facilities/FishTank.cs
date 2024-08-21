@@ -58,7 +58,6 @@ public class FishTank : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        Debug.Log(GameManager.Instance.isInteracting);
         float distance = CalculateDistance(player, baseTile);
 
         if (distance <= interactionDistance && GameManager.Instance.isInteracting == false)

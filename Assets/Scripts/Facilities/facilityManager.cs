@@ -3,37 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class facilityManager : ActionPoints
+public class facilityManager : MonoBehaviour
 {
     public Transform player;
-
-    public int lineNumber;
-
     private float interactionDistance = 0.8f;
 
     private KeyCode interactionKey = KeyCode.E;
-    private KeyCode destoryKey = KeyCode.Q;
+    private KeyCode destroyKey = KeyCode.Q;
+    
+    public int lineNumber;  // index of this line
 
-    private int[] lineStatus;
-    private int[] elementStatus;
-    private int[] isWorking;
+    private int[] lineStatus;  // kind of line
+    private int[] elementStatus;  // kind of elements
+    private int[] isWorking;  // is this line working
 
     public GameObject installPopUp;
     public GameObject inputPopUp;
 
-    public Tilemap[] elementTiles = new Tilemap[4];
-    private int currentTile;
+    public Tilemap[] elementTiles = new Tilemap[4];  // four element tiles of this line
+    private int currentTile;  // which tile is now on interact
+
+    public TileBase groundTile;
+    public TileBase interactTile;
+    public TileBase facilityTile;
 
     public AudioSource installSound;
 
-    List<int> ableElements;
+    List<int> ableElements;  // to save the kinds of installable facility
 
-    // Start is called before the first frame update
     void Start()
     {
+        // load status datas from installStatusManager
         lineStatus = installStatusManager.Instance.facilityLine;
         elementStatus = installStatusManager.Instance.facilityElements[lineNumber];
         isWorking = installStatusManager.Instance.isFacilityWorking;
+
         currentTile = setCurrentTile();
         if (isWorking[lineNumber] == 1)
         {
@@ -41,44 +45,66 @@ public class facilityManager : ActionPoints
             isWorking[lineNumber] = 0;
         }
     }
-
-    // Update is called once per frame
+    
     void Update()
     {        
         Vector3 playerPosition = player.position;
-        float distance = CalculateDistance(playerPosition, elementTiles[currentTile]);
+        float currentTileDistance = CalculateDistance(playerPosition, elementTiles[currentTile]);
+        float mainTileDistance = CalculateDistance(playerPosition, elementTiles[0]);
 
-        if (distance <= interactionDistance)
+        // if player is close enough to main tile, activate destory option
+        if(mainTileDistance <= interactionDistance)
         {
-            if (lineStatus[lineNumber] != 0)
+            if (elementStatus[0] != 0)  // when the line has at least one element
             {
+                if (Input.GetKeyDown(destroyKey))
+                {
+                    Debug.Log("Line destroyed!");
+                    lineStatus[lineNumber] = 0;
+                    for (int i = 0; i < 4; i++)
+                        elementStatus[i] = 0;
+                    currentTile = setCurrentTile();
+                }
+            }
+        }
+
+        // if close enough, start interacting process
+        if (currentTileDistance <= interactionDistance)
+        {
+            // if line is completed, player can input fish
+            if (lineStatus[lineNumber] != 0)
+            {                
                 if (isWorking[lineNumber]==0)
                 {
-                    if(Input.GetKeyDown(interactionKey))
+                    inputPopUp.SetActive(true);
+                    if (Input.GetKeyDown(interactionKey))
                     {
                         Debug.Log("물고기 투입");
                         isWorking[lineNumber] = 1;
+                        inputPopUp.SetActive(false);
                     }
                 }
             }
 
             else
             {
-                if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0)
+                if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
                 {
                     ableElements = GetOutput(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
                     Debug.Log(string.Join(", ", ableElements));
-                    isDoingInteract = 1;
+                    GameManager.Instance.isInteracting = true;
         
                 }
 
-                else if(isDoingInteract == 1)
+                else if(GameManager.Instance.isInteracting == true)
                 {
                     if (Input.GetKeyDown(KeyCode.Alpha1))
                     {
                         Debug.Log(currentTile + "번 위치에" + ableElements[0] + "번 설치");
                         elementStatus[currentTile] = ableElements[0];
-                        isDoingInteract = 0;
+                        elementTiles[currentTile].SwapTile(interactTile, facilityTile);
+                        Debug.Log("swap");
+                        GameManager.Instance.isInteracting = false;
                         if (ableElements[0] == 4)
                         {
                             lineStatus[lineNumber] = checkLineType();
@@ -90,18 +116,24 @@ public class facilityManager : ActionPoints
                     {
                         Debug.Log(currentTile + "번 위치에" + ableElements[1] + "번 설치");
                         elementStatus[currentTile] = ableElements[1];
-                        isDoingInteract = 0;
+                        GameManager.Instance.isInteracting = false;
                         currentTile = setCurrentTile();
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha3))
                     {
                         Debug.Log(currentTile + "번 위치에" + ableElements[2] + "번 설치");
                         elementStatus[currentTile] = ableElements[2];
-                        isDoingInteract = 0;
+                        GameManager.Instance.isInteracting = false;
                         currentTile = setCurrentTile();
                     }
                 }
             }
+        }
+
+        else
+        {
+            inputPopUp.SetActive(false);
+            installPopUp.SetActive(false);
         }
     }
 
