@@ -35,7 +35,7 @@ public class BasicMovements : ActionPoints
         float verticalInput = Input.GetAxis("Vertical");
 
         // control movement when interaction is not processing
-        if (isDoingInteract == 0)
+        if (GameManager.Instance.isInteracting == false)
         {
             // show vertical animation if have vertical input
             if (verticalInput != 0)

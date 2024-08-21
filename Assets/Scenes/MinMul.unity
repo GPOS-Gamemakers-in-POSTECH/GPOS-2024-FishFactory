@@ -12548,7 +12548,6 @@ MonoBehaviour:
   fishButton: {fileID: 1669380389}
   feedButton: {fileID: 942054541}
   player: {fileID: 0}
-  isInteracting: 0
   tileBaseA: {fileID: 11400000, guid: 1b5836d4d86ecee48b53ff31026cb693, type: 2}
   tileBaseB: {fileID: 11400000, guid: ec29ffd19395a914180c9be52820023c, type: 2}
   baseTile: {fileID: 1608547986}
