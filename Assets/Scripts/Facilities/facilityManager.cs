@@ -32,6 +32,12 @@ public class facilityManager : MonoBehaviour
 
     List<int> ableElements;  // to save the kinds of installable facility
 
+    void Awake()
+    {
+        for (int i=0; i<4; i++)
+            elementTileColliders[i] = elementTiles[i].GetComponent<TilemapCollider2D>();
+    }
+
     void Start()
     {
         // load status datas from installStatusManager
@@ -41,11 +47,18 @@ public class facilityManager : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            elementTileColliders[i] = elementTiles[i].GetComponent<TilemapCollider2D>();
             if (elementStatus[i] != 0)
             {
                 elementTiles[i].SwapTile(groundTile, facilityTile);
                 elementTileColliders[i].enabled = true;
+                if (elementStatus[i] == 4)
+                    break;
+            }
+            else
+            {
+                elementTiles[i].SwapTile(groundTile, interactTile);
+                elementTileColliders[i].enabled = true;
+                break;
             }
         }
 
@@ -53,11 +66,6 @@ public class facilityManager : MonoBehaviour
             elementTiles[0].SwapTile(groundTile, interactTile);
 
         currentTile = setCurrentTile();
-        if (isWorking[lineNumber] == 1)
-        {
-            Debug.Log(lineNumber + "번 작동 종료");
-            isWorking[lineNumber] = 0;
-        }
     }
     
     void Update()
@@ -66,17 +74,25 @@ public class facilityManager : MonoBehaviour
         float currentTileDistance = CalculateDistance(playerPosition, elementTiles[currentTile]);
         float mainTileDistance = CalculateDistance(playerPosition, elementTiles[0]);
 
-        // if player is close enough to main tile, activate destory option
         if(mainTileDistance <= interactionDistance)
         {
-            if (elementStatus[0] != 0)  // when the line has at least one element
+            // if player is close enough to main tile and line has at least one element, activate destory option
+            if (elementStatus[0] != 0)
             {
                 if (Input.GetKeyDown(destroyKey))
                 {
                     Debug.Log("Line destroyed!");
                     lineStatus[lineNumber] = 0;
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 1; i < 4; i++)
+                    {
                         elementStatus[i] = 0;
+                        elementTiles[i].SwapTile(facilityTile, groundTile);
+                        elementTiles[i].SwapTile(interactTile, groundTile);
+                        elementTileColliders[i].enabled = false;
+                    }
+                    elementStatus[0] = 0;
+                    elementTiles[0].SwapTile(facilityTile, interactTile);
+
                     currentTile = setCurrentTile();
                 }
             }
@@ -102,6 +118,8 @@ public class facilityManager : MonoBehaviour
 
             else
             {
+                inputPopUp.SetActive(false);
+
                 if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
                 {
                     ableElements = GetOutput(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
@@ -122,9 +140,10 @@ public class facilityManager : MonoBehaviour
                         if (ableElements[0] == 4)
                         {
                             lineStatus[lineNumber] = checkLineType();
-                            Debug.Log(lineStatus[lineNumber]+"번 라인 완성");
+                            Debug.Log(lineStatus[lineNumber] + "번 라인 완성");
                         }
                         currentTile = setCurrentTile();
+                        Debug.Log(currentTile);
                         elementTiles[currentTile].SwapTile(groundTile, interactTile);
                         elementTileColliders[currentTile].enabled = true;
                     }
@@ -142,6 +161,8 @@ public class facilityManager : MonoBehaviour
                         GameManager.Instance.isInteracting = false;
                         currentTile = setCurrentTile();
                     }
+                    else if (Input.GetKeyDown(interactionKey))
+                        GameManager.Instance.isInteracting = false;
                 }
             }
         }
