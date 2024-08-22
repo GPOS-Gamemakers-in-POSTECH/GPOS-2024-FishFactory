@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class facilityManager : MonoBehaviour
 {
@@ -26,15 +27,18 @@ public class facilityManager : MonoBehaviour
     private TilemapCollider2D[] elementTileColliders = new TilemapCollider2D[4];
     private int currentTile;  // which tile is now on interact
 
-    public TileBase groundTile;
-    public TileBase interactTile;
-    public TileBase facilityTile;
+    public Tilemap[] exampleTiles = new Tilemap[10];
+
+
+
+    
 
     public AudioSource installSound;
 
     public JsonManager jsonManager;
 
-    List<int> ableElements;  // to save the kinds of installable facility
+    List<int> ableElements;  // to save the kinds of installable facilities
+    List<string> ableFishes; // to save the kinds of inputable fishes
 
     void Awake()
     {
@@ -53,21 +57,22 @@ public class facilityManager : MonoBehaviour
         {
             if (elementStatus[i] != 0)
             {
-                elementTiles[i].SwapTile(groundTile, facilityTile);
+                CopyTiles(elementTiles[i], elementStatus[i]);
                 elementTileColliders[i].enabled = true;
                 if (elementStatus[i] == 4)
                     break;
             }
             else
-            {
-                elementTiles[i].SwapTile(groundTile, interactTile);
+            {                
+                CopyTiles(elementTiles[i], 9);
                 elementTileColliders[i].enabled = true;
                 break;
             }
         }
 
         if (elementStatus[0] == 0)
-            elementTiles[0].SwapTile(groundTile, interactTile);
+            CopyTiles(elementTiles[0], 9);
+
 
         currentTile = setCurrentTile();
 
@@ -76,8 +81,13 @@ public class facilityManager : MonoBehaviour
             Debug.Log("working is ended in no." + lineNumber);
             isWorking[lineNumber] = 0;
         }
+
+        
+
     }
     
+
+
     void Update()
     {        
         Vector3 playerPosition = player.position;
@@ -87,7 +97,7 @@ public class facilityManager : MonoBehaviour
         if(mainTileDistance <= interactionDistance)
         {
             // if player is close enough to main tile and line has at least one element, activate destory option
-            if (elementStatus[0] != 0)
+            if (elementStatus[0] != 0 && GameManager.Instance.isInteracting == false)
             {
                 if (Input.GetKeyDown(destroyKey))
                 {
@@ -96,12 +106,11 @@ public class facilityManager : MonoBehaviour
                     for (int i = 1; i < 4; i++)
                     {
                         elementStatus[i] = 0;
-                        elementTiles[i].SwapTile(facilityTile, groundTile);
-                        elementTiles[i].SwapTile(interactTile, groundTile);
+                        CopyTiles(elementTiles[i], 0);
                         elementTileColliders[i].enabled = false;
                     }
                     elementStatus[0] = 0;
-                    elementTiles[0].SwapTile(facilityTile, interactTile);
+                    CopyTiles(elementTiles[0], 9);               
                     isWorking[lineNumber] = 0;
 
                     currentTile = setCurrentTile();
@@ -112,12 +121,25 @@ public class facilityManager : MonoBehaviour
             {
                 if (isWorking[lineNumber] == 0)
                 {
-                    inputPopUp.SetActive(true);
-                    if (Input.GetKeyDown(interactionKey))
+                    if (GameManager.Instance.isInteracting == false)
                     {
-                        Debug.Log("물고기 투입");
-                        isWorking[lineNumber] = 1;
-                        inputPopUp.SetActive(false);
+                        if (Input.GetKeyDown(interactionKey))
+                        {
+                            inputPopUp.SetActive(true);
+                            GameManager.Instance.isInteracting = true;
+                            ableFishes = getAbleFishList(lineStatus[lineNumber]);
+                            Debug.Log(string.Join(", ", ableFishes));
+                            /*Debug.Log("물고기 투입");
+                            isWorking[lineNumber] = 1;*/
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetKeyDown(interactionKey))
+                        {
+                            inputPopUp.SetActive(false);
+                            GameManager.Instance.isInteracting = false;
+                        }
                     }
                 }
             }
@@ -229,6 +251,35 @@ public class facilityManager : MonoBehaviour
         return result;
     }
 
+    List<string> getAbleFishList(int input)
+    {
+        List<string> result = new List<string>();
+
+        switch (input)
+        {
+            case 1:
+                result.AddRange(new string[] { "미꾸라지", "송어", "우럭", "명태", "고등어", "청어", "참다랑어" });
+                break;
+            case 2:
+                result.AddRange(new string[] { "새우", "김", "미역", "멸치", "명태", "쥐치", "오징어" });
+                break;
+            case 3:
+                result.AddRange(new string[] { "새우", "굴", "멸치", "오징어", "참다랑어" });
+                break;
+            case 4:
+                result.AddRange(new string[] { "우럭", "명태", "참다랑어" });
+                break;
+            case 5:
+                result.AddRange(new string[] { "물", "멸치", "고등어", "청어", "철갑상어" });
+                break;
+            default:
+                // 다른 입력 값에 대한 기본 동작을 여기에 추가할 수 있음
+                break;
+        }
+
+        return result;
+    }
+
     int checkLineType()
     {
         int[] status1 = new int[] { 1, 4, 0, 0 };
@@ -260,8 +311,8 @@ public class facilityManager : MonoBehaviour
         GameManager.Instance.isInteracting = true;
         Debug.Log(currentTile + "번 위치에" + ableElements[elementIndex] + "번 설치");
         installSound.Play();
-        elementStatus[currentTile] = ableElements[elementIndex];
-        elementTiles[currentTile].SwapTile(interactTile, facilityTile);
+        elementStatus[currentTile] = ableElements[elementIndex];        
+        CopyTiles(elementTiles[currentTile], elementStatus[currentTile]);
         
         GameManager.Instance.isInteracting = false;
         if (ableElements[0] == 4)
@@ -271,9 +322,36 @@ public class facilityManager : MonoBehaviour
         }
         yield return new WaitForSeconds(installSound.clip.length / 2);
         currentTile = setCurrentTile();
-        elementTiles[currentTile].SwapTile(groundTile, interactTile);
-        elementTileColliders[currentTile].enabled = true;
-        GameManager.Instance.isInteracting = false;
+        if (lineStatus[lineNumber] == 0)
+        {
+            CopyTiles(elementTiles[currentTile], 9);
+            elementTileColliders[currentTile].enabled = true;
+        }
+        GameManager.Instance.isInteracting = false;        
+    }
+
+    void CopyTiles(Tilemap target, int tileNum)
+    {        
+        Tilemap source = exampleTiles[tileNum];
+
+        // calculate boundary of source Tilemap
+        BoundsInt sourceBounds = source.cellBounds;
+        Vector3Int targetOrigin = target.origin;  // origin of target Tilemap
+
+        // for each tiles of source Tilemap
+        foreach (var pos in sourceBounds.allPositionsWithin)
+        {
+            // get tile of it and copy it into target Tilemap
+            TileBase tile = source.GetTile(pos);
+
+            if (tile != null)
+            {
+                Vector3Int targetPosition = pos - sourceBounds.position + targetOrigin;
+                target.SetTile(targetPosition, tile);
+            }
+        }
+
+
     }
 
     /*

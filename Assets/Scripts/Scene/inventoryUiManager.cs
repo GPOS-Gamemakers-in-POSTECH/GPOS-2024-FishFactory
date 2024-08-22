@@ -9,6 +9,12 @@ public class inventoryUiManager : MonoBehaviour
     public Button productsButton;
     public Button toolsButton;
     public Button facilitiesButton;
+    public Button closeButton;
+    public Button openButton;
+
+    public Button testButton;
+    private int test;
+    public GameObject inventoryUi;
 
     public RectTransform targetRectTransform;
 
@@ -19,6 +25,9 @@ public class inventoryUiManager : MonoBehaviour
         productsButton.onClick.AddListener(scrollProducts);
         toolsButton.onClick.AddListener(scrollTools);
         facilitiesButton.onClick.AddListener(scrollFacilities);
+        openButton.onClick.AddListener(openInventory);
+        closeButton.onClick.AddListener(closeInventory);
+        testButton.onClick.AddListener(testFunc);
     }
 
     // Update is called once per frame
@@ -45,5 +54,29 @@ public class inventoryUiManager : MonoBehaviour
     void scrollFacilities()
     {
         targetRectTransform.anchoredPosition = new Vector2(targetRectTransform.anchoredPosition.x, 910);
+    }
+
+    void openInventory()
+    {
+        inventoryUi.SetActive(true);
+    }
+
+    void closeInventory()
+    {
+        inventoryUi.SetActive(false);
+    }
+
+    void testFunc()
+    {
+        if(Input.GetKey(KeyCode.LeftControl))
+        {
+            test+=10;
+            Debug.Log(test);
+        }
+        else
+        {
+            test += 1;
+            Debug.Log(test);
+        }
     }
 }
