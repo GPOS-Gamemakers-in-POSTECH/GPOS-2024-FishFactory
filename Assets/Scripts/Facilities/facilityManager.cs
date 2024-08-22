@@ -35,7 +35,7 @@ public class facilityManager : MonoBehaviour
 
     public AudioSource installSound;
 
-    public JsonManager jsonManager;
+    
 
     List<int> ableElements;  // to save the kinds of installable facilities
     List<string> ableFishes; // to save the kinds of inputable fishes
@@ -82,7 +82,7 @@ public class facilityManager : MonoBehaviour
             isWorking[lineNumber] = 0;
         }
 
-        
+        Debug.Log(makeProduct(10301, 1).itemName);
 
     }
     
@@ -354,29 +354,10 @@ public class facilityManager : MonoBehaviour
 
     }
 
-    /*
+    
     Item makeProduct(int fishID, int lineKind)
     {
-        if(lineKind == 1) // freeze
-        {
-            switch(fishID)
-                case :
-        }
-        else if(lineKind == 2) // dry
-        {
-
-        }
-        else if(lineKind == 3) // jeotgal
-        {
-            
-        }
-        else if(lineKind == 4) // fish cake
-        {
-
-        }
-        else // if(lineKind == 5) // can
-        {
-            
-        }
-    }*/
+        int productID = fishID + lineKind;
+        return GameManager.Instance.itemDict[0][productID];
+    }
 }
