@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -33,10 +32,14 @@ public class FishTankManager : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        fishTankData = GameManager.Instance.fishTanks[fishTankNo];
+        if (SceneManager.GetActiveScene().name == "MinMul") { fishTankData = GameManager.Instance.freshFishTanks[fishTankNo]; }
+        else if (SceneManager.GetActiveScene().name == "Ocean") { fishTankData = GameManager.Instance.oceanFishTanks[fishTankNo]; }
+        else if (SceneManager.GetActiveScene().name == "Indoor") { fishTankData = GameManager.Instance.indoorFishTanks[fishTankNo]; }
+        else { Debug.Log("This Scene has no Fish Tank"); }
+
         player = GameObject.FindWithTag("Player"); // Find Player Object
 
-        fishButton.onClick.AddListener(() => AddFish(null, 0));
+        fishButton.onClick.AddListener(() => AddFish(GameManager.Instance.itemDict[0][10100], 1));
         feedButton.onClick.AddListener(FeedFish);
 
         if (fishTankData.isTankInstalled)
@@ -133,8 +136,8 @@ public class FishTankManager : MonoBehaviour
     {
         if (fishTankData.fish == null)
         {
-            GameManager.Instance.fishTanks[fishTankNo].fish = fish;
-            GameManager.Instance.fishTanks[fishTankNo].fishAmount = fishAmount;
+            fishTankData.fish = fish;
+            fishTankData.fishAmount = fishAmount;
         }
         else { Debug.Log("Fish Already Exists."); }
 

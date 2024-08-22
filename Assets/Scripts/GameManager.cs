@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,10 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public bool isInteracting; // Check If Player is Interacting
-    public bool[] freshFishTank = new bool[9];
-    public bool[] oceanFishTank = new bool[20];
-    public bool[] indoorFishTank = new bool[9];
-    public FishTankData[] fishTanks = new FishTankData[9];
+    public FishTankData[] freshFishTanks = new FishTankData[9];
+    public FishTankData[] oceanFishTanks = new FishTankData[20];
+    public FishTankData[] indoorFishTanks = new FishTankData[9];
     public Dictionary<int, Item>[] itemDict = new Dictionary<int, Item>[3];
 
 
@@ -26,15 +24,9 @@ public class GameManager : MonoBehaviour
             itemDict[1] = new Dictionary<int, Item>();
             itemDict[2] = new Dictionary<int, Item>();
 
-            fishTanks[0] = new FishTankData();
-            fishTanks[1] = new FishTankData();
-            fishTanks[2] = new FishTankData();
-            fishTanks[3] = new FishTankData();
-            fishTanks[4] = new FishTankData();
-            fishTanks[5] = new FishTankData();
-            fishTanks[6] = new FishTankData();
-            fishTanks[7] = new FishTankData();
-            fishTanks[8] = new FishTankData();
+            for (int i = 0; i < 9; i++) { freshFishTanks[i] = new FishTankData(); }
+            for (int i = 0; i < 20; i++) { oceanFishTanks[i] = new FishTankData(); }
+            for (int i = 0; i < 9; i++) { indoorFishTanks[i] = new FishTankData(); }
 
             LoadJson(itemDict);
         }
