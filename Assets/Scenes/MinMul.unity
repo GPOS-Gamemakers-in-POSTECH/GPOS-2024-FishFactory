@@ -12489,8 +12489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e480a7fe0ecc65a42923ff119b731480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishTankNo: 0
+  fishTankNo: 6
   waterType: 0
+  isTankInstalled: 0
   fish:
     itemID: 0
     itemName: 
@@ -12552,7 +12553,6 @@ MonoBehaviour:
   tileBaseB: {fileID: 11400000, guid: ec29ffd19395a914180c9be52820023c, type: 2}
   baseTile: {fileID: 1608547986}
   edgeTile: {fileID: 537580148}
-  isTankInstalled: 0
   installSound: {fileID: 1308029777}
 --- !u!1 &410432706
 GameObject:
@@ -17723,6 +17723,45 @@ MonoBehaviour:
   freshFishTank: 000000000000000000
   oceanFishTank: 0000000000000000000000000000000000000000
   indoorFishTank: 000000000000000000
+  fishTanks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1996043877
 GameObject:
   m_ObjectHideFlags: 0

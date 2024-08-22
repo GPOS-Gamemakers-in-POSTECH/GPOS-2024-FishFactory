@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
     public bool[] freshFishTank = new bool[9];
     public bool[] oceanFishTank = new bool[20];
     public bool[] indoorFishTank = new bool[9];
+    public FishTankData[] fishTanks = new FishTankData[9];
     public Dictionary<int, Item>[] itemDict = new Dictionary<int, Item>[3];
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (Instance == null)
         {
@@ -24,6 +25,17 @@ public class GameManager : MonoBehaviour
             itemDict[0] = new Dictionary<int, Item>();
             itemDict[1] = new Dictionary<int, Item>();
             itemDict[2] = new Dictionary<int, Item>();
+
+            fishTanks[0] = new FishTankData();
+            fishTanks[1] = new FishTankData();
+            fishTanks[2] = new FishTankData();
+            fishTanks[3] = new FishTankData();
+            fishTanks[4] = new FishTankData();
+            fishTanks[5] = new FishTankData();
+            fishTanks[6] = new FishTankData();
+            fishTanks[7] = new FishTankData();
+            fishTanks[8] = new FishTankData();
+
             LoadJson(itemDict);
         }
         else { Destroy(gameObject); }
