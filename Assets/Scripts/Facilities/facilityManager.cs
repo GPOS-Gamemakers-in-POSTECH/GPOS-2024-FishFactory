@@ -21,6 +21,7 @@ public class facilityManager : MonoBehaviour
     public GameObject inputPopUp;
 
     public Tilemap[] elementTiles = new Tilemap[4];  // four element tiles of this line
+    private TilemapCollider2D[] elementTileColliders = new TilemapCollider2D[4];
     private int currentTile;  // which tile is now on interact
 
     public TileBase groundTile;
@@ -37,6 +38,19 @@ public class facilityManager : MonoBehaviour
         lineStatus = installStatusManager.Instance.facilityLine;
         elementStatus = installStatusManager.Instance.facilityElements[lineNumber];
         isWorking = installStatusManager.Instance.isFacilityWorking;
+
+        for (int i = 0; i < 4; i++)
+        {
+            elementTileColliders[i] = elementTiles[i].GetComponent<TilemapCollider2D>();
+            if (elementStatus[i] != 0)
+            {
+                elementTiles[i].SwapTile(groundTile, facilityTile);
+                elementTileColliders[i].enabled = true;
+            }
+        }
+
+        if (elementStatus[0] == 0)
+            elementTiles[0].SwapTile(groundTile, interactTile);
 
         currentTile = setCurrentTile();
         if (isWorking[lineNumber] == 1)
@@ -103,7 +117,7 @@ public class facilityManager : MonoBehaviour
                         Debug.Log(currentTile + "번 위치에" + ableElements[0] + "번 설치");
                         elementStatus[currentTile] = ableElements[0];
                         elementTiles[currentTile].SwapTile(interactTile, facilityTile);
-                        Debug.Log("swap");
+                        installSound.Play();
                         GameManager.Instance.isInteracting = false;
                         if (ableElements[0] == 4)
                         {
@@ -111,6 +125,8 @@ public class facilityManager : MonoBehaviour
                             Debug.Log(lineStatus[lineNumber]+"번 라인 완성");
                         }
                         currentTile = setCurrentTile();
+                        elementTiles[currentTile].SwapTile(groundTile, interactTile);
+                        elementTileColliders[currentTile].enabled = true;
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
