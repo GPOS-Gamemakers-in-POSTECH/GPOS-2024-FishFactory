@@ -24,7 +24,6 @@ public class FishTank : MonoBehaviour
     public Button feedButton; // Button for feeding fishes
 
     public GameObject player;
-    public bool isInteracting; // Check if Player is Interacting
     private float interactionDistance = 0.8f; // Max Distance to Interact with Fish Tank
     private KeyCode interactionKey = KeyCode.E; // KeyCode for Interact
 
@@ -48,7 +47,6 @@ public class FishTank : MonoBehaviour
         feedButton.onClick.AddListener(FeedFish);
 
         isTankInstalled = SearchTankInstallation()[fishTankNo];
-        isInteracting = GameManager.Instance.isInteracting;
 
         if (isTankInstalled)
         {
@@ -60,9 +58,10 @@ public class FishTank : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        Debug.Log(GameManager.Instance.isInteracting);
         float distance = CalculateDistance(player, baseTile);
 
-        if (distance <= interactionDistance && isInteracting == false)
+        if (distance <= interactionDistance && GameManager.Instance.isInteracting == false)
         {
             // if fish tank is not installed yet
             if (!isTankInstalled)
@@ -71,9 +70,9 @@ public class FishTank : MonoBehaviour
                 installPopup.SetActive(true);
 
                 // if interactionKey pressed, and condition satisfied, install fish tank
-                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    isInteracting = true;
+                    GameManager.Instance.isInteracting = true;
                     StartCoroutine(InstallFishTank());
                 }
             }
@@ -84,20 +83,20 @@ public class FishTank : MonoBehaviour
                 infoPopup.SetActive(true);
 
                 // if interactionKey pressed, show information UI
-                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    isInteracting = true;
+                    GameManager.Instance.isInteracting = true;
                     fishInfoUI.SetActive(true);
                     infoPopup.SetActive(false);
                 }
             }
         }
 
-        else if (distance <= interactionDistance && isInteracting && isTankInstalled)
+        else if (distance <= interactionDistance && GameManager.Instance.isInteracting && isTankInstalled)
         {
             if (Input.GetKeyDown(interactionKey))
             {
-                isInteracting = false;
+                GameManager.Instance.isInteracting = false;
                 fishInfoUI.SetActive(false);
             }
         }
@@ -143,7 +142,7 @@ public class FishTank : MonoBehaviour
 
         isTankInstalled = true;
         SearchTankInstallation()[fishTankNo] = true;
-        isInteracting = false;
+        GameManager.Instance.isInteracting = false;
     }
 
     // Show the Information of Fish Tank
