@@ -8,7 +8,7 @@ public class Item
     public string itemName;
     public bool waterType;
     public int itemTier;
-    public int growTime;
+    public int time;
     public double feedAmount;
     public int sellPrice;
     public int buyPrice;
