@@ -38,7 +38,7 @@ public class facilityManager : MonoBehaviour
     
 
     List<int> ableElements;  // to save the kinds of installable facilities
-    List<string> ableFishes; // to save the kinds of inputable fishes
+    List<int> ableFishes; // to save the kinds of inputable fishes
 
     void Awake()
     {
@@ -76,9 +76,9 @@ public class facilityManager : MonoBehaviour
 
         currentTile = setCurrentTile();
 
-        if (isWorking[lineNumber] == 2)
+        if (isWorking[lineNumber] % 100 != 1)
         {
-            Debug.Log("working is ended in no." + lineNumber);
+            Debug.Log("product made. ID : " + (isWorking[lineNumber] + 1 + lineStatus[lineNumber]));
             isWorking[lineNumber] = 0;
         }
 
@@ -130,9 +130,9 @@ public class facilityManager : MonoBehaviour
                             GameManager.Instance.isInteracting = true;
                             ableFishes = getAbleFishList(lineStatus[lineNumber]);
                             Debug.Log(string.Join(", ", ableFishes));
-                            inputPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableFishes);
-                            /*Debug.Log("물고기 투입");
-                            isWorking[lineNumber] = 1;*/
+                            //inputPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableFishes);
+                            
+                            isWorking[lineNumber] = ableFishes[0];
                         }
                     }
                     else
@@ -144,6 +144,8 @@ public class facilityManager : MonoBehaviour
                         }
                     }
                 }
+
+
             }
         }
 
@@ -155,8 +157,9 @@ public class facilityManager : MonoBehaviour
 
             if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
             {
-                ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);                
-                installPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableElements);
+                ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
+                Debug.Log(string.Join(", ", ableElements));
+                // installPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableElements);
                 installPopUp.SetActive(true);
                 GameManager.Instance.isInteracting = true;
         
@@ -255,26 +258,26 @@ public class facilityManager : MonoBehaviour
         return result;
     }
 
-    List<string> getAbleFishList(int input)
+    List<int> getAbleFishList(int input)
     {
-        List<string> result = new List<string>();
+        List<int> result = new List<int>();
 
         switch (input)
         {
             case 1:
-                result.AddRange(new string[] { "미꾸라지", "송어", "우럭", "명태", "고등어", "청어", "참다랑어" });
+                result.AddRange(new int[] { 10301, 10401, 20301, 20701, 21001, 21101, 21301 });
                 break;
             case 2:
-                result.AddRange(new string[] { "새우", "김", "미역", "멸치", "명태", "쥐치", "오징어" });
+                result.AddRange(new int[] { 10201, 20101, 20201, 20601, 20701, 20901, 21201 });
                 break;
             case 3:
-                result.AddRange(new string[] { "새우", "굴", "멸치", "오징어", "참다랑어" });
+                result.AddRange(new int[] { 10201, 20501, 20601, 21201, 21301 });
                 break;
             case 4:
-                result.AddRange(new string[] { "우럭", "명태", "참다랑어" });
+                result.AddRange(new int[] { 20301, 20701, 21301 });
                 break;
             case 5:
-                result.AddRange(new string[] { "물", "멸치", "고등어", "청어", "철갑상어" });
+                result.AddRange(new int[] { 20501, 20601, 21001, 21101, 21401 });
                 break;
         }
 
