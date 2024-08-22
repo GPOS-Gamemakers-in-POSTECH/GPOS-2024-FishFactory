@@ -92,6 +92,7 @@ public class facilityManager : MonoBehaviour
                     }
                     elementStatus[0] = 0;
                     elementTiles[0].SwapTile(facilityTile, interactTile);
+                    isWorking[lineNumber] = 0;
 
                     currentTile = setCurrentTile();
                 }
@@ -122,7 +123,7 @@ public class facilityManager : MonoBehaviour
 
                 if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
                 {
-                    ableElements = GetOutput(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
+                    ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
                     Debug.Log(string.Join(", ", ableElements));
                     GameManager.Instance.isInteracting = true;
         
@@ -142,8 +143,7 @@ public class facilityManager : MonoBehaviour
                             lineStatus[lineNumber] = checkLineType();
                             Debug.Log(lineStatus[lineNumber] + "번 라인 완성");
                         }
-                        currentTile = setCurrentTile();
-                        Debug.Log(currentTile);
+                        currentTile = setCurrentTile();                        
                         elementTiles[currentTile].SwapTile(groundTile, interactTile);
                         elementTileColliders[currentTile].enabled = true;
                     }
@@ -151,15 +151,23 @@ public class facilityManager : MonoBehaviour
                     {
                         Debug.Log(currentTile + "번 위치에" + ableElements[1] + "번 설치");
                         elementStatus[currentTile] = ableElements[1];
-                        GameManager.Instance.isInteracting = false;
-                        currentTile = setCurrentTile();
+                        elementTiles[currentTile].SwapTile(interactTile, facilityTile);
+                        installSound.Play();
+                        GameManager.Instance.isInteracting = false;                        
+                        currentTile = setCurrentTile();                        
+                        elementTiles[currentTile].SwapTile(groundTile, interactTile);
+                        elementTileColliders[currentTile].enabled = true;
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha3))
                     {
                         Debug.Log(currentTile + "번 위치에" + ableElements[2] + "번 설치");
                         elementStatus[currentTile] = ableElements[2];
+                        elementTiles[currentTile].SwapTile(interactTile, facilityTile);
+                        installSound.Play();
                         GameManager.Instance.isInteracting = false;
-                        currentTile = setCurrentTile();
+                        currentTile = setCurrentTile();                        
+                        elementTiles[currentTile].SwapTile(groundTile, interactTile);
+                        elementTileColliders[currentTile].enabled = true;
                     }
                     else if (Input.GetKeyDown(interactionKey))
                         GameManager.Instance.isInteracting = false;
@@ -203,7 +211,7 @@ public class facilityManager : MonoBehaviour
             return 3;
     }
 
-    List<int> GetOutput(int input)
+    List<int> getAbleFacilityList(int input)
     {
         List<int> result = new List<int>();
 
