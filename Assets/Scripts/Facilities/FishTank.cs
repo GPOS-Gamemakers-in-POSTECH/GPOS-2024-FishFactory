@@ -117,7 +117,6 @@ public class FishTankManager : MonoBehaviour
         }
 
         fishTankData.isTankInstalled = true;
-        SearchTankInstallation()[fishTankNo] = true;
         GameManager.Instance.isInteracting = false;
     }
 
@@ -218,14 +217,6 @@ public class FishTankManager : MonoBehaviour
         // Find the closest point and Calculate Distance
         Vector3 closestPoint = tilemapBounds.ClosestPoint(player.transform.position);
         return Vector3.Distance(player.transform.position, closestPoint);
-    }
-
-    bool[] SearchTankInstallation()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "MinMul") { return GameManager.Instance.freshFishTank; }
-        else if (currentSceneName == "Ocean") { return GameManager.Instance.oceanFishTank; }
-        else { return GameManager.Instance.indoorFishTank; }
     }
 }
 

@@ -12490,65 +12490,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishTankNo: 6
-  waterType: 0
-  isTankInstalled: 0
-  fish:
-    itemID: 0
-    itemName: 
+  fishTankData:
+    fishTankNo: 0
     waterType: 0
-    itemTier: 0
-    time: 0
-    feedAmount: 0
-    sellPrice: 0
-    buyPrice: 0
-    power: 0
-  fishAmount: 0
-  dieCount: 0
-  growCount: 0
-  parts:
-  - itemID: 0
-    itemName: 
-    waterType: 0
-    itemTier: 0
-    time: 0
-    feedAmount: 0
-    sellPrice: 0
-    buyPrice: 0
-    power: 0
-  - itemID: 0
-    itemName: 
-    waterType: 0
-    itemTier: 0
-    time: 0
-    feedAmount: 0
-    sellPrice: 0
-    buyPrice: 0
-    power: 0
-  - itemID: 0
-    itemName: 
-    waterType: 0
-    itemTier: 0
-    time: 0
-    feedAmount: 0
-    sellPrice: 0
-    buyPrice: 0
-    power: 0
-  - itemID: 0
-    itemName: 
-    waterType: 0
-    itemTier: 0
-    time: 0
-    feedAmount: 0
-    sellPrice: 0
-    buyPrice: 0
-    power: 0
-  isPartsOn: 00000000
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
   fishInfoUI: {fileID: 1180924519}
   infoPopup: {fileID: 1442037614}
   installPopup: {fileID: 583196780}
   fishButton: {fileID: 1669380389}
   feedButton: {fileID: 942054541}
-  player: {fileID: 0}
+  player: {fileID: 199419080}
   tileBaseA: {fileID: 11400000, guid: 1b5836d4d86ecee48b53ff31026cb693, type: 2}
   tileBaseB: {fileID: 11400000, guid: ec29ffd19395a914180c9be52820023c, type: 2}
   baseTile: {fileID: 1608547986}
@@ -17724,44 +17726,2058 @@ MonoBehaviour:
   oceanFishTank: 0000000000000000000000000000000000000000
   indoorFishTank: 000000000000000000
   fishTanks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
 --- !u!1 &1996043877
 GameObject:
   m_ObjectHideFlags: 0
