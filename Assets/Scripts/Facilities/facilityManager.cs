@@ -158,7 +158,6 @@ public class facilityManager : MonoBehaviour
 
         else
         {
-
             installPopUp.SetActive(false);
         }
     }
@@ -228,18 +227,17 @@ public class facilityManager : MonoBehaviour
 
     int checkLineType()
     {
-        // 배열을 변수로 선언
         int[] status1 = new int[] { 1, 4, 0, 0 };
         int[] status2 = new int[] { 2, 4, 0, 0 };
         int[] status3 = new int[] { 3, 5, 4, 0 };
         int[] status4 = new int[] { 3, 6, 8, 4 };
         int[] status5 = new int[] { 3, 7, 4, 0 };
 
-        if (compareArr(elementStatus, status1)) return 1; // 냉동
-        else if (compareArr(elementStatus, status2)) return 2; // 말리기
-        else if (compareArr(elementStatus, status3)) return 3; // 젓갈
-        else if (compareArr(elementStatus, status4)) return 4; // 어묵
-        else /*if (compareArr(elementStatus, status5))*/ return 5; // 통조림     
+        if (compareArr(elementStatus, status1)) return 1; // freeze
+        else if (compareArr(elementStatus, status2)) return 2; // dry
+        else if (compareArr(elementStatus, status3)) return 3; // jutgal
+        else if (compareArr(elementStatus, status4)) return 4; // fishcake
+        else /*if (compareArr(elementStatus, status5))*/ return 5; // can   
     }
 
     bool compareArr(int[] arr1, int[] arr2)
