@@ -36,6 +36,17 @@ public class Item
     public void GeneratePower(int increasePower) { power += increasePower; } // Increase Power Value
 
     public void DecreasePower(int decreasePower) { power -= decreasePower; } // Decrease Power Value
+
+    public static int PowerConsumption(Item[] items)
+    {
+        int totalPower=0;
+        if(items.Length == 0) return 0;
+        for (int i = 0; i < items.Length; i++)
+        {
+            totalPower += items[i].power;
+        }
+        return totalPower;
+    }
 }
 
 [Serializable]
