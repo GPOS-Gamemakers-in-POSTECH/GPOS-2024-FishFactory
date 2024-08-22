@@ -17,14 +17,14 @@ public class Item
 
     public void ShowItemInfo()
     {
-        string debugLine = itemID.ToString()+ " ; " + itemName + " : /t";
+        string debugLine = itemID.ToString() + " ; " + itemName + " : /t";
         int itemType = itemID / 10000;
         if (itemType == 1 || itemType == 2 || itemType == 4)
             debugLine += "ItemTier:" + itemTier.ToString();
         if ((itemType == 1 && itemID % 10 == 0) || (itemType == 2 && itemID % 10 == 0) || itemType == 9)
             debugLine += " | " + time.ToString();
         if (itemType >= 1 && itemType <= 2)
-            debugLine += ", " +(!waterType?"Freshwater":"Ocean")+", FeedAmount: " + feedAmount.ToString();
+            debugLine += ", " + (!waterType ? "Freshwater" : "Ocean") + ", FeedAmount: " + feedAmount.ToString();
         if (itemType >= 1 && itemType <= 4)
             debugLine += " | " + sellPrice.ToString() + "/" + buyPrice.ToString();
         if (itemType == 9)
