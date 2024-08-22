@@ -84,9 +84,7 @@ public class FishTank : MonoBehaviour
                 // if interactionKey pressed, show information UI
                 if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    GameManager.Instance.isInteracting = true;
-                    fishInfoUI.SetActive(true);
-                    infoPopup.SetActive(false);
+                    ShowFishTankInfo();
                 }
             }
         }
@@ -147,10 +145,9 @@ public class FishTank : MonoBehaviour
     // Show the Information of Fish Tank
     public void ShowFishTankInfo()
     {
-        Debug.Log(fish.itemID);
-        Debug.Log(fish.itemName);
-        Debug.Log(fishAmount);
-        Debug.Log(isPartsOn);
+        GameManager.Instance.isInteracting = true;
+        fishInfoUI.SetActive(true);
+        infoPopup.SetActive(false);
     }
 
     // Add New Fishes to Fish Tank
@@ -169,7 +166,7 @@ public class FishTank : MonoBehaviour
     // Gather Grown Fishes
     public void GatherFish()
     {
-        if (growCount >= fish.growTime) { Debug.Log("Gathered"); }
+        if (growCount >= fish.time) { Debug.Log("Gathered"); }
         else if (dieCount >= 3) { Debug.Log("Died"); }
         else { Debug.Log("Not Yet"); }
     }
