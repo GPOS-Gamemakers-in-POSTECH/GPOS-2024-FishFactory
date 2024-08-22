@@ -23,7 +23,12 @@ public class playerInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        addToInventory(1, 12);
+        PrintInventory();
+        addToInventory(1, 12);
+        PrintInventory();
+        addToInventory(2, 12);
+        PrintInventory();
     }
 
     // Update is called once per frame
@@ -65,18 +70,7 @@ public class playerInventory : MonoBehaviour
         Debug.Log("----");
     }
 
-    public Item findItemWithID(int itemID)
-    {
-        for (int i = 0; i < itemDict.Length; i++)
-        {
-            foreach (KeyValuePair<int, Item> kvp in itemDict[i])
-            {
-                if (kvp.Key == itemID)
-                    return kvp.Value;
-            }
-        }
-        return null;
-    }
+
 
 
 }

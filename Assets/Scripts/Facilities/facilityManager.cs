@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using TMPro;
 
 public class facilityManager : MonoBehaviour
 {
@@ -29,9 +30,8 @@ public class facilityManager : MonoBehaviour
 
     public Tilemap[] exampleTiles = new Tilemap[10];
 
-
-
-    
+    public GameObject inputPopUpText;
+    public GameObject installPopUpText;    
 
     public AudioSource installSound;
 
@@ -82,7 +82,8 @@ public class facilityManager : MonoBehaviour
             isWorking[lineNumber] = 0;
         }
 
-        Debug.Log(makeProduct(10301, 1).itemName);
+
+
 
     }
     
@@ -129,6 +130,7 @@ public class facilityManager : MonoBehaviour
                             GameManager.Instance.isInteracting = true;
                             ableFishes = getAbleFishList(lineStatus[lineNumber]);
                             Debug.Log(string.Join(", ", ableFishes));
+                            inputPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableFishes);
                             /*Debug.Log("물고기 투입");
                             isWorking[lineNumber] = 1;*/
                         }
@@ -149,11 +151,13 @@ public class facilityManager : MonoBehaviour
         if (currentTileDistance <= interactionDistance && lineStatus[lineNumber] == 0)
         {
             inputPopUp.SetActive(false);
+            
 
             if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
             {
-                ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
-                Debug.Log(string.Join(", ", ableElements));
+                ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);                
+                installPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableElements);
+                installPopUp.SetActive(true);
                 GameManager.Instance.isInteracting = true;
         
             }
@@ -272,9 +276,6 @@ public class facilityManager : MonoBehaviour
             case 5:
                 result.AddRange(new string[] { "물", "멸치", "고등어", "청어", "철갑상어" });
                 break;
-            default:
-                // 다른 입력 값에 대한 기본 동작을 여기에 추가할 수 있음
-                break;
         }
 
         return result;
@@ -315,7 +316,7 @@ public class facilityManager : MonoBehaviour
         CopyTiles(elementTiles[currentTile], elementStatus[currentTile]);
         
         GameManager.Instance.isInteracting = false;
-        if (ableElements[0] == 4)
+        if (ableElements[elementIndex] == 4)
         {
             lineStatus[lineNumber] = checkLineType();
             Debug.Log(lineStatus[lineNumber] + "번 라인 완성");
