@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
             DontDestroyOnLoad(gameObject);
 
             itemDict[0] = new Dictionary<int, Item>();
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
             LoadJson(itemDict);
         }
         else { Destroy(gameObject); }
+
     }
 
     // Load Item Data from Json
