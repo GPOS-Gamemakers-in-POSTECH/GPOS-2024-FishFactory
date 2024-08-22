@@ -19,8 +19,12 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            LoadJson(itemDict);
             DontDestroyOnLoad(gameObject);
+
+            itemDict[0] = new Dictionary<int, Item>();
+            itemDict[1] = new Dictionary<int, Item>();
+            itemDict[2] = new Dictionary<int, Item>();
+            LoadJson(itemDict);
         }
         else { Destroy(gameObject); }
     }
