@@ -13,6 +13,8 @@ public class facilityManager : MonoBehaviour
     
     public int lineNumber;  // index of this line
 
+    public Item recipe;
+
     private int[] lineStatus;  // kind of line
     private int[] elementStatus;  // kind of elements
     private int[] isWorking;  // is this line working
@@ -29,6 +31,8 @@ public class facilityManager : MonoBehaviour
     public TileBase facilityTile;
 
     public AudioSource installSound;
+
+    public JsonManager jsonManager;
 
     List<int> ableElements;  // to save the kinds of installable facility
 
@@ -271,4 +275,30 @@ public class facilityManager : MonoBehaviour
         elementTileColliders[currentTile].enabled = true;
         GameManager.Instance.isInteracting = false;
     }
+
+    /*
+    Item makeProduct(int fishID, int lineKind)
+    {
+        if(lineKind == 1) // freeze
+        {
+            switch(fishID)
+                case :
+        }
+        else if(lineKind == 2) // dry
+        {
+
+        }
+        else if(lineKind == 3) // jeotgal
+        {
+            
+        }
+        else if(lineKind == 4) // fish cake
+        {
+
+        }
+        else // if(lineKind == 5) // can
+        {
+            
+        }
+    }*/
 }
