@@ -71,8 +71,7 @@ public class FishTankManager : MonoBehaviour
                     {
                         GameManager.Instance.isInteracting = true;
                         StartCoroutine(InstallFishTank());
-                    }
-                    
+                    }                    
                 }
             }
 
