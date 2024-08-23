@@ -132,7 +132,7 @@ public class facilityManager : MonoBehaviour
                             GameManager.Instance.isInteracting = true;
                             ableFishes = getAbleFishList(lineStatus[lineNumber]);
 
-                            string allFishNames = "투입 가능한 물고기 : ";
+                            string allFishNames = "";
                             for (int i = 0; i < ableFishes.Count; i++)
                             {
                                 int fish_ = ableFishes[i]; // 현재 접근 중인 fish_ 값
@@ -148,9 +148,11 @@ public class facilityManager : MonoBehaviour
                                 }
                             }
 
+                            allFishNames += "\n숫자키 : +1마리, shift+숫자키 : +10마리 / Q : 나가기 / E : 결정";
+
                             Debug.Log(allFishNames);
 
-                            // inputPopUpText.GetComponent<TextMeshPro>().text = allFishNames;                           
+                            inputPopUpText.GetComponent<TextMeshPro>().text = allFishNames;                           
 
                         }
                     }
@@ -259,7 +261,7 @@ public class facilityManager : MonoBehaviour
                 }
 
                 Debug.Log(allElementNames);
-                // installPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableElements);
+                installPopUpText.GetComponent<TextMeshPro>().text = allElementNames + "\n숫자키 : 기계 설치 / E : 나가기";
                 installPopUp.SetActive(true);
                 GameManager.Instance.isInteracting = true;
         
