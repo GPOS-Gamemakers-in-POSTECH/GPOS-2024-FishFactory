@@ -18,6 +18,8 @@ public class BasicMovements : MonoBehaviour
     public Tilemap groundTile;
     private Bounds groundBounds;
 
+    public GameObject wantSleep;
+
     void Start()
     {
         // calculate the boundary of ground tilemap

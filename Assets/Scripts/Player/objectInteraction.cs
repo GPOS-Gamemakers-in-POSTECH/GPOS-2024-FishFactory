@@ -26,8 +26,7 @@ public class ObjectInteraction : fadeInOut
     // sound effect of transition
     public AudioSource transitionAudio;
 
-    public int totalDate;
-    public int actionPoint;
+
     int maxActionPoint = 100;
     
     void Start()
@@ -35,8 +34,7 @@ public class ObjectInteraction : fadeInOut
         if (departureMap == sceneName) { player.position = transform.position; } // set players position to right arrow that is connected to departured map
         StartCoroutine(FadeFunction(1f)); // fade in when scene is started
 
-        actionPoint = GameManager.Instance.actionPoint;
-        totalDate = GameManager.Instance.totalDate;
+
     }
 
     void Update()
@@ -84,7 +82,7 @@ public class ObjectInteraction : fadeInOut
         // fill the AP to max and add date
         GameManager.Instance.isInteracting = true;
         GameManager.Instance.actionPoint = maxActionPoint;
-        totalDate++;
+        GameManager.Instance.totalDate++;
 
         // fade out and move to SleepScene
         StartCoroutine(FadeFunction(0f));
