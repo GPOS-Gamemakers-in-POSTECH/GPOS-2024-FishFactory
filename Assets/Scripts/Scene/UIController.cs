@@ -76,8 +76,12 @@ public class UIController : MonoBehaviour
             seasonCoverImage.gameObject.SetActive(false);
             DateText.gameObject.SetActive(false);
         }
-            
-        if (GameManager.Instance.actionPoint <= 20)
+
+        if (SceneManager.GetActiveScene().name == "MinMul")
+        {
+            goToBedButton.gameObject.SetActive(false);
+        }
+        else if (GameManager.Instance.actionPoint <= 20)
             goToBedButton.gameObject.SetActive(true);
         else
             goToBedButton.gameObject.SetActive(false);
