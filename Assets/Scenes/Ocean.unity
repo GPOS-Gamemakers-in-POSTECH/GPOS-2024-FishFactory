@@ -13349,7 +13349,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1918211202
@@ -13381,6 +13381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionPointsText: {fileID: 1923550739}
+  seasonCoverImage: {fileID: 0}
   DateText: {fileID: 46542565}
   APmask: {fileID: 95341146}
   seasonImage: {fileID: 1337170497}
