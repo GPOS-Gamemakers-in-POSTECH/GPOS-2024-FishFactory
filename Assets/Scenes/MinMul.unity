@@ -15463,6 +15463,7 @@ MonoBehaviour:
   transitionAudio: {fileID: 0}
   totalDate: 0
   actionPoint: 0
+  controlUI: {fileID: 1775538199}
 --- !u!212 &909048881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17646,6 +17647,7 @@ MonoBehaviour:
   transitionAudio: {fileID: 410432707}
   totalDate: 0
   actionPoint: 0
+  controlUI: {fileID: 0}
 --- !u!1 &1174582692
 GameObject:
   m_ObjectHideFlags: 0
@@ -19943,6 +19945,7 @@ MonoBehaviour:
   transitionAudio: {fileID: 1760393338}
   totalDate: 0
   actionPoint: 0
+  controlUI: {fileID: 0}
 --- !u!212 &1618569951
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20431,7 +20434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1760393338
 AudioSource:
   m_ObjectHideFlags: 0
