@@ -61,7 +61,7 @@ public class fadeInOut : MonoBehaviour
             transitionAudio.Play();
             yield return new WaitForSeconds(transitionAudio.clip.length);
         }
-
+        GameManager.Instance.isInteracting = false;
         SceneManager.LoadScene(sceneName);
     }
 

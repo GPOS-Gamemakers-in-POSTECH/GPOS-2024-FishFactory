@@ -3229,14 +3229,14 @@ RectTransform:
   m_GameObject: {fileID: 189431214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18233852, y: 0.6665286, z: 1}
+  m_LocalScale: {x: 0.2192901, y: 0.4900099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1153955497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.091441154, y: -0.019994736}
+  m_AnchoredPosition: {x: -0.07387638, y: -0.008966446}
   m_SizeDelta: {x: 4.4121, y: 1.6875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189431216
@@ -3259,7 +3259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FreshWater
+  m_text: "  Fresh\n     Water"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
   m_sharedMaterial: {fileID: -1274956940867082501, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
@@ -3293,7 +3293,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -15485,8 +15485,8 @@ Transform:
   m_GameObject: {fileID: 1153955495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27149963, y: 0.049999237, z: 0}
-  m_LocalScale: {x: 5.4843044, y: 1.5003108, z: 1}
+  m_LocalPosition: {x: 0.1069, y: 0.0383, z: 0}
+  m_LocalScale: {x: 4.5601697, y: 2.040775, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 189431215}
