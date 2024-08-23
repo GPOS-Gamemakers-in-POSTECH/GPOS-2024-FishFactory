@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public int totalDate; // Total Date
-    [HideInInspector] public int actionPoint = 100; // Player's Action Point
+    [HideInInspector] public int actionPoint; // Player's Action Point
 
     public bool isInteracting; // Check If Player is Interacting
 
@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
 
             DontDestroyOnLoad(gameObject);
+
+            actionPoint = 100;
 
             itemDict[0] = new Dictionary<int, Item>();
             itemDict[1] = new Dictionary<int, Item>();
