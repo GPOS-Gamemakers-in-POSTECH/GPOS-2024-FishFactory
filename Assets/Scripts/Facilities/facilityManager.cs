@@ -168,6 +168,14 @@ public class facilityManager : MonoBehaviour
                             }
                         }
 
+                        else if (Input.GetKeyDown(destroyKey))
+                        {
+                            inputPopUp.SetActive(false);
+                            GameManager.Instance.isInteracting = false;
+                            isWorking[lineNumber] = 0;
+                            inputCount[lineNumber] = 0;
+                        }
+
                         else
                         {
                             for (int i = 1; i <= 7; i++)
@@ -185,11 +193,30 @@ public class facilityManager : MonoBehaviour
                                         inputFish = ableFishes[i - 1];
 
                                         if (Input.GetKey(KeyCode.LeftShift))
-                                            inputCount[lineNumber] += 10;
+                                        {
+                                            if (inputCount[lineNumber] <= 40)
+                                            {
+                                                inputCount[lineNumber] += 10;
+                                                Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입하시겠습니까?");
+                                            }
+                                            else if (inputCount[lineNumber] <= 49)
+                                            {
+                                                inputCount[lineNumber] = 50;
+                                                Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입하시겠습니까?");
+                                            }
+                                            else
+                                                Debug.Log("더 이상 넣을 수 없습니다");
+                                        }
                                         else
-                                            inputCount[lineNumber] += 1;
-                                        
-                                        Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입하시겠습니까?");
+                                        {
+                                            if (inputCount[lineNumber] <= 49)
+                                            {
+                                                inputCount[lineNumber] += 1;
+                                                Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입하시겠습니까?");
+                                            }
+                                            else
+                                                Debug.Log("더 이상 넣을 수 없습니다");
+                                        }
                                     }
                                 }
                             }
@@ -210,7 +237,23 @@ public class facilityManager : MonoBehaviour
             if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
             {
                 ableElements = getAbleFacilityList(currentTile == 0 ? 0 : elementStatus[currentTile - 1]);
-                Debug.Log(string.Join(", ", ableElements));
+
+                string allElementNames = "설치 가능한 장비 : ";
+                for (int i = 0; i < ableElements.Count; i++)
+                {                    
+                    string elementName = facilityNumToName(ableElements[i]); // itemName 가져오기
+
+                    // itemName을 allFishNames에 추가
+
+                    allElementNames = allElementNames + "(" + (i + 1).ToString() + ")" + elementName;
+
+                    if (i != ableElements.Count - 1)
+                    {
+                        allElementNames += ", ";
+                    }
+                }
+
+                Debug.Log(allElementNames);
                 // installPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableElements);
                 installPopUp.SetActive(true);
                 GameManager.Instance.isInteracting = true;
@@ -365,7 +408,7 @@ public class facilityManager : MonoBehaviour
     IEnumerator installFacility(int elementIndex)
     {
         GameManager.Instance.isInteracting = true;
-        Debug.Log(currentTile + "번 위치에" + ableElements[elementIndex] + "번 설치");
+        Debug.Log(currentTile + "번 라인에 " + facilityNumToName(ableElements[elementIndex]) + " 설치");
         installSound.Play();
         elementStatus[currentTile] = ableElements[elementIndex];        
         CopyTiles(elementTiles[currentTile], elementStatus[currentTile]);
@@ -374,7 +417,7 @@ public class facilityManager : MonoBehaviour
         if (ableElements[elementIndex] == 4)
         {
             lineStatus[lineNumber] = checkLineType();
-            Debug.Log(lineStatus[lineNumber] + "번 라인 완성");
+            Debug.Log(lineNumToName(lineStatus[lineNumber]) + " 완성");
         }
         yield return new WaitForSeconds(installSound.clip.length / 2);
         currentTile = setCurrentTile();
@@ -415,5 +458,32 @@ public class facilityManager : MonoBehaviour
     {
         int productID = fishID + lineKind;
         return GameManager.Instance.itemDict[0][productID];
+    }
+
+    string facilityNumToName(int num)
+    {
+        switch (num)
+        {
+            case 1: return "냉동기";
+            case 2: return "건조기";
+            case 3: return "발골기";
+            case 4: return "포장기";
+            case 5: return "젓갈충전기";
+            case 6: return "전분합성기";
+            case 7: return "통조림제조기";
+            default: return "튀김기";
+        }
+    }
+
+    string lineNumToName(int num)
+    {
+        switch (num)
+        {
+            case 1: return "냉동 라인";
+            case 2: return "건조 라인";
+            case 3: return "젓갈 라인";
+            case 4: return "어묵 라인";
+            default: return "통조림 라인";
+        }
     }
 }
