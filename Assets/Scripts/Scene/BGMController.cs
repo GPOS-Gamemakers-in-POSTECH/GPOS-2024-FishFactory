@@ -19,7 +19,7 @@ public class BGMController : MonoBehaviour
     // check if current scene is sleepScene
     private int isInSleepScene = 0;
 
-    public int totalDate;
+
     int seasonDate = 1;
 
     void Awake()
@@ -34,7 +34,7 @@ public class BGMController : MonoBehaviour
 
     void Start()
     {
-        totalDate = GameManager.Instance.totalDate;
+
         playBGM();
     }
 
@@ -51,7 +51,7 @@ public class BGMController : MonoBehaviour
     // insert correct BGM clip into bgmSource and play it
     void playBGM()
     {
-        switch (totalDate / seasonDate)
+        switch (GameManager.Instance.totalDate / seasonDate)
         {
             case 0: // spring
                 bgmSource.clip = springBGM; break;

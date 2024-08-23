@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class UIController : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class UIController : MonoBehaviour
     public Button inventoryButton;
     public Button goToBedButton;
 
+    public TextMeshProUGUI locationText;
+
     // update UI when starting the scene
     void Awake()
     {
@@ -55,6 +58,7 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.P))
             ReduceActionPoints(20);
 
@@ -62,6 +66,20 @@ public class UIController : MonoBehaviour
         {
             UpdateActionPointsUI();
             UpdateDateUI();
+            locationText.gameObject.SetActive(false);
+        }
+
+        else
+        {
+            locationText.gameObject.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "MinMul")
+                locationText.text = "< 민물 양식장 >";
+            else if (SceneManager.GetActiveScene().name == "Ocean")
+                locationText.text = "< 바다 양식장 >";
+            else if (SceneManager.GetActiveScene().name == "Indoor")
+                locationText.text = "< 실내 양식장 >";
+            else
+                locationText.text = "< 공장 >";
         }
 
         Vector2 mousePosition = Input.mousePosition;
@@ -96,6 +114,7 @@ public class UIController : MonoBehaviour
         if (GameManager.Instance.actionPoint < intAmount)
         {
             Debug.Log("Running out of Action Points!");
+            StartCoroutine(playerSleepy());
             return false;
         }
 
@@ -127,7 +146,7 @@ public class UIController : MonoBehaviour
         // express Date as "season - day"
         if (DateText != null)
         {
-            switch (GameManager.Instance.totalDate / seasonDate)
+            switch ((GameManager.Instance.totalDate / seasonDate) % 4)
             {
                 case 0: 
                     DateText.text = "SP-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
@@ -144,8 +163,7 @@ public class UIController : MonoBehaviour
                 case 3:
                     DateText.text = "WT-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = winterImage;
-                    break;
-                default: DateText.text = "Game End!"; break;
+                    break;                
             }
         }
     }
@@ -154,6 +172,13 @@ public class UIController : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name != "MinMul")
             SceneManager.LoadScene("MinMul");
+    }
+
+    IEnumerator playerSleepy()
+    {
+        GameObject.Find("Player").transform.Find("wantSleep").gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        GameObject.Find("Player").transform.Find("wantSleep").gameObject.SetActive(false);
     }
 
 }
