@@ -28,6 +28,7 @@ public class controlUiElements : ActionPoints
     public GameObject inventory;
 
     public Button inventoryButton;
+    public Button goToBedButton;
 
     // update UI when starting the scene
     void Start()
@@ -35,15 +36,12 @@ public class controlUiElements : ActionPoints
         UpdateActionPointsUI();
         UpdateDateUI();
         //inventoryButton.onClick.AddListener(openInventory);
+        goToBedButton.onClick.AddListener(goToBed);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            ReduceActionPoints(10);
 
-        if (Input.GetKeyDown(KeyCode.T))
-            ReduceActionPoints(20);
 
         Vector2 mousePosition = Input.mousePosition;
 
@@ -62,23 +60,30 @@ public class controlUiElements : ActionPoints
     }
 
     // function to update AP
-    void ReduceActionPoints(int amount)
+    public bool ReduceActionPoints(float amount)
     {
+        int intAmount = Mathf.RoundToInt(amount);
         // if require more than remaining AP, action is not happens
-        if (actionPoints < amount)
+        if (actionPoints < intAmount)
+        {
             Debug.Log("Running out of Action Points!");
+            return false;
+        }
 
         // if AP is enough, reduce AP and update UI
         else
         {
-            actionPoints -= amount;
+            actionPoints -= intAmount;
             UpdateActionPointsUI();
 
-            // if AP becomes zero, move to scene where bed is located
+            /* if AP becomes zero, move to scene where bed is located
             if (actionPoints == 0)
             {
-                SceneManager.LoadScene("MinMul");
-            }
+                bedButton.SetActive(true);
+            }*/
+
+            return true;
+
         }
     }
 
@@ -126,4 +131,9 @@ public class controlUiElements : ActionPoints
     {
         inventory.SetActivate(true);
     }*/
+
+    void goToBed()
+    {
+        SceneManager.LoadScene("MinMul");
+    }
 }

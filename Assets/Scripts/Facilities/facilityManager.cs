@@ -38,7 +38,7 @@ public class facilityManager : MonoBehaviour
 
     public AudioSource installSound;
 
-    
+    public controlUiElements controlUI;
 
     List<int> ableElements;  // to save the kinds of installable facilities
     List<int> ableFishes; // to save the kinds of inputable fishes
@@ -114,6 +114,7 @@ public class facilityManager : MonoBehaviour
                     elementStatus[0] = 0;
                     CopyTiles(elementTiles[0], 9);               
                     isWorking[lineNumber] = 0;
+                    inputCount[lineNumber] = 0;
 
                     currentTile = setCurrentTile();
                 }
@@ -163,8 +164,12 @@ public class facilityManager : MonoBehaviour
                             GameManager.Instance.isInteracting = false;
                             if (inputFish != 0)
                             {
-                                isWorking[lineNumber] = inputFish;
-                                Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입");
+                                if (controlUI.ReduceActionPoints((0.1f * (float)inputCount[lineNumber])));
+                                {
+                                    isWorking[lineNumber] = inputFish;
+                                    Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입");
+                                }
+                                
                             }
                         }
 
@@ -264,7 +269,8 @@ public class facilityManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
-                    StartCoroutine(installFacility(0));
+                    if(controlUI.ReduceActionPoints(15))
+                        StartCoroutine(installFacility(0));
                 }
                 else if (ableElements.Count==1)
                 {
@@ -273,11 +279,13 @@ public class facilityManager : MonoBehaviour
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
-                    StartCoroutine(installFacility(1));
+                    if (controlUI.ReduceActionPoints(15))
+                        StartCoroutine(installFacility(1));
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
-                    StartCoroutine(installFacility(2));
+                    if (controlUI.ReduceActionPoints(15))
+                        StartCoroutine(installFacility(2));
                 }
                 else if (Input.GetKeyDown(interactionKey))
                     GameManager.Instance.isInteracting = false;
@@ -408,7 +416,7 @@ public class facilityManager : MonoBehaviour
     IEnumerator installFacility(int elementIndex)
     {
         GameManager.Instance.isInteracting = true;
-        Debug.Log(currentTile + "번 라인에 " + facilityNumToName(ableElements[elementIndex]) + " 설치");
+        Debug.Log(lineNumber + "번 라인에 " + facilityNumToName(ableElements[elementIndex]) + " 설치");
         installSound.Play();
         elementStatus[currentTile] = ableElements[elementIndex];        
         CopyTiles(elementTiles[currentTile], elementStatus[currentTile]);
