@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     // UI texts
     public TextMeshProUGUI ActionPointsText;
+    public Image seasonCoverImage;
     public TextMeshProUGUI DateText;
 
     // mask for hide a AP bar
@@ -49,11 +50,16 @@ public class UIController : MonoBehaviour
         Vector2 mousePosition = Input.mousePosition;
 
         if (RectTransformUtility.RectangleContainsScreenPoint(seasonTransform, mousePosition, null))
+        {
+            seasonCoverImage.gameObject.SetActive(true);
             DateText.gameObject.SetActive(true);
-
+        }
         else
+        {
+            seasonCoverImage.gameObject.SetActive(false);
             DateText.gameObject.SetActive(false);
-
+        }
+            
         if (GameManager.Instance.actionPoint <= 20)
             goToBedButton.gameObject.SetActive(true);
         else
