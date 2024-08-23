@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class controlUiElements : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     // UI texts
     public TextMeshProUGUI ActionPointsText;

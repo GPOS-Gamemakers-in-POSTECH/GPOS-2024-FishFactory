@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class controlBGM : MonoBehaviour
+public class BGMController : MonoBehaviour
 {
     // singletone instance
-    private static controlBGM Instance;
+    private static BGMController Instance;
 
     public AudioSource bgmSource;
     public AudioClip springBGM;
