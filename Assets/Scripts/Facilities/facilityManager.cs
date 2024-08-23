@@ -172,7 +172,6 @@ public class facilityManager : MonoBehaviour
                                 Debug.Log(allFishNames);
 
                                 inputPopUpText.GetComponent<TextMeshPro>().text = allFishNames;
-
                             }
                         }
                         else

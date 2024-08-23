@@ -21,15 +21,15 @@ public class installStatusManager : MonoBehaviour
     // 2�� �ڸ� : 4 �����, 5 ���� ������, 6 ���� �ռ���, 7 ������ ���۱�
     // 3�� �ڸ� : 4 �����, 8 Ƣ���
     // 4�� �ڸ� : 4 �����
-    public int[][] facilityElements = new int[6][];
+    public int[][] facilityElements = new int[7][];
 
     // status of facilities. 0 if not installed, and line types below
     // 1 : freeze, 2 : dry, 3 : jutgal, 4 : fish cake, 5 : can
     // ( 1400 �õ�, 2400 ������, 3540 ����, 3684 �, 3740 ������)
-    public int[] facilityLine = new int[6];
+    public int[] facilityLine = new int[7];
 
-    public int[] isFacilityWorking = new int[6];
-    public int[] facilityInputCount = new int[6];
+    public int[] isFacilityWorking = new int[7];
+    public int[] facilityInputCount = new int[7];
 
     void Awake()
     {
