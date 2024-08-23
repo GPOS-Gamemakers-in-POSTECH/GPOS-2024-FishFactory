@@ -28,6 +28,8 @@ public class FishTankManager : MonoBehaviour
 
     public AudioSource installSound; // Sound for Installation
 
+    public UIController controlUI;
+
 
     // Start is called before the first frame update
     public void Start()
@@ -65,8 +67,12 @@ public class FishTankManager : MonoBehaviour
                 // if interactionKey pressed, and condition satisfied, install fish tank
                 if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    GameManager.Instance.isInteracting = true;
-                    StartCoroutine(InstallFishTank());
+                    if (controlUI.ReduceActionPoints(15))
+                    {
+                        GameManager.Instance.isInteracting = true;
+                        StartCoroutine(InstallFishTank());
+                    }
+                    
                 }
             }
 

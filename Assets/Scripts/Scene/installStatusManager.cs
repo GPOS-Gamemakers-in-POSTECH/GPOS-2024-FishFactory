@@ -13,7 +13,7 @@ public class installStatusManager : MonoBehaviour
     public bool[] OceanFishTank = new bool[20];
     public bool[] IndoorFishTank = new bool[9];
 
-
+    private bool isSleeping = false;
 
 
     // status of facility elements. each line has 4 elements. 0 if not installed, and
@@ -29,6 +29,7 @@ public class installStatusManager : MonoBehaviour
     public int[] facilityLine = new int[6];
 
     public int[] isFacilityWorking = new int[6];
+    public int[] facilityInputCount = new int[6];
 
     void Awake()
     {
@@ -50,16 +51,20 @@ public class installStatusManager : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "SleepScene")
+        if (SceneManager.GetActiveScene().name == "SleepScene" && isSleeping == false)
         {
-            for (int i=0; i<6; i++)
+            isSleeping = true;
+            for (int i = 0; i < 6; i++)
             {
-                if (isFacilityWorking[i]==1)
+                if (isFacilityWorking[i] != 0)
                 {
-                    isFacilityWorking[i] = 2;
+                    isFacilityWorking[i]--;
                 }
             }
         }
+
+        else if (SceneManager.GetActiveScene().name != "SleepScene" && isSleeping == true)
+            isSleeping = false;
     }
 
 

@@ -31,6 +31,7 @@ public class UIController : MonoBehaviour
     public GameObject inventory;
 
     public Button inventoryButton;
+    public Button goToBedButton;
 
     // update UI when starting the scene
     void Start()
@@ -41,15 +42,13 @@ public class UIController : MonoBehaviour
         UpdateActionPointsUI();
         UpdateDateUI();
         //inventoryButton.onClick.AddListener(openInventory);
+        goToBedButton.onClick.AddListener(goToBed);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            ReduceActionPoints(10);
-
-        if (Input.GetKeyDown(KeyCode.T))
-            ReduceActionPoints(20);
+        if (Input.GetKeyDown(KeyCode.P))
+            ReduceActionPoints(20); 
 
         Vector2 mousePosition = Input.mousePosition;
 
@@ -58,26 +57,41 @@ public class UIController : MonoBehaviour
 
         else
             DateText.gameObject.SetActive(false);
+
+        if (actionPoint <= 20)
+            goToBedButton.gameObject.SetActive(true);
+        else
+            goToBedButton.gameObject.SetActive(false);
     }
 
     // function to update AP
-    void ReduceActionPoints(int amount)
+    public bool ReduceActionPoints(float amount)
     {
+        int intAmount = Mathf.RoundToInt(amount);
         // if require more than remaining AP, action is not happens
-        if (actionPoint < amount)
+
+        if (actionPoint < intAmount)
+        {
             Debug.Log("Running out of Action Points!");
+            return false;
+        }
 
         // if AP is enough, reduce AP and update UI
         else
         {
-            actionPoint -= amount;
+
+            actionPoint -= intAmount;
             UpdateActionPointsUI();
 
-            // if AP becomes zero, move to scene where bed is located
-            if (actionPoint == 0)
+            /* if AP becomes zero, move to scene where bed is located
+            if (actionPoints == 0)
+
             {
-                SceneManager.LoadScene("MinMul");
-            }
+                bedButton.SetActive(true);
+            }*/
+
+            return true;
+
         }
     }
 
@@ -120,4 +134,16 @@ public class UIController : MonoBehaviour
             }
         }
     }
+
+
+    /*void openinventory()
+    {
+        inventory.SetActivate(true);
+    }*/
+
+    void goToBed()
+    {
+        SceneManager.LoadScene("MinMul");
+    }
+
 }
