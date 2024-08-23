@@ -10,7 +10,7 @@ public class BasicMovements : MonoBehaviour
     public Animator animator;
 
     // set moving speed
-    float movingspeed = 5.0f;
+    float movingspeed = 7.0f;
 
     // walking sound
     public AudioSource walkingAudio;
