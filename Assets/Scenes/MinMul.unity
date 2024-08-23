@@ -13342,7 +13342,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -14708,7 +14708,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -16196,7 +16196,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -16318,7 +16318,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -16440,7 +16440,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -20324,7 +20324,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
@@ -20732,6 +20732,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1775538199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775538194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac48aef6b5fe4a4eb60154899807cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionPointsText: {fileID: 291294953}
+  seasonCoverImage: {fileID: 622896580}
+  DateText: {fileID: 1260795686}
+  APmask: {fileID: 248232521}
+  seasonImage: {fileID: 414790751}
+  springImage: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
+  summerImage: {fileID: 21300000, guid: 452fa22d0eb73e941b7096c511f9ac51, type: 3}
+  fallImage: {fileID: 21300000, guid: 8b68587f8039bf84599aad824669a955, type: 3}
+  winterImage: {fileID: 21300000, guid: 5b682f9273c045d4494195fda842b7a6, type: 3}
+  APmaskTransform: {fileID: 248232518}
+  seasonTransform: {fileID: 414790750}
+  inventory: {fileID: 0}
+  inventoryButton: {fileID: 0}
+  goToBedButton: {fileID: 2083461892}
 --- !u!1 &1797156777
 GameObject:
   m_ObjectHideFlags: 0
@@ -27242,7 +27268,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: infoPopup
       value: 
