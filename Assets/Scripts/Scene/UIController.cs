@@ -145,7 +145,8 @@ public class UIController : MonoBehaviour
 
     void goToBed()
     {
-        SceneManager.LoadScene("MinMul");
+        if(SceneManager.GetActiveScene().name != "MinMul")
+            SceneManager.LoadScene("MinMul");
     }
 
 }
