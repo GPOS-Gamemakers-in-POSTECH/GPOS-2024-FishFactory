@@ -1,20 +1,16 @@
-// script for implement interaction that moves to another scene
+// Script for implement Object Interaction which switches Scene
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System.Collections;
 
-public class objectInteraction : ActionPoints
+public class ObjectInteraction : fadeInOut
 {
     public Transform player;
 
-    // interaction become active when player is closer to object than this value
-    private float interactionDistance = 1f;
-
-    // key to do interact
-    private KeyCode interactionKey = KeyCode.E;
+    public bool isInteracting;
+    public float interactionDistance = 1.0f; // Interaction become active when player is closer than this value
+    public KeyCode interactionKey = KeyCode.E; // Key to interact
 
     // value - 0 : arrow that moves to new map, 1 : bed
     public int objectKind;
@@ -30,18 +26,20 @@ public class objectInteraction : ActionPoints
 
     // sound effect of transition
     public AudioSource transitionAudio;
+
+    public int totalDate;
+    public int actionPoint;
+    int maxActionPoint = 100;
     
     void Start()
     {
-        // set players position to right arrow that is connected to departured map
-        if (departureMap == sceneName)
-        {
-            player.position = transform.position;
-        }
-        // fade in when scene is started
-        StartCoroutine(FadeFunction(1f));
+        if (departureMap == sceneName) { player.position = transform.position; } // set players position to right arrow that is connected to departured map
+        StartCoroutine(FadeFunction(1f)); // fade in when scene is started
 
-        isDoingInteract = 0;
+        isInteracting = GameManager.Instance.isInteracting;
+        actionPoint = GameManager.Instance.actionPoint;
+        totalDate = GameManager.Instance.totalDate;
+        isInteracting = false;
     }
 
     void Update()
@@ -50,15 +48,15 @@ public class objectInteraction : ActionPoints
         float distance = Vector3.Distance(player.position, transform.position);
 
         // if close enough, start process of interaction
-        if (distance <= interactionDistance )
+        if (distance <= interactionDistance)
         {
             // activate popup
             interactionPopUp.SetActive(true);
             
             // when interactionkey pressed, and interaction is not processing
-            if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0 )
+            if (Input.GetKeyDown(interactionKey) && isInteracting == false)
             {
-                isDoingInteract = 1;
+                isInteracting = true;
                 
                 // save the departureMap name
                 departureMap = SceneManager.GetActiveScene().name;                
@@ -72,7 +70,7 @@ public class objectInteraction : ActionPoints
                 // if object is bed, move to sleep scene
                 else if (objectKind == 1)
                 {
-                    StartCoroutine(sleep());
+                    StartCoroutine(Sleep());
                 }
             }
         }
@@ -82,5 +80,17 @@ public class objectInteraction : ActionPoints
         {
             interactionPopUp.SetActive(false);
         }
+    }
+
+    IEnumerator Sleep()
+    {
+        // fill the AP to max and add date
+        actionPoint = maxActionPoint;
+        totalDate++;
+
+        // fade out and move to SleepScene
+        StartCoroutine(FadeFunction(0f));
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("SleepScene");
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class sellingManager : ActionPoints
+public class sellingManager : MonoBehaviour
 {
     // button to close UI
     public Button closeButton;
@@ -24,6 +24,6 @@ public class sellingManager : ActionPoints
     void closeUI()
     {
         gameObject.SetActive(false);
-        isDoingInteract = 0;
+        GameManager.Instance.isInteracting = false;
     }
 }
