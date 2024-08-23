@@ -1,5 +1,4 @@
 // script to control player movement
-// Reference : https://jjong-ga.tistory.com/101
 
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -10,7 +9,7 @@ public class BasicMovements : MonoBehaviour
     public Animator animator;
 
     // set moving speed
-    float movingspeed = 7.0f;
+    float movingspeed = 5.0f;
 
     // walking sound
     public AudioSource walkingAudio;
