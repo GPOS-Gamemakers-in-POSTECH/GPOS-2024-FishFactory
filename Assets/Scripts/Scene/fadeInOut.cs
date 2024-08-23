@@ -1,7 +1,6 @@
 // script to implement fade in/out
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;

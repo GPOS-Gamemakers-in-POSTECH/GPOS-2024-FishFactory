@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class controlBGM : ActionPoints
+public class controlBGM : MonoBehaviour
 {
     // singletone instance
-    private static controlBGM instance;
+    private static controlBGM Instance;
 
     public AudioSource bgmSource;
     public AudioClip springBGM;
@@ -19,22 +19,22 @@ public class controlBGM : ActionPoints
     // check if current scene is sleepScene
     private int isInSleepScene = 0;
 
+    public int totalDate;
+    int seasonDate = 1;
+
     void Awake()
     {
-        // destroy object when instance already exsist
-        if (instance != null && instance != this)
+        if (Instance == null)
         {
-            Destroy(gameObject);
-            return;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-
-        // make instance to dont destroy
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        else { Destroy(gameObject); }
     }
 
     void Start()
     {
+        totalDate = GameManager.Instance.totalDate;
         playBGM();
     }
 
@@ -51,7 +51,7 @@ public class controlBGM : ActionPoints
     // insert correct BGM clip into bgmSource and play it
     void playBGM()
     {
-        switch (date / daysInOneSeason)
+        switch (totalDate / seasonDate)
         {
             case 0: // spring
                 bgmSource.clip = springBGM; break;

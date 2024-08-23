@@ -5,10 +5,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public int totalDate; // Total Date
+    [HideInInspector] public int actionPoint = 100; // Player's Action Point
+
     public bool isInteracting; // Check If Player is Interacting
+
     public FishTankData[] freshFishTanks = new FishTankData[9];
     public FishTankData[] oceanFishTanks = new FishTankData[20];
     public FishTankData[] indoorFishTanks = new FishTankData[9];
+
     public Dictionary<int, Item>[] itemDict = new Dictionary<int, Item>[3];
 
 

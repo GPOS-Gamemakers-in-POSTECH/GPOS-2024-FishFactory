@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class controlUiElements : ActionPoints
+public class controlUiElements : MonoBehaviour
 {
     // UI texts
     public TextMeshProUGUI ActionPointsText;
@@ -13,6 +11,11 @@ public class controlUiElements : ActionPoints
 
     // mask for hide a AP bar
     public Image APmask;
+    public int actionPoint;
+    int maxActionPoint = 100;
+
+    public int totalDate;
+    int seasonDate = 1;
 
     // sprites for various season
     public Image seasonImage;
@@ -32,6 +35,9 @@ public class controlUiElements : ActionPoints
     // update UI when starting the scene
     void Start()
     {
+        actionPoint = GameManager.Instance.actionPoint;
+        totalDate = GameManager.Instance.totalDate;
+
         UpdateActionPointsUI();
         UpdateDateUI();
         //inventoryButton.onClick.AddListener(openInventory);
@@ -47,13 +53,6 @@ public class controlUiElements : ActionPoints
 
         Vector2 mousePosition = Input.mousePosition;
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(APmaskTransform, mousePosition, null))
-            ActionPointsText.gameObject.SetActive(true);
-
-        else
-            ActionPointsText.gameObject.SetActive(false);
-
-
         if (RectTransformUtility.RectangleContainsScreenPoint(seasonTransform, mousePosition, null))
             DateText.gameObject.SetActive(true);
 
@@ -65,17 +64,17 @@ public class controlUiElements : ActionPoints
     void ReduceActionPoints(int amount)
     {
         // if require more than remaining AP, action is not happens
-        if (actionPoints < amount)
+        if (actionPoint < amount)
             Debug.Log("Running out of Action Points!");
 
         // if AP is enough, reduce AP and update UI
         else
         {
-            actionPoints -= amount;
+            actionPoint -= amount;
             UpdateActionPointsUI();
 
             // if AP becomes zero, move to scene where bed is located
-            if (actionPoints == 0)
+            if (actionPoint == 0)
             {
                 SceneManager.LoadScene("MinMul");
             }
@@ -88,8 +87,8 @@ public class controlUiElements : ActionPoints
         // express AP as "amount / max amount"
         if (ActionPointsText != null)
         {
-            ActionPointsText.text = actionPoints.ToString() + " / " + maxActionPoints.ToString();
-            APmask.fillAmount = (float)actionPoints / maxActionPoints;
+            ActionPointsText.text = actionPoint.ToString() + " / " + maxActionPoint.ToString();
+            APmask.fillAmount = (float)actionPoint / maxActionPoint;
         }
     }
 
@@ -99,31 +98,26 @@ public class controlUiElements : ActionPoints
         // express Date as "season - day"
         if (DateText != null)
         {
-            switch (date / daysInOneSeason)
+            switch (totalDate / seasonDate)
             {
                 case 0: 
-                    DateText.text = "SPRING - " + ((date % daysInOneSeason) + 1).ToString();
+                    DateText.text = "SP-" + ((totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = springImage;
                     break;
                 case 1: 
-                    DateText.text = "SUMMER - " + ((date % daysInOneSeason) + 1).ToString();
+                    DateText.text = "SM-" + ((totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = summerImage;
                     break;
                 case 2: 
-                    DateText.text = "FALL - " + ((date % daysInOneSeason) + 1).ToString();
+                    DateText.text = "FL-" + ((totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = fallImage;
                     break;
                 case 3:
-                    DateText.text = "WINTER - " + ((date % daysInOneSeason) + 1).ToString();
+                    DateText.text = "WT-" + ((totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = winterImage;
                     break;
                 default: DateText.text = "Game End!"; break;
             }
         }
     }
-
-    /*void openinventory()
-    {
-        inventory.SetActivate(true);
-    }*/
 }

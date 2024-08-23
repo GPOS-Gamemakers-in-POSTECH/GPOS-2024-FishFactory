@@ -3209,6 +3209,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -3757,12 +3765,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9938973b1573134caaf0ca34854d840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
   bgmSource: {fileID: 406273741}
   springBGM: {fileID: 8300000, guid: 745e7765b03b283459737ddc9f1d5d69, type: 3}
   summerBGM: {fileID: 8300000, guid: 2d9c64757615ac6439d8ab816b6467e7, type: 3}
   fallBGM: {fileID: 8300000, guid: 745e7765b03b283459737ddc9f1d5d69, type: 3}
   winterBGM: {fileID: 8300000, guid: 2d9c64757615ac6439d8ab816b6467e7, type: 3}
+  totalDate: 0
 --- !u!1 &489306865
 GameObject:
   m_ObjectHideFlags: 0
@@ -12864,6 +12872,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -14061,6 +14077,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -14207,10 +14231,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 380928378}
   player: {fileID: 1777825503}
+  isInteracting: 0
+  interactionDistance: 1
+  interactionKey: 101
   objectKind: 0
   sceneName: MinMul
   interactionPopUp: {fileID: 1153955495}
   transitionAudio: {fileID: 867906484}
+  totalDate: 0
+  actionPoint: 0
 --- !u!212 &1615830427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14528,6 +14557,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1777825496}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -14917,6 +14954,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -15156,10 +15201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac48aef6b5fe4a4eb60154899807cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
   ActionPointsText: {fileID: 92074831}
   DateText: {fileID: 0}
   APmask: {fileID: 0}
+  actionPoint: 0
+  totalDate: 0
   seasonImage: {fileID: 0}
   springImage: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
   summerImage: {fileID: 21300000, guid: 452fa22d0eb73e941b7096c511f9ac51, type: 3}
@@ -15274,7 +15320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca306495aaefdcf408a5ee1bf6d81694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 380928378}
   animator: {fileID: 1777825500}
   walkingAudio: {fileID: 1367103697}
   groundTile: {fileID: 835172399}
@@ -15594,6 +15639,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1777825496}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -15921,6 +15974,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -16102,6 +16163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed77ffe313a7b844f94b9a150172737a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalDate: 0
+  actionPoint: 100
   isInteracting: 0
   freshFishTanks:
   - fishTankNo: 0
@@ -18770,6 +18833,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777825496}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
+    - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
       objectReference: {fileID: 2079656859}
@@ -18867,6 +18938,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1777825496}
+    - target: {fileID: 3738887132378446547, guid: 27e357dc1e5db8a428087f0ee3f37360, type: 3}
+      propertyPath: tileBaseA
+      value: 
+      objectReference: {fileID: 11400000, guid: 2712c14a302c0fd4d9a4693d094f5585, type: 2}
+    - target: {fileID: 3738887132378446547, guid: 27e357dc1e5db8a428087f0ee3f37360, type: 3}
+      propertyPath: tileBaseB
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a86152263bda84f9d0b05591d6f01e, type: 2}
     - target: {fileID: 3738887132378446547, guid: 27e357dc1e5db8a428087f0ee3f37360, type: 3}
       propertyPath: feedButton
       value: 
