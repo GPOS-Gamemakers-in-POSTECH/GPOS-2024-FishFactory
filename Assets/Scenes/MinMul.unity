@@ -11880,7 +11880,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -12106,7 +12106,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -12191,7 +12191,6 @@ GameObject:
   - component: {fileID: 199419083}
   - component: {fileID: 199419082}
   - component: {fileID: 199419081}
-  - component: {fileID: 199419089}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -12262,7 +12261,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12375,32 +12374,6 @@ Transform:
   - {fileID: 2118694574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &199419089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199419080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac48aef6b5fe4a4eb60154899807cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionPointsText: {fileID: 291294953}
-  seasonCoverImage: {fileID: 622896580}
-  DateText: {fileID: 1260795686}
-  APmask: {fileID: 248232521}
-  seasonImage: {fileID: 414790751}
-  springImage: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
-  summerImage: {fileID: 21300000, guid: 452fa22d0eb73e941b7096c511f9ac51, type: 3}
-  fallImage: {fileID: 21300000, guid: 8b68587f8039bf84599aad824669a955, type: 3}
-  winterImage: {fileID: 21300000, guid: 5b682f9273c045d4494195fda842b7a6, type: 3}
-  APmaskTransform: {fileID: 248232518}
-  seasonTransform: {fileID: 414790750}
-  inventory: {fileID: 0}
-  inventoryButton: {fileID: 0}
-  goToBedButton: {fileID: 2083461892}
 --- !u!1 &232761107
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,7 +13524,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -16207,7 +16180,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -16443,7 +16416,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -16935,9 +16908,10 @@ GameObject:
   - component: {fileID: 1775538197}
   - component: {fileID: 1775538196}
   - component: {fileID: 1775538195}
+  - component: {fileID: 1775538199}
   m_Layer: 5
   m_Name: UI
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17026,6 +17000,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1775538199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775538194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac48aef6b5fe4a4eb60154899807cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionPointsText: {fileID: 291294953}
+  seasonCoverImage: {fileID: 622896580}
+  DateText: {fileID: 1260795686}
+  APmask: {fileID: 248232521}
+  seasonImage: {fileID: 414790751}
+  springImage: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
+  summerImage: {fileID: 21300000, guid: 452fa22d0eb73e941b7096c511f9ac51, type: 3}
+  fallImage: {fileID: 21300000, guid: 8b68587f8039bf84599aad824669a955, type: 3}
+  winterImage: {fileID: 21300000, guid: 5b682f9273c045d4494195fda842b7a6, type: 3}
+  APmaskTransform: {fileID: 248232518}
+  seasonTransform: {fileID: 414790750}
+  inventory: {fileID: 0}
+  inventoryButton: {fileID: 0}
+  goToBedButton: {fileID: 2083461892}
 --- !u!1 &1803302061
 GameObject:
   m_ObjectHideFlags: 0
@@ -17493,7 +17493,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -19685,7 +19685,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -21855,7 +21855,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -22220,7 +22220,7 @@ PrefabInstance:
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: controlUI
       value: 
-      objectReference: {fileID: 199419089}
+      objectReference: {fileID: 1775538199}
     - target: {fileID: 8036498926767462101, guid: 32bff07108951794990dff0b7d142e1a, type: 3}
       propertyPath: feedButton
       value: 
@@ -22296,7 +22296,6 @@ SceneRoots:
   - {fileID: 712215252}
   - {fileID: 1230857393}
   - {fileID: 1775538198}
-  - {fileID: 232761110}
   - {fileID: 2107280188}
   - {fileID: 677940772}
   - {fileID: 318000858}
@@ -22313,3 +22312,4 @@ SceneRoots:
   - {fileID: 1934785849}
   - {fileID: 884007955}
   - {fileID: 45595924}
+  - {fileID: 232761110}

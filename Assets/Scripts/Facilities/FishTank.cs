@@ -39,6 +39,7 @@ public class FishTankManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Indoor") { fishTankData = GameManager.Instance.indoorFishTanks[fishTankNo]; }
         else { Debug.Log("This Scene has no Fish Tank"); }
 
+        controlUI = UIController.Instance;
         player = GameObject.FindWithTag("Player"); // Find Player Object
 
         fishButton.onClick.AddListener(() => AddFish(GameManager.Instance.itemDict[0][10100], 1));

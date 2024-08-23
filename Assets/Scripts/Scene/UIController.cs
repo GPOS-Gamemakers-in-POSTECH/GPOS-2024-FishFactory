@@ -2,9 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController Instance;
+
     // UI texts
     public TextMeshProUGUI ActionPointsText;
     public Image seasonCoverImage;
@@ -14,7 +17,6 @@ public class UIController : MonoBehaviour
     public Image APmask;
 
     int maxActionPoint = 100;
-
     int seasonDate = 1;
 
     // sprites for various season
@@ -34,11 +36,20 @@ public class UIController : MonoBehaviour
     public Button goToBedButton;
 
     // update UI when starting the scene
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else { Destroy(gameObject); }
+    }
+
     void Start()
     {
         UpdateActionPointsUI();
         UpdateDateUI();
-        //inventoryButton.onClick.AddListener(openInventory);
         goToBedButton.onClick.AddListener(goToBed);
     }
 
@@ -81,19 +92,9 @@ public class UIController : MonoBehaviour
         // if AP is enough, reduce AP and update UI
         else
         {
-
             GameManager.Instance.actionPoint -= intAmount;
             UpdateActionPointsUI();
-
-            /* if AP becomes zero, move to scene where bed is located
-            if (actionPoints == 0)
-
-            {
-                bedButton.SetActive(true);
-            }*/
-
             return true;
-
         }
     }
 
@@ -136,12 +137,6 @@ public class UIController : MonoBehaviour
             }
         }
     }
-
-
-    /*void openinventory()
-    {
-        inventory.SetActivate(true);
-    }*/
 
     void goToBed()
     {
