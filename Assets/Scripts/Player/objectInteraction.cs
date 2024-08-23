@@ -82,7 +82,7 @@ public class ObjectInteraction : fadeInOut
     IEnumerator Sleep()
     {
         // fill the AP to max and add date
-        actionPoint = maxActionPoint;
+        GameManager.Instance.actionPoint = maxActionPoint;
         totalDate++;
 
         // fade out and move to SleepScene
