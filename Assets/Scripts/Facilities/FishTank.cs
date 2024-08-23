@@ -1,21 +1,14 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class FishTank : MonoBehaviour
+public class FishTankManager : MonoBehaviour
 {
-    public int fishTankNo; // Number of Fish Tank
-    public int waterType; // Water Type of Fish Tank
-
-    public Item fish; // Fish Item
-    public int fishAmount; // Amount of Fishes
-    public int dieCount; // Die Count of Fishes
-    public int growCount; // Grow Count of Fishes
-
-    public Item[] parts; // Parts on Fish Tank
-    public bool[] isPartsOn; // Bool variable for which parts is on
+    public int fishTankNo;
+    public FishTankData fishTankData;
 
     public GameObject fishInfoUI; // UI for Fish Tank Information
     public GameObject infoPopup; // Information Pop-up for Fish Tank
@@ -24,7 +17,6 @@ public class FishTank : MonoBehaviour
     public Button feedButton; // Button for feeding fishes
 
     public GameObject player;
-    public bool isInteracting; // Check if Player is Interacting
     private float interactionDistance = 0.8f; // Max Distance to Interact with Fish Tank
     private KeyCode interactionKey = KeyCode.E; // KeyCode for Interact
 
@@ -34,23 +26,23 @@ public class FishTank : MonoBehaviour
     public Tilemap baseTile;
     public Tilemap edgeTile;
 
-    public bool isTankInstalled; // Check if Fish Tank is Installed
     public AudioSource installSound; // Sound for Installation
-
 
 
     // Start is called before the first frame update
     public void Start()
     {
+        if (SceneManager.GetActiveScene().name == "MinMul") { fishTankData = GameManager.Instance.freshFishTanks[fishTankNo]; }
+        else if (SceneManager.GetActiveScene().name == "Ocean") { fishTankData = GameManager.Instance.oceanFishTanks[fishTankNo]; }
+        else if (SceneManager.GetActiveScene().name == "Indoor") { fishTankData = GameManager.Instance.indoorFishTanks[fishTankNo]; }
+        else { Debug.Log("This Scene has no Fish Tank"); }
+
         player = GameObject.FindWithTag("Player"); // Find Player Object
 
-        fishButton.onClick.AddListener(() => AddFish(null, 0));
+        fishButton.onClick.AddListener(() => AddFish(GameManager.Instance.itemDict[0][10100], 1));
         feedButton.onClick.AddListener(FeedFish);
 
-        isTankInstalled = SearchTankInstallation()[fishTankNo];
-        isInteracting = GameManager.Instance.isInteracting;
-
-        if (isTankInstalled)
+        if (fishTankData.isTankInstalled)
         {
             edgeTile.gameObject.SetActive(true);
             if (SceneManager.GetActiveScene().name == "Indoor") { baseTile.SwapTile(tileBaseA, tileBaseB); }
@@ -62,18 +54,18 @@ public class FishTank : MonoBehaviour
     {
         float distance = CalculateDistance(player, baseTile);
 
-        if (distance <= interactionDistance && isInteracting == false)
+        if (distance <= interactionDistance && GameManager.Instance.isInteracting == false)
         {
             // if fish tank is not installed yet
-            if (!isTankInstalled)
+            if (!fishTankData.isTankInstalled)
             {
                 // show pop up
                 installPopup.SetActive(true);
 
                 // if interactionKey pressed, and condition satisfied, install fish tank
-                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    isInteracting = true;
+                    GameManager.Instance.isInteracting = true;
                     StartCoroutine(InstallFishTank());
                 }
             }
@@ -84,20 +76,18 @@ public class FishTank : MonoBehaviour
                 infoPopup.SetActive(true);
 
                 // if interactionKey pressed, show information UI
-                if (Input.GetKeyDown(interactionKey) && !isInteracting)
+                if (Input.GetKeyDown(interactionKey) && !GameManager.Instance.isInteracting)
                 {
-                    isInteracting = true;
-                    fishInfoUI.SetActive(true);
-                    infoPopup.SetActive(false);
+                    ShowFishTankInfo();
                 }
             }
         }
 
-        else if (distance <= interactionDistance && isInteracting && isTankInstalled)
+        else if (distance <= interactionDistance && GameManager.Instance.isInteracting && fishTankData.isTankInstalled)
         {
             if (Input.GetKeyDown(interactionKey))
             {
-                isInteracting = false;
+                GameManager.Instance.isInteracting = false;
                 fishInfoUI.SetActive(false);
             }
         }
@@ -107,18 +97,6 @@ public class FishTank : MonoBehaviour
             installPopup.SetActive(false);
             infoPopup.SetActive(false);
         }
-    }
-
-
-    // Constructor
-    public FishTank()
-    {
-        fish = null;
-        fishAmount = 0;
-        parts = new Item[] { null, null, null, null };
-        isPartsOn = new bool[] { false, false, false, false };
-        dieCount = 0;
-        growCount = 0;
     }
 
     // Install FIsh Tank
@@ -141,27 +119,25 @@ public class FishTank : MonoBehaviour
             yield return new WaitForSeconds(installSound.clip.length / 2);
         }
 
-        isTankInstalled = true;
-        SearchTankInstallation()[fishTankNo] = true;
-        isInteracting = false;
+        fishTankData.isTankInstalled = true;
+        GameManager.Instance.isInteracting = false;
     }
 
     // Show the Information of Fish Tank
     public void ShowFishTankInfo()
     {
-        Debug.Log(fish.itemID);
-        Debug.Log(fish.itemName);
-        Debug.Log(fishAmount);
-        Debug.Log(isPartsOn);
+        GameManager.Instance.isInteracting = true;
+        fishInfoUI.SetActive(true);
+        infoPopup.SetActive(false);
     }
 
     // Add New Fishes to Fish Tank
     public void AddFish(Item fish, int fishAmount)
     {
-        if (this.fish == null)
+        if (fishTankData.fish == null)
         {
-            this.fish = fish;
-            this.fishAmount = fishAmount;
+            fishTankData.fish = fish;
+            fishTankData.fishAmount = fishAmount;
         }
         else { Debug.Log("Fish Already Exists."); }
 
@@ -171,8 +147,8 @@ public class FishTank : MonoBehaviour
     // Gather Grown Fishes
     public void GatherFish()
     {
-        if (growCount >= fish.growTime) { Debug.Log("Gathered"); }
-        else if (dieCount >= 3) { Debug.Log("Died"); }
+        if (fishTankData.growCount >= fishTankData.fish.time) { Debug.Log("Gathered"); }
+        else if (fishTankData.dieCount >= 3) { Debug.Log("Died"); }
         else { Debug.Log("Not Yet"); }
     }
 
@@ -181,12 +157,12 @@ public class FishTank : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            if (parts[i].itemID / 1000 == newParts.itemID / 1000)
+            if (fishTankData.parts[i].itemID / 1000 == newParts.itemID / 1000)
             {
-                if (parts[i].itemID == newParts.itemID) { Debug.Log("Parts Already Exists"); }
-                else if (parts[i].itemID < newParts.itemID)
+                if (fishTankData.parts[i].itemID == newParts.itemID) { Debug.Log("Parts Already Exists"); }
+                else if (fishTankData.parts[i].itemID < newParts.itemID)
                 {
-                    parts[i] = newParts;
+                    fishTankData.parts[i] = newParts;
                     Debug.Log("Changed");
                 }
                 else { Debug.Log("Low Tier"); }
@@ -205,8 +181,8 @@ public class FishTank : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            if (parts[i].itemID != 0) { isPartsOn[i] = true; }
-            else { isPartsOn[i] = false; }
+            if (fishTankData.parts[i].itemID != 0) { fishTankData.isPartsOn[i] = true; }
+            else { fishTankData.isPartsOn[i] = false; }
         }
 
         return;
@@ -215,9 +191,9 @@ public class FishTank : MonoBehaviour
     // Feed Fishes
     public void FeedFish()
     {
-        if (isPartsOn[3] == true)
+        if (fishTankData.isPartsOn[3] == true)
         {
-            parts[3].feedAmount -= fish.feedAmount * fishAmount;
+            fishTankData.parts[3].feedAmount -= fishTankData.fish.feedAmount * fishTankData.fishAmount;
         }
 
         Debug.Log("Feeded");
@@ -226,10 +202,10 @@ public class FishTank : MonoBehaviour
     // Check fish's grown days or days to die
     public void DecideFishHealth()
     {
-        if (isPartsOn[0] == false && isPartsOn[1] == false) { dieCount += 1; }
-        else { dieCount = 0; growCount += 1; }
+        if (fishTankData.isPartsOn[0] == false && fishTankData.isPartsOn[1] == false) { fishTankData.dieCount += 1; }
+        else { fishTankData.dieCount = 0; fishTankData.growCount += 1; }
 
-        if (dieCount == 3) { }
+        if (fishTankData.dieCount == 3) { }
 
         return;
     }
@@ -245,12 +221,20 @@ public class FishTank : MonoBehaviour
         Vector3 closestPoint = tilemapBounds.ClosestPoint(player.transform.position);
         return Vector3.Distance(player.transform.position, closestPoint);
     }
+}
 
-    bool[] SearchTankInstallation()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "MinMul") { return GameManager.Instance.freshFishTank; }
-        else if (currentSceneName == "Ocean") { return GameManager.Instance.oceanFishTank; }
-        else { return GameManager.Instance.indoorFishTank; }
-    }
+[Serializable]
+public class FishTankData
+{
+    public int fishTankNo; // Number of Fish Tank
+    public int waterType; // Water Type of Fish Tank
+    public bool isTankInstalled; // Check if Fish Tank is Installed
+
+    public Item fish; // Fish Item
+    public int fishAmount; // Amount of Fishes
+    public int dieCount; // Die Count of Fishes
+    public int growCount; // Grow Count of Fishes
+
+    public Item[] parts = new Item[4]; // Parts on Fish Tank
+    public bool[] isPartsOn = new bool[4]; // Bool variable for which parts is on
 }

@@ -1,14 +1,12 @@
 // script to control player movement
-//https://jjong-ga.tistory.com/101
+// Reference : https://jjong-ga.tistory.com/101
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class BasicMovements : ActionPoints
+public class BasicMovements : MonoBehaviour
 {
-    // aminator to control player animation
+    // animator to control player animation
     public Animator animator;
 
     // set moving speed
@@ -35,7 +33,7 @@ public class BasicMovements : ActionPoints
         float verticalInput = Input.GetAxis("Vertical");
 
         // control movement when interaction is not processing
-        if (isDoingInteract == 0)
+        if (GameManager.Instance.isInteracting == false)
         {
             // show vertical animation if have vertical input
             if (verticalInput != 0)

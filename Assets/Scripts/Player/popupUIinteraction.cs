@@ -1,19 +1,14 @@
-// script to implement interaction that pops up some UI
+// Script to implement interaction that pops up UI
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class popupUIinteraction : ActionPoints
+public class popupUIinteraction : MonoBehaviour
 {
     public Transform player;
 
-    // interaction become active when player is closer to object than this value
-    public float interactionDistance = 1.5f;
-
-    // key to do interact
-    public KeyCode interactionKey = KeyCode.E;
+    public float interactionDistance = 1.5f; // Interaction become active when player is closer than this value
+    public KeyCode interactionKey = KeyCode.E; // Key to interact
 
     // UI that pops up when interaction occurs
     public GameObject popupUI;
@@ -37,25 +32,18 @@ public class popupUIinteraction : ActionPoints
             interactionPopUp.SetActive(true);
 
             // when interactionkey pressed, and interaction is not processing
-            if (Input.GetKeyDown(interactionKey) && isDoingInteract == 0)
+            if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
             {
-                isDoingInteract = 1;
-                
-                if(objectKind == 0) // mining
-                    StartCoroutine(mining());
-                                
-                else // selling
-                    popupUI.SetActive(true);
+                GameManager.Instance.isInteracting = true;
+                if (objectKind == 0) { StartCoroutine(Mining()); } // Mining
+                else { popupUI.SetActive(true); } // Trading
             }
         }
-
-        // if player moves away, deactivate popup
-        else        
-            interactionPopUp.SetActive(false);        
+        else { interactionPopUp.SetActive(false); }        
     }
 
     // if mining arrow interacted, activate mining UI during the length of mining sound
-    IEnumerator mining()
+    IEnumerator Mining()
     {
         popupUI.SetActive(true);
         if (soundEffect != null)
@@ -67,6 +55,6 @@ public class popupUIinteraction : ActionPoints
         }
 
         popupUI.SetActive(false);
-        isDoingInteract = 0;
+        GameManager.Instance.isInteracting = false;
     }
 }
