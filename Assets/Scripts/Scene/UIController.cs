@@ -11,10 +11,9 @@ public class UIController : MonoBehaviour
 
     // mask for hide a AP bar
     public Image APmask;
-    public int actionPoint;
+
     int maxActionPoint = 100;
 
-    public int totalDate;
     int seasonDate = 1;
 
     // sprites for various season
@@ -36,9 +35,6 @@ public class UIController : MonoBehaviour
     // update UI when starting the scene
     void Start()
     {
-        actionPoint = GameManager.Instance.actionPoint;
-        totalDate = GameManager.Instance.totalDate;
-
         UpdateActionPointsUI();
         UpdateDateUI();
         //inventoryButton.onClick.AddListener(openInventory);
@@ -58,7 +54,7 @@ public class UIController : MonoBehaviour
         else
             DateText.gameObject.SetActive(false);
 
-        if (actionPoint <= 20)
+        if (GameManager.Instance.actionPoint <= 20)
             goToBedButton.gameObject.SetActive(true);
         else
             goToBedButton.gameObject.SetActive(false);
@@ -70,7 +66,7 @@ public class UIController : MonoBehaviour
         int intAmount = Mathf.RoundToInt(amount);
         // if require more than remaining AP, action is not happens
 
-        if (actionPoint < intAmount)
+        if (GameManager.Instance.actionPoint < intAmount)
         {
             Debug.Log("Running out of Action Points!");
             return false;
@@ -80,7 +76,7 @@ public class UIController : MonoBehaviour
         else
         {
 
-            actionPoint -= intAmount;
+            GameManager.Instance.actionPoint -= intAmount;
             UpdateActionPointsUI();
 
             /* if AP becomes zero, move to scene where bed is located
@@ -101,8 +97,8 @@ public class UIController : MonoBehaviour
         // express AP as "amount / max amount"
         if (ActionPointsText != null)
         {
-            ActionPointsText.text = actionPoint.ToString() + " / " + maxActionPoint.ToString();
-            APmask.fillAmount = (float)actionPoint / maxActionPoint;
+            ActionPointsText.text = GameManager.Instance.actionPoint.ToString() + " / " + maxActionPoint.ToString();
+            APmask.fillAmount = (float)GameManager.Instance.actionPoint / maxActionPoint;
         }
     }
 
@@ -112,22 +108,22 @@ public class UIController : MonoBehaviour
         // express Date as "season - day"
         if (DateText != null)
         {
-            switch (totalDate / seasonDate)
+            switch (GameManager.Instance.totalDate / seasonDate)
             {
                 case 0: 
-                    DateText.text = "SP-" + ((totalDate % seasonDate) + 1).ToString();
+                    DateText.text = "SP-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = springImage;
                     break;
                 case 1: 
-                    DateText.text = "SM-" + ((totalDate % seasonDate) + 1).ToString();
+                    DateText.text = "SM-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = summerImage;
                     break;
                 case 2: 
-                    DateText.text = "FL-" + ((totalDate % seasonDate) + 1).ToString();
+                    DateText.text = "FL-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = fallImage;
                     break;
                 case 3:
-                    DateText.text = "WT-" + ((totalDate % seasonDate) + 1).ToString();
+                    DateText.text = "WT-" + ((GameManager.Instance.totalDate % seasonDate) + 1).ToString();
                     seasonImage.sprite = winterImage;
                     break;
                 default: DateText.text = "Game End!"; break;
