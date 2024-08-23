@@ -38,7 +38,7 @@ public class facilityManager : MonoBehaviour
 
     public AudioSource installSound;
 
-    public controlUiElements controlUI;
+    public UIController controlUI;
 
     List<int> ableElements;  // to save the kinds of installable facilities
     List<int> ableFishes; // to save the kinds of inputable fishes
@@ -164,7 +164,7 @@ public class facilityManager : MonoBehaviour
                             GameManager.Instance.isInteracting = false;
                             if (inputFish != 0)
                             {
-                                if (controlUI.ReduceActionPoints((0.1f * (float)inputCount[lineNumber])));
+                                if (controlUI.ReduceActionPoints((0.2f * (float)inputCount[lineNumber])));
                                 {
                                     isWorking[lineNumber] = inputFish;
                                     Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입");

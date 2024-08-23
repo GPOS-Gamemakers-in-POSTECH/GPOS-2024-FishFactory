@@ -34,6 +34,7 @@ public class fadeInOut : MonoBehaviour
     // function to fade out current scene and load new scene with name sceneName
     protected IEnumerator FadeAndLoadScene(string sceneName, AudioSource transitionAudio)
     {
+        GameManager.Instance.isInteracting = true;
         // play audio
         if (transitionAudio != null)
         {
@@ -45,6 +46,7 @@ public class fadeInOut : MonoBehaviour
 
         // load the new scene
         SceneManager.LoadScene(sceneName);
+        GameManager.Instance.isInteracting = false;
     }
 
     // function to fade in and delay, and load current scene

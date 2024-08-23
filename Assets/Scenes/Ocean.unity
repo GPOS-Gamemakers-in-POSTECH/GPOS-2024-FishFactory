@@ -216,6 +216,2108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 530780974621395065, guid: e032b4b46a0ee9a48a76df6a45c5c8fa, type: 3}
   m_PrefabInstance: {fileID: 1115712}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &37556001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37556003}
+  - component: {fileID: 37556002}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &37556002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37556001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed77ffe313a7b844f94b9a150172737a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalDate: 0
+  actionPoint: 100
+  isInteracting: 0
+  freshFishTanks:
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  oceanFishTanks:
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  indoorFishTanks:
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+  - fishTankNo: 0
+    waterType: 0
+    isTankInstalled: 0
+    fish:
+      itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    fishAmount: 0
+    dieCount: 0
+    growCount: 0
+    parts:
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    - itemID: 0
+      itemName: 
+      waterType: 0
+      itemTier: 0
+      time: 0
+      feedAmount: 0
+      sellPrice: 0
+      buyPrice: 0
+      power: 0
+    isPartsOn: 00000000
+--- !u!4 &37556003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37556001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.0985265, y: -4.2629895, z: -0.13893539}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &43281530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,6 +2412,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 530780974621395065, guid: e032b4b46a0ee9a48a76df6a45c5c8fa, type: 3}
   m_PrefabInstance: {fileID: 43281530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &46542562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46542563}
+  - component: {fileID: 46542564}
+  - component: {fileID: 46542565}
+  m_Layer: 5
+  m_Name: DateText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &46542563
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46542562}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545481543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 19, y: -60}
+  m_SizeDelta: {x: 0, y: 45}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &46542564
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46542562}
+  m_CullTransparentMesh: 1
+--- !u!114 &46542565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46542562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: SP-1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_sharedMaterial: {fileID: -1274956940867082501, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294115583
+  m_fontColor: {r: 1, g: 0, b: 0.95224714, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -89.86261, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &58778159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,6 +10233,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87697234}
   m_CullTransparentMesh: 1
+--- !u!1 &95341142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95341143}
+  - component: {fileID: 95341145}
+  - component: {fileID: 95341146}
+  - component: {fileID: 95341144}
+  m_Layer: 5
+  m_Name: ActionPointBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &95341143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95341142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545481543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.39900002, y: 0.38521317}
+  m_AnchorMax: {x: 0.39900002, y: 0.38521317}
+  m_AnchoredPosition: {x: 100, y: 40}
+  m_SizeDelta: {x: 595, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &95341144
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95341142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!222 &95341145
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95341142}
+  m_CullTransparentMesh: 1
+--- !u!114 &95341146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95341142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e8fe71671a1b6924fba4061c8ecc9bfe, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &128841617
 GameObject:
   m_ObjectHideFlags: 0
@@ -8330,7 +10687,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -514111311
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &228558376
@@ -8501,7 +10858,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -514111311
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &250219329
@@ -8565,12 +10922,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9938973b1573134caaf0ca34854d840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
   bgmSource: {fileID: 284129773}
   springBGM: {fileID: 8300000, guid: 745e7765b03b283459737ddc9f1d5d69, type: 3}
   summerBGM: {fileID: 8300000, guid: 2d9c64757615ac6439d8ab816b6467e7, type: 3}
   fallBGM: {fileID: 8300000, guid: 745e7765b03b283459737ddc9f1d5d69, type: 3}
   winterBGM: {fileID: 8300000, guid: 2d9c64757615ac6439d8ab816b6467e7, type: 3}
+  totalDate: 0
 --- !u!82 &284129773
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8818,7 +11175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc2e7f67a2a67a40ba3be8cee7dd86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 1229667807}
   player: {fileID: 1918211202}
   interactionDistance: 1.5
   interactionKey: 101
@@ -8952,7 +11308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1918211202}
-  smoothSpeed: 3
+  smoothSpeed: 100
   offset: {x: 0, y: 0}
 --- !u!81 &331389543
 AudioListener:
@@ -9178,7 +11534,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -743736637
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 0.36862746}
@@ -10143,6 +12499,127 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 530780974621395065, guid: e032b4b46a0ee9a48a76df6a45c5c8fa, type: 3}
   m_PrefabInstance: {fileID: 486333849}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &488092418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488092422}
+  - component: {fileID: 488092421}
+  - component: {fileID: 488092420}
+  - component: {fileID: 488092419}
+  m_Layer: 5
+  m_Name: bedButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &488092419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488092418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 488092420}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &488092420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488092418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &488092421
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488092418}
+  m_CullTransparentMesh: 1
+--- !u!224 &488092422
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488092418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2083592805}
+  m_Father: {fileID: 1558281977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -168.23242, y: 205}
+  m_SizeDelta: {x: 101.5351, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &564548419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10303,6 +12780,74 @@ Transform:
   - {fileID: 486333850}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &687322040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687322043}
+  - component: {fileID: 687322042}
+  - component: {fileID: 687322041}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &687322041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687322040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &687322042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687322040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &687322043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687322040}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 96, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693561147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10438,127 +12983,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &791454662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 791454663}
-  - component: {fileID: 791454665}
-  - component: {fileID: 791454666}
-  - component: {fileID: 791454664}
-  m_Layer: 5
-  m_Name: APmask
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &791454663
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791454662}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2107301811}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.39900002, y: 0.38521317}
-  m_AnchorMax: {x: 0.39900002, y: 0.38521317}
-  m_AnchoredPosition: {x: 99.51746, y: 39.915306}
-  m_SizeDelta: {x: 594.9459, y: 142.4017}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!61 &791454664
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791454662}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!222 &791454665
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791454662}
-  m_CullTransparentMesh: 1
---- !u!114 &791454666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791454662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8fe71671a1b6924fba4061c8ecc9bfe, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &818966622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10747,314 +13171,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 530780974621395065, guid: e032b4b46a0ee9a48a76df6a45c5c8fa, type: 3}
   m_PrefabInstance: {fileID: 829794442}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &873988689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873988690}
-  - component: {fileID: 873988691}
-  - component: {fileID: 873988692}
-  m_Layer: 5
-  m_Name: DateText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &873988690
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873988689}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1000412458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.2, y: -125}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &873988691
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873988689}
-  m_CullTransparentMesh: 1
---- !u!114 &873988692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873988689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: New Text
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -89.86261, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &904598856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 904598857}
-  - component: {fileID: 904598859}
-  - component: {fileID: 904598858}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &904598857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904598856}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -500, y: -297.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1000412458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &904598858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904598856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &904598859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904598856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!1 &1000412457
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1000412458}
-  - component: {fileID: 1000412461}
-  - component: {fileID: 1000412460}
-  - component: {fileID: 1000412459}
-  m_Layer: 5
-  m_Name: UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1000412458
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000412457}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 904598857}
-  - {fileID: 2107301811}
-  - {fileID: 1532115064}
-  - {fileID: 873988690}
-  - {fileID: 1851328241}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1000412459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000412457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1000412460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000412457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1000412461
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000412457}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 90
-  m_TargetDisplay: 0
 --- !u!1001 &1032560133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11490,7 +13606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11702,6 +13818,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 530780974621395065, guid: e032b4b46a0ee9a48a76df6a45c5c8fa, type: 3}
   m_PrefabInstance: {fileID: 1260368997}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1337170494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337170495}
+  - component: {fileID: 1337170496}
+  - component: {fileID: 1337170497}
+  m_Layer: 5
+  m_Name: SeasonImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1337170495
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337170494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545481543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 62, y: -60}
+  m_SizeDelta: {x: 57, y: 57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1337170496
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337170494}
+  m_CullTransparentMesh: 1
+--- !u!114 &1337170497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337170494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1482666496
 GameObject:
   m_ObjectHideFlags: 0
@@ -11870,7 +14061,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -514111311
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1508333056
@@ -11904,81 +14095,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1532115063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1532115064}
-  - component: {fileID: 1532115065}
-  - component: {fileID: 1532115066}
-  m_Layer: 5
-  m_Name: seasonImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1532115064
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532115063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1000412458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 77, y: -74.087}
-  m_SizeDelta: {x: 57, y: 57}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1532115065
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532115063}
-  m_CullTransparentMesh: 1
---- !u!114 &1532115066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532115063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1532380297
 GameObject:
   m_ObjectHideFlags: 0
@@ -12048,10 +14164,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1229667807}
   player: {fileID: 1918211202}
+  interactionDistance: 1
+  interactionKey: 101
   objectKind: 0
   sceneName: MinMul
   interactionPopUp: {fileID: 1986634544}
   transitionAudio: {fileID: 389576404}
+  totalDate: 0
+  actionPoint: 0
 --- !u!212 &1532380301
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12121,6 +14241,188 @@ Transform:
   - {fileID: 1986634546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1545481542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545481543}
+  - component: {fileID: 1545481545}
+  - component: {fileID: 1545481544}
+  m_Layer: 5
+  m_Name: MainUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1545481543
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545481542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1337170495}
+  - {fileID: 95341143}
+  - {fileID: 1923550737}
+  - {fileID: 46542563}
+  m_Father: {fileID: 1558281977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 184, y: -75}
+  m_SizeDelta: {x: 338, y: 122}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1545481544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545481542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 55166946ec9af6e4e996041275cbdebb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1545481545
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545481542}
+  m_CullTransparentMesh: 1
+--- !u!1 &1558281976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558281977}
+  - component: {fileID: 1558281980}
+  - component: {fileID: 1558281979}
+  - component: {fileID: 1558281978}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1558281977
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558281976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1545481543}
+  - {fileID: 488092422}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1558281978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558281976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1558281979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558281976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1558281980
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558281976}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 90
+  m_TargetDisplay: 0
 --- !u!1 &1667149811
 GameObject:
   m_ObjectHideFlags: 0
@@ -12774,140 +15076,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848079401}
   m_CullTransparentMesh: 1
---- !u!1 &1851328240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1851328241}
-  - component: {fileID: 1851328242}
-  - component: {fileID: 1851328243}
-  m_Layer: 5
-  m_Name: ActionPointsText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1851328241
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851328240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1000412458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 270.9, y: -91.4}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1851328242
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851328240}
-  m_CullTransparentMesh: 1
---- !u!114 &1851328243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851328240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: New Text
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1896706860
 GameObject:
   m_ObjectHideFlags: 0
@@ -13163,7 +15331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca306495aaefdcf408a5ee1bf6d81694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
   animator: {fileID: 1918211197}
   walkingAudio: {fileID: 1759349870}
   groundTile: {fileID: 2128287094}
@@ -13206,7 +15373,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -514111311
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1053828209, guid: 20a74011e693ed340afd1b10e7abb512, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13247,19 +15414,155 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac48aef6b5fe4a4eb60154899807cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 1229667807}
-  ActionPointsText: {fileID: 1851328243}
-  DateText: {fileID: 873988692}
-  APmask: {fileID: 791454666}
-  seasonImage: {fileID: 1532115066}
+  ActionPointsText: {fileID: 1923550739}
+  DateText: {fileID: 46542565}
+  APmask: {fileID: 95341146}
+  actionPoint: 0
+  totalDate: 0
+  seasonImage: {fileID: 1337170497}
   springImage: {fileID: 21300000, guid: 40f3233ab9ab479499c9ff4a005d6384, type: 3}
   summerImage: {fileID: 21300000, guid: 452fa22d0eb73e941b7096c511f9ac51, type: 3}
   fallImage: {fileID: 21300000, guid: 8b68587f8039bf84599aad824669a955, type: 3}
   winterImage: {fileID: 21300000, guid: 5b682f9273c045d4494195fda842b7a6, type: 3}
-  APmaskTransform: {fileID: 791454663}
-  seasonTransform: {fileID: 1532115064}
+  APmaskTransform: {fileID: 95341143}
+  seasonTransform: {fileID: 1337170495}
   inventory: {fileID: 0}
   inventoryButton: {fileID: 0}
+  goToBedButton: {fileID: 488092419}
+--- !u!1 &1923550736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923550737}
+  - component: {fileID: 1923550738}
+  - component: {fileID: 1923550739}
+  m_Layer: 5
+  m_Name: ActionPointText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1923550737
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923550736}
+  m_LocalRotation: {x: -0, y: -0.0036047157, z: -0, w: 0.9999935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545481543}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.413, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 235, y: -35}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1923550738
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923550736}
+  m_CullTransparentMesh: 1
+--- !u!114 &1923550739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923550736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 100 / 100
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_sharedMaterial: {fileID: -1274956940867082501, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1923621208
 GameObject:
   m_ObjectHideFlags: 0
@@ -13329,10 +15632,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1229667807}
   player: {fileID: 1918211202}
+  interactionDistance: 1
+  interactionKey: 101
   objectKind: 0
   sceneName: Factory
   interactionPopUp: {fileID: 369674107}
   transitionAudio: {fileID: 1896706861}
+  totalDate: 0
+  actionPoint: 0
 --- !u!212 &1923621211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13490,7 +15797,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -743736637
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 0.36862746}
@@ -13575,7 +15882,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -743736637
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 0.36862746}
@@ -13603,6 +15910,37 @@ Transform:
   m_Children:
   - {fileID: 164929794}
   m_Father: {fileID: 1532380302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1991903520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991903521}
+  m_Layer: 0
+  m_Name: -------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991903521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991903520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.932182, y: -33.318832, z: -0.028251143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2065728566
 PrefabInstance:
@@ -13826,7 +16164,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2107301810
+--- !u!1 &2083592804
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13834,46 +16172,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2107301811}
-  - component: {fileID: 2107301813}
-  - component: {fileID: 2107301812}
+  - component: {fileID: 2083592805}
+  - component: {fileID: 2083592807}
+  - component: {fileID: 2083592806}
   m_Layer: 5
-  m_Name: MainUI
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2107301811
+--- !u!224 &2083592805
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107301810}
+  m_GameObject: {fileID: 2083592804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 791454663}
-  m_Father: {fileID: 1000412458}
+  m_Children: []
+  m_Father: {fileID: 488092422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 184, y: -75}
-  m_SizeDelta: {x: 338, y: 122}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2107301812
+--- !u!114 &2083592806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107301810}
+  m_GameObject: {fileID: 2083592804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -13884,23 +16221,82 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55166946ec9af6e4e996041275cbdebb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2107301813
+  m_text: Bed
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_sharedMaterial: {fileID: -1274956940867082501, guid: 50472599211d5584ea8764bd399c7f2d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2083592807
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107301810}
+  m_GameObject: {fileID: 2083592804}
   m_CullTransparentMesh: 1
 --- !u!1 &2122751368
 GameObject:
@@ -30861,7 +33257,8 @@ SceneRoots:
   - {fileID: 580587663}
   - {fileID: 1508333057}
   - {fileID: 2122751372}
-  - {fileID: 1000412458}
+  - {fileID: 1558281977}
+  - {fileID: 687322043}
   - {fileID: 450015910}
   - {fileID: 128841618}
   - {fileID: 284129774}
@@ -30874,3 +33271,5 @@ SceneRoots:
   - {fileID: 2124380192}
   - {fileID: 304134066}
   - {fileID: 693561151}
+  - {fileID: 1991903521}
+  - {fileID: 37556003}

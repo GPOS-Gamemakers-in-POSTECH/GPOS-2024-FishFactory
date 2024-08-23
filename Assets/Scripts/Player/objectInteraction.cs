@@ -8,7 +8,6 @@ public class ObjectInteraction : fadeInOut
 {
     public Transform player;
 
-    public bool isInteracting;
     public float interactionDistance = 1.0f; // Interaction become active when player is closer than this value
     public KeyCode interactionKey = KeyCode.E; // Key to interact
 
@@ -36,10 +35,8 @@ public class ObjectInteraction : fadeInOut
         if (departureMap == sceneName) { player.position = transform.position; } // set players position to right arrow that is connected to departured map
         StartCoroutine(FadeFunction(1f)); // fade in when scene is started
 
-        isInteracting = GameManager.Instance.isInteracting;
         actionPoint = GameManager.Instance.actionPoint;
         totalDate = GameManager.Instance.totalDate;
-        isInteracting = false;
     }
 
     void Update()
@@ -54,9 +51,9 @@ public class ObjectInteraction : fadeInOut
             interactionPopUp.SetActive(true);
             
             // when interactionkey pressed, and interaction is not processing
-            if (Input.GetKeyDown(interactionKey) && isInteracting == false)
+            if (Input.GetKeyDown(interactionKey) && GameManager.Instance.isInteracting == false)
             {
-                isInteracting = true;
+
                 
                 // save the departureMap name
                 departureMap = SceneManager.GetActiveScene().name;                

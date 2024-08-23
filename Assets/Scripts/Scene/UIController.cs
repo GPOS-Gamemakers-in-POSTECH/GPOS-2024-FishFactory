@@ -47,7 +47,8 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+            ReduceActionPoints(20); 
 
         Vector2 mousePosition = Input.mousePosition;
 
@@ -56,6 +57,11 @@ public class UIController : MonoBehaviour
 
         else
             DateText.gameObject.SetActive(false);
+
+        if (actionPoint <= 20)
+            goToBedButton.gameObject.SetActive(true);
+        else
+            goToBedButton.gameObject.SetActive(false);
     }
 
     // function to update AP

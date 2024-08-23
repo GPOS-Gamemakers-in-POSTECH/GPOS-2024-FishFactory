@@ -5,19 +5,14 @@ using UnityEngine;
 public class playerInventory : MonoBehaviour
 {
     public List<KeyValuePair<int, int>> itemAndCount = new List<KeyValuePair<int, int>>();
-    public JsonManager jsonManager;
-    Dictionary<int, Item>[] itemDict = new Dictionary<int, Item>[3];
+
+
 
     void Awake()
     {
 
 
-        for (int i = 0; i < itemDict.Length; i++)
-        {
-            itemDict[i] = new Dictionary<int, Item>();
-        }
 
-        jsonManager.LoadJson(itemDict);
     }
 
     // Start is called before the first frame update
