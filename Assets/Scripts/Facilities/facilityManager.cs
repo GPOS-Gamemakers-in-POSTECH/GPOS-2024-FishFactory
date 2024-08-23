@@ -20,6 +20,9 @@ public class facilityManager : MonoBehaviour
     private int[] lineStatus;  // kind of line
     private int[] elementStatus;  // kind of elements
     private int[] isWorking;  // is this line working
+    private int[] inputCount;  // amount of fishes input
+
+    private int inputFish = 0;
 
     public GameObject installPopUp;
     public GameObject inputPopUp;
@@ -52,6 +55,7 @@ public class facilityManager : MonoBehaviour
         lineStatus = installStatusManager.Instance.facilityLine;
         elementStatus = installStatusManager.Instance.facilityElements[lineNumber];
         isWorking = installStatusManager.Instance.isFacilityWorking;
+        inputCount = installStatusManager.Instance.facilityInputCount;
 
         for (int i = 0; i < 4; i++)
         {
@@ -76,17 +80,14 @@ public class facilityManager : MonoBehaviour
 
         currentTile = setCurrentTile();
 
-        if (isWorking[lineNumber] % 100 != 1)
+        if (isWorking[lineNumber] % 100 != 1 && isWorking[lineNumber] != 0)
         {
-            Debug.Log("product made. ID : " + (isWorking[lineNumber] + 1 + lineStatus[lineNumber]));
+            int productID = isWorking[lineNumber] + 1 + lineStatus[lineNumber];
+            Debug.Log("product made : " + GameManager.Instance.itemDict[0][productID].itemName + inputCount[lineNumber] / 2 + "개 제작 성공");
             isWorking[lineNumber] = 0;
+            inputCount[lineNumber] = 0;
         }
-
-
-
-
-    }
-    
+    }   
 
 
     void Update()
@@ -129,18 +130,69 @@ public class facilityManager : MonoBehaviour
                             inputPopUp.SetActive(true);
                             GameManager.Instance.isInteracting = true;
                             ableFishes = getAbleFishList(lineStatus[lineNumber]);
-                            Debug.Log(string.Join(", ", ableFishes));
-                            //inputPopUpText.GetComponent<TextMeshPro>().text = string.Join(", ", ableFishes);
-                            
-                            isWorking[lineNumber] = ableFishes[0];
+
+                            string allFishNames = "투입 가능한 물고기 : ";
+                            for (int i = 0; i < ableFishes.Count; i++)
+                            {
+                                int fish_ = ableFishes[i]; // 현재 접근 중인 fish_ 값
+                                string itemName = GameManager.Instance.itemDict[0][fish_].itemName; // itemName 가져오기
+
+                                // itemName을 allFishNames에 추가
+                              
+                                allFishNames = allFishNames + "(" + (i + 1).ToString() + ")" + itemName;                               
+                                
+                                if (i != ableFishes.Count - 1)
+                                {
+                                    allFishNames += ", ";
+                                }
+                            }
+
+                            Debug.Log(allFishNames);
+
+                            // inputPopUpText.GetComponent<TextMeshPro>().text = allFishNames;                           
+
                         }
                     }
                     else
                     {
+
+
                         if (Input.GetKeyDown(interactionKey))
                         {
                             inputPopUp.SetActive(false);
                             GameManager.Instance.isInteracting = false;
+                            if (inputFish != 0)
+                            {
+                                isWorking[lineNumber] = inputFish;
+                                Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입");
+                            }
+                        }
+
+                        else
+                        {
+                            for (int i = 1; i <= 7; i++)
+                            {
+                                KeyCode key = KeyCode.Alpha0 + i;
+
+                                // 해당 키가 눌렸는지 확인
+                                if (Input.GetKeyDown(key))
+                                {
+                                    if (i <= ableFishes.Count)
+                                    {
+                                        if (inputFish != ableFishes[i - 1])
+                                            inputCount[lineNumber] = 0;
+
+                                        inputFish = ableFishes[i - 1];
+
+                                        if (Input.GetKey(KeyCode.LeftShift))
+                                            inputCount[lineNumber] += 10;
+                                        else
+                                            inputCount[lineNumber] += 1;
+                                        
+                                        Debug.Log(GameManager.Instance.itemDict[0][inputFish].itemName + "을" + inputCount[lineNumber] + "마리 투입하시겠습니까?");
+                                    }
+                                }
+                            }
                         }
                     }
                 }

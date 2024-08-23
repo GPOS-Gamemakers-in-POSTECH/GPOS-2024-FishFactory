@@ -29,6 +29,7 @@ public class installStatusManager : MonoBehaviour
     public int[] facilityLine = new int[6];
 
     public int[] isFacilityWorking = new int[6];
+    public int[] facilityInputCount = new int[6];
 
     void Awake()
     {
@@ -62,7 +63,7 @@ public class installStatusManager : MonoBehaviour
             }
         }
 
-        else if (SceneManager.GetActiveScene().name == "SleepScene" && isSleeping == true)
+        else if (SceneManager.GetActiveScene().name != "SleepScene" && isSleeping == true)
             isSleeping = false;
     }
 
