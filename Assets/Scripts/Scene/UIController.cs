@@ -56,7 +56,13 @@ public class UIController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
-            ReduceActionPoints(20); 
+            ReduceActionPoints(20);
+
+        if(SceneManager.GetActiveScene().name == "SleepScene")
+        {
+            UpdateActionPointsUI();
+            UpdateDateUI();
+        }
 
         Vector2 mousePosition = Input.mousePosition;
 
@@ -99,7 +105,7 @@ public class UIController : MonoBehaviour
     }
 
     // function to update AP UI
-    void UpdateActionPointsUI()
+    public void UpdateActionPointsUI()
     {
         // express AP as "amount / max amount"
         if (ActionPointsText != null)
@@ -107,10 +113,12 @@ public class UIController : MonoBehaviour
             ActionPointsText.text = GameManager.Instance.actionPoint.ToString() + " / " + maxActionPoint.ToString();
             APmask.fillAmount = (float)GameManager.Instance.actionPoint / maxActionPoint;
         }
+
+        Debug.Log("ap updated, current is"+GameManager.Instance.actionPoint);
     }
 
     // function to update Date UI
-    void UpdateDateUI()
+    public void UpdateDateUI()
     {
         // express Date as "season - day"
         if (DateText != null)
