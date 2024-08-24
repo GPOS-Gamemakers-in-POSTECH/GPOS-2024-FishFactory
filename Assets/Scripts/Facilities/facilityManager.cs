@@ -59,7 +59,7 @@ public class facilityManager : MonoBehaviour
         isWorking = installStatusManager.Instance.isFacilityWorking;
         inputCount = installStatusManager.Instance.facilityInputCount;
 
-        controlUI = UIController.Instance;
+        
 
         for (int i = 0; i < 4; i++)
         {

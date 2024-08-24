@@ -7,7 +7,7 @@ using System.Collections;
 
 public class UIController : MonoBehaviour
 {
-    public static UIController Instance;
+    
 
     // UI texts
     public TextMeshProUGUI ActionPointsText;
@@ -41,12 +41,7 @@ public class UIController : MonoBehaviour
     // update UI when starting the scene
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else { Destroy(gameObject); }
+
     }
 
     void Start()
